@@ -5,6 +5,11 @@
 1. **Doble click** en `index.html`
 2. O arrastra el archivo al navegador
 
+✅ **Imágenes**: Las siguientes imágenes reales ahora aparecen en la presentación:
+- Slide 23: Matriz de confusión Pronación
+- Slide 25: Matriz de confusión Golpeteo  
+- Slide 26: Modelo C4 Nivel 2 de Arquitectura Vimov
+
 ## Navegación Rápida
 
 ### Teclado ⌨️

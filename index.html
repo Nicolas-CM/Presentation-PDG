@@ -671,9 +671,9 @@
     <div class="page-number">20</div>
 </div>
 
-<!-- ===== 21. ANÁLISIS INFERENCIAL ===== -->
+<!-- ===== 34. ANÁLISIS INFERENCIAL (MOVIDO A TRL3) ===== -->
 <div class="slide slide-content" style="padding:36px 56px 50px;">
-    <div class="section-header">Métricas</div>
+    <div class="section-header">Validación</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">ANÁLISIS INFERENCIAL</h2>
     <p class="sub">Herramientas estadísticas para confirmar la discriminación entre estadios</p>
@@ -711,26 +711,36 @@
             </div>
         </div>
     </div>
-    <div class="page-number">21</div>
+    <div class="page-number">34</div>
 </div>
 
-<!-- ===== 22. RESULTADO PRONACIÓN ===== -->
+<!-- ===== 22. RESULTADO PRONACIÓN - PARTE 1 ===== -->
 <div class="slide slide-content" style="padding:36px 56px 50px;">
     <div class="section-header">Métricas</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">RESULTADO — PRONACIÓN/SUPINACIÓN</h2>
     <p class="sub">Modelo LDA ajustado · shrinkage=0.95, amplitud corregida</p>
 
-    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
-        <div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Resultados generales</h3>
-            <div class="mg" style="grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px 0;">
-                <div class="mb"><div class="mv">84.4%</div><div class="ml">Accuracy Train</div></div>
-                <div class="mb gr"><div class="mv" style="font-size:28px;">75.96%</div><div class="ml">Accuracy LOSO</div></div>
-                <div class="mb or" style="grid-column:1/-1;"><div class="mv">92.38%</div><div class="ml">AUC Macro</div></div>
+    <div class="cols" style="gap:40px;margin-top:16px;align-items:start;">
+        <div style="flex:0.6;">
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:16px;">📊 Resultados Generales</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--blue);text-align:center;">
+                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">84.4%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy Train</div>
+                </div>
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--green);text-align:center;">
+                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">75.96%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy LOSO</div>
+                </div>
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--orange);text-align:center;grid-column:1/-1;">
+                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">92.38%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">AUC Macro</div>
+                </div>
             </div>
-            <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Top 5 features discriminativas</h3>
-            <div style="display:flex;flex-direction:column;gap:5px;">
+
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">⭐ Top 5 Features Discriminativas</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
                 <div class="auc-row"><span class="auc-score">intervalo_medio</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87%;"></div></div><span class="auc-value">3.48</span></div>
                 <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:77%;"></div></div><span class="auc-value">3.07</span></div>
                 <div class="auc-row"><span class="auc-score">amplitud_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:55%;"></div></div><span class="auc-value">2.21</span></div>
@@ -738,43 +748,77 @@
                 <div class="auc-row"><span class="auc-score">frecuencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:41%;"></div></div><span class="auc-value">1.66</span></div>
             </div>
         </div>
-        <div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">AUC por estadio (one-vs-rest)</h3>
-            <div style="display:flex;flex-direction:column;gap:7px;">
-                <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:81.3%;"></div></div><span class="auc-value">0.813</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
-                <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:88%;"></div></div><span class="auc-value">0.880</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
-                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:92.8%;"></div></div><span class="auc-value">0.928</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.8%;"></div></div><span class="auc-value">0.998</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.9%;"></div></div><span class="auc-value">0.999</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-            </div>
-            <div class="img-slide" style="padding-top:12px;">
-                <div class="img-placeholder" style="min-height:100px;width:100%;">
-                    <div class="ip-label">Matriz de confusión — Pronación</div>
-                    <div class="ip-filename">assets/confusion-pronacion.png</div>
-                </div>
+
+        <div style="flex:0.4;background:var(--bg-soft);padding:20px;border-radius:12px;border-left:6px solid var(--blue);">
+            <div style="font-size:11px;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">📈 Interpretación</div>
+            <div style="font-size:13px;line-height:1.7;color:var(--text);">
+                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 75.96% indica una capacidad predictiva robusta en validación cruzada sin dejar uno fuera.</p>
+                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 92.38% demuestra excelente discriminación entre estadios.</p>
+                <p><strong>Features clave:</strong> El intervalo entre movimientos es el predictor más importante, seguido de cadencia y amplitud.</p>
             </div>
         </div>
     </div>
     <div class="page-number">22</div>
 </div>
 
-<!-- ===== 23. RESULTADO GOLPETEO ===== -->
+<!-- ===== 23. RESULTADO PRONACIÓN - PARTE 2 (MATRIZ CONFUSIÓN) ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">MATRIZ DE CONFUSIÓN — PRONACIÓN</h2>
+    <p class="sub">Performance por estadio (one-vs-rest) y análisis de desempeño</p>
+
+    <div class="cols" style="gap:32px;margin-top:16px;align-items:center;">
+        <div style="flex:0.6;">
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:16px;">🎯 AUC por Estadio</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:81.3%;"></div></div><span class="auc-value">0.813</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
+                <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:88%;"></div></div><span class="auc-value">0.880</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
+                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:92.8%;"></div></div><span class="auc-value">0.928</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.8%;"></div></div><span class="auc-value">0.998</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.9%;"></div></div><span class="auc-value">0.999</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+            </div>
+        </div>
+
+        <div style="flex:0.4;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <img src="./assets/confusion-pronacion.png" alt="Matriz de confusión — Pronación" style="max-width:100%; max-height:320px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+        </div>
+    </div>
+
+    <div class="hb" style="margin-top:18px;">
+        <h4>✓ Conclusión Pronación</h4>
+        <p>El modelo LDA demuestra excelente capacidad discriminativa, especialmente en estadios severos. La prueba de pronación/supinación es altamente predictiva de bradicinesia.</p>
+    </div>
+
+    <div class="page-number">23</div>
+</div>
+<!-- ===== 24. RESULTADO GOLPETEO - PARTE 1 ===== -->
 <div class="slide slide-content" style="padding:36px 56px 50px;">
     <div class="section-header">Métricas</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">RESULTADO — GOLPETEO DE DEDOS</h2>
     <p class="sub">Modelo LDA ajustado · shrinkage=0.95, amplitud corregida</p>
 
-    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
-        <div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Resultados generales</h3>
-            <div class="mg" style="grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px 0;">
-                <div class="mb"><div class="mv">80.2%</div><div class="ml">Accuracy Train</div></div>
-                <div class="mb or"><div class="mv" style="font-size:28px;">57.19%</div><div class="ml">Accuracy LOSO</div></div>
-                <div class="mb gr" style="grid-column:1/-1;"><div class="mv">84.44%</div><div class="ml">AUC Macro</div></div>
+    <div class="cols" style="gap:40px;margin-top:16px;align-items:start;">
+        <div style="flex:0.6;">
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:16px;">📊 Resultados Generales</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--blue);text-align:center;">
+                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">80.2%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy Train</div>
+                </div>
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--orange);text-align:center;">
+                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">57.19%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy LOSO</div>
+                </div>
+                <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--green);text-align:center;grid-column:1/-1;">
+                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">84.44%</div>
+                    <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">AUC Macro</div>
+                </div>
             </div>
-            <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Top 5 features discriminativas</h3>
-            <div style="display:flex;flex-direction:column;gap:5px;">
+
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">⭐ Top 5 Features Discriminativas</h3>
+            <div style="display:flex;flex-direction:column;gap:6px;">
                 <div class="auc-row"><span class="auc-score">iti_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:74%;"></div></div><span class="auc-value">2.97</span></div>
                 <div class="auc-row"><span class="auc-score">iti_std</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:69%;"></div></div><span class="auc-value">2.75</span></div>
                 <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:67%;"></div></div><span class="auc-value">2.70</span></div>
@@ -782,27 +826,52 @@
                 <div class="auc-row"><span class="auc-score">rms_acc_lateral</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:39%;"></div></div><span class="auc-value">1.60</span></div>
             </div>
         </div>
-        <div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">AUC por estadio (one-vs-rest)</h3>
-            <div style="display:flex;flex-direction:column;gap:7px;">
+
+        <div style="flex:0.4;background:var(--bg-soft);padding:20px;border-radius:12px;border-left:6px solid var(--blue);">
+            <div style="font-size:11px;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">📈 Interpretación</div>
+            <div style="font-size:13px;line-height:1.7;color:var(--text);">
+                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 57.19% refleja mayor complejidad en discriminación de golpeteo comparado con pronación.</p>
+                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 84.44% sigue siendo robusto, especialmente en estadios avanzados.</p>
+                <p><strong>Features clave:</strong> Variabilidad de intervalos entre golpes (ITI) es fundamental para detección de bradicinesia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">24</div>
+</div>
+
+<!-- ===== 25. RESULTADO GOLPETEO - PARTE 2 (MATRIZ CONFUSIÓN) ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">MATRIZ DE CONFUSIÓN — GOLPETEO</h2>
+    <p class="sub">Performance por estadio (one-vs-rest) y análisis de desempeño</p>
+
+    <div class="cols" style="gap:32px;margin-top:16px;align-items:center;">
+        <div style="flex:0.6;">
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:16px;">🎯 AUC por Estadio</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;">
                 <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:75.4%;"></div></div><span class="auc-value">0.754</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
                 <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:89%;"></div></div><span class="auc-value">0.890</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
                 <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87.3%;"></div></div><span class="auc-value">0.873</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
                 <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:98.7%;"></div></div><span class="auc-value">0.987</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
                 <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.7%;"></div></div><span class="auc-value">0.997</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
             </div>
-            <div class="img-slide" style="padding-top:12px;">
-                <div class="img-placeholder" style="min-height:100px;width:100%;">
-                    <div class="ip-label">Matriz de confusión — Golpeteo</div>
-                    <div class="ip-filename">assets/confusion-golpeteo.png</div>
-                </div>
-            </div>
+        </div>
+
+        <div style="flex:0.4;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <img src="./assets/confusion-golpeteo.png" alt="Matriz de confusión — Golpeteo" style="max-width:100%; max-height:320px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
         </div>
     </div>
-    <div class="page-number">23</div>
+
+    <div class="hb" style="margin-top:18px;">
+        <h4>✓ Conclusión Golpeteo</h4>
+        <p>El modelo LDA muestra buena discriminación en estadios leve-moderado, con excelencia en estadios severos. La prueba de golpeteo complementa el análisis de bradicinesia.</p>
+    </div>
+
+    <div class="page-number">25</div>
 </div>
 
-<!-- ===== 24. TOP 5 BIOMARCADORES ===== -->
+<!-- ===== 26. TOP 5 BIOMARCADORES ===== -->
 <div class="slide slide-content" style="padding:36px 56px 50px;">
     <div class="section-header">Métricas</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
@@ -870,10 +939,7 @@
                 <div class="cd or" style="padding:11px 14px;"><p style="font-size:13px;">Modelo Entidad–Relación (MER)</p></div>
             </div>
             <div class="img-slide" style="padding-top:12px;">
-                <div class="img-placeholder" style="min-height:120px;width:100%;">
-                    <div class="ip-label">Modelo C4 Nivel 2 — Vimov</div>
-                    <div class="ip-filename">assets/c4-nivel2-vimov.png</div>
-                </div>
+                <img src="./assets/c4-nivel2-vimov.png" alt="Modelo C4 Nivel 2 — Vimov" style="max-width:100%; max-height:250px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
             </div>
         </div>
         <div>
@@ -1102,7 +1168,93 @@
     <div class="page-number">33</div>
 </div>
 
-<!-- ===== 34. SECCIÓN: CONCLUSIONES ===== -->
+<!-- ===== 34. ANÁLISIS INFERENCIAL ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Validación</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">ANÁLISIS INFERENCIAL</h2>
+    <p class="sub">Herramientas estadísticas para confirmar la discriminación entre estadios</p>
+
+    <div class="cg3" style="grid-template-columns:repeat(4,1fr);margin-top:16px;gap:12px;">
+        <div class="cd" style="padding:18px;">
+            <h3 style="font-size:14px;">Kruskal-Wallis</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Permite comparar los puntajes entre grupos. <strong>p &lt; 0.001</strong> en la mayoría de variables, confirmando diferencias estadísticamente reales.</p>
+        </div>
+        <div class="cd or" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--orange);">Eta-cuadrado (η²)</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Mide el tamaño del efecto. Valores <strong>&gt; 0.26</strong> indican una diferencia grande y obvia entre los grupos.</p>
+        </div>
+        <div class="cd gr" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--green);">Prueba Post-hoc</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Compara los puntajes uno a uno (0 vs 1, 2 vs 3) para confirmar si el sensor puede notar cuando la gravedad sube un solo escalón.</p>
+        </div>
+        <div class="cd pu" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--purple);">Corrección Bonferroni</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Filtro matemático para evitar <strong>falsos positivos</strong> al realizar múltiples comparaciones simultáneas.</p>
+        </div>
+    </div>
+
+    <div class="cols" style="gap:28px;margin-top:18px;">
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:160px;width:100%;">
+                <div class="ip-label">Análisis estadístico — Pronación</div>
+                <div class="ip-filename">assets/analisis-pronacion.png</div>
+            </div>
+        </div>
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:160px;width:100%;">
+                <div class="ip-label">Análisis estadístico — Golpeteo</div>
+                <div class="ip-filename">assets/analisis-golpeteo.png</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">34</div>
+</div>
+
+<!-- ===== 35. TOP 5 BIOMARCADORES ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Validación</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">TOP BIOMARCADORES</h2>
+    <p class="sub">Variables con mayor poder discriminativo (η² Kruskal-Wallis)</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:14px;">
+        <div>
+            <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--blue);"></div>Pronación/Supinación</div>
+            <table class="st">
+                <thead><tr><th>Métrica</th><th>η² KW</th><th>Sig.</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Intervalo medio</strong></td><td>0.89</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Cadencia</strong></td><td>0.87</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Amplitud media</strong></td><td>0.72</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Amplitud máxima</strong></td><td>0.68</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Frecuencia</strong></td><td>0.54</td><td style="color:var(--teal);font-weight:700;">***</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <div style="font-size:14px;font-weight:700;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--teal);"></div>Golpeteo de Dedos</div>
+            <table class="st">
+                <thead><tr><th>Métrica</th><th>η² KW</th><th>Sig.</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>ITI media</strong></td><td>0.85</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>ITI std</strong></td><td>0.79</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Cadencia</strong></td><td>0.78</td><td style="color:var(--orange);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Regularidad (%)</strong></td><td>0.61</td><td style="color:var(--teal);font-weight:700;">***</td></tr>
+                    <tr><td><strong>Amplitud media</strong></td><td>0.47</td><td style="color:var(--teal);font-weight:700;">**</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="hb" style="margin-top:18px;background:var(--teal);border-left-color:var(--blue);">
+        <h4 style="color:var(--blue);">Conclusión — Biomarcadores</h4>
+        <p style="color:rgba(255,255,255,0.9);">Los biomarcadores de <strong style="color:#fff;">regularidad temporal (ITI, intervalo medio, cadencia)</strong> son los predictores más robustos de bradicinesia, confirmando que la <strong style="color:#fff;">variabilidad del movimiento</strong> es la firma cuantitativa de la bradicinesia en ambas pruebas.</p>
+    </div>
+    <div class="page-number">35</div>
+</div>
+
+<!-- ===== 36. SECCIÓN: CONCLUSIONES ===== -->
 <div class="slide slide-section">
     <div class="section-header">Conclusiones</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
