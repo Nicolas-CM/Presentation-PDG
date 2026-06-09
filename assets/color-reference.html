@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencia de Colores — Universidad Icesi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #5454e9;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1f2937;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .color-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .color-sample {
+            height: 140px;
+            width: 100%;
+            position: relative;
+        }
+        .color-hex {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .color-info {
+            padding: 20px;
+        }
+        .color-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #1f2937;
+        }
+        .pantone {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+        .specs {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+        }
+        .spec-row {
+            display: flex;
+            gap: 8px;
+        }
+        .spec-label {
+            font-weight: 700;
+            color: #4b5563;
+            min-width: 50px;
+        }
+        .spec-value {
+            color: #6b7280;
+        }
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 16px 20px;
+            margin-top: 30px;
+            border-radius: 6px;
+        }
+        .note strong {
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paleta de Colores — Universidad Icesi</h1>
+        <p class="subtitle">Manual de Identidad Visual · Referencia Rápida</p>
+
+        <!-- PALETA PRINCIPAL -->
+        <div class="section">
+            <h2>Paleta Principal</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #5454e9;">
+                        <div class="color-hex">#5454e9</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Azul Icesi</div>
+                        <div class="pantone">Pantone 2131 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:83 M:78 Y:0 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:84 G:84 B:233</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #ffffff; border-bottom: 2px solid #e5e7eb;">
+                        <div class="color-hex" style="background: #1f2937; color: white;">#ffffff</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Blanco</div>
+                        <div class="pantone">—</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:0 M:0 Y:0 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:255 G:255 B:255</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PALETA COMPLEMENTARIA -->
+        <div class="section">
+            <h2>Paleta Complementaria</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: #88898c;">
+                        <div class="color-hex">#88898c</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Gris 1</div>
+                        <div class="pantone">Pantone 423 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:55 M:43 Y:41 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:136 G:137 B:140</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #e4eb60;">
+                        <div class="color-hex">#e4eb60</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Amarillo Icesi</div>
+                        <div class="pantone">Pantone 381 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:23 M:0 Y:79 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:228 G:235 B:96</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #4cb979;">
+                        <div class="color-hex">#4cb979</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Icesi</div>
+                        <div class="pantone">Pantone 2251 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:86 M:0 Y:75 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:76 G:185 B:121</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #865cf0;">
+                        <div class="color-hex">#865cf0</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Morado Icesi</div>
+                        <div class="pantone">Pantone 2665 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:68 M:78 Y:0 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:134 G:92 B:240</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #e9683b;">
+                        <div class="color-hex">#e9683b</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Naranja Icesi</div>
+                        <div class="pantone">Pantone Orange 21 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:0 M:79 Y:78 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:233 G:104 B:59</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-sample" style="background: #cecfd4;">
+                        <div class="color-hex">#cecfd4</div>
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Gris 2</div>
+                        <div class="pantone">Pantone 420 C</div>
+                        <div class="specs">
+                            <div class="spec-row">
+                                <span class="spec-label">CMYK</span>
+                                <span class="spec-value">C:23 M:17 Y:15 K:0</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-label">RGB</span>
+                                <span class="spec-value">R:206 G:207 B:212</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOTAS -->
+        <div class="note">
+            <strong>⚠ Notas Importantes:</strong><br>
+            1. Para tener un manejo preciso y uniforme del color es necesario trabajar con el perfil de color <strong>Adobe RGB</strong>.<br>
+            2. Para obtener un color preciso en pinturas para pared, se debe solicitar al proveedor que realice un proceso de <strong>tintometría</strong>.
+        </div>
+    </div>
+</body>
+</html>

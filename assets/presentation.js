@@ -1,102 +1,192 @@
-const container = document.getElementById('slideContainer');
-const slides    = document.querySelectorAll('.slide');
-let current  = 0;
-let locked   = false;
-const DURATION = 680; // ms — matches CSS animation (0.65s + small buffer)
+/* ==========================================
+   VIMOV — NAVEGACIÓN DE PRESENTACIÓN
+   Universidad Icesi
+   ========================================== */
 
-const SECTIONS = [
-    'Inicio','Contexto','Marco Teórico','Estado del Arte',
-    'Objetivos','Solución','Arquitectura','Calidad','Resultados','Cierre'
-];
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+let hideControlsTimeout;
 
-function getSection(i) {
-    const h = slides[i].querySelector('.section-header');
-    return h ? h.textContent.trim() : 'Inicio';
+// Crear controles de navegación dinámicamente
+function createNavigationControls() {
+    const navControls = document.createElement('div');
+    navControls.className = 'nav-controls';
+    navControls.id = 'navControls';
+    navControls.innerHTML = `
+        <button class="nav-btn" id="prevBtn" aria-label="Slide anterior">←</button>
+        <span class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">${totalSlides}</span>
+        </span>
+        <button class="nav-btn" id="nextBtn" aria-label="Siguiente slide">→</button>
+    `;
+    document.body.appendChild(navControls);
+    
+    // Agregar event listeners
+    document.getElementById('prevBtn').addEventListener('click', () => changeSlide(-1));
+    document.getElementById('nextBtn').addEventListener('click', () => changeSlide(1));
 }
 
-function buildBar(slide, i) {
-    const colored = slide.classList.contains('slide-colored') ||
-                    slide.classList.contains('slide-portada') ||
-                    slide.classList.contains('slide-cierre');
-    const bar  = document.createElement('div');
-    bar.className = 'progress-bar' + (colored ? ' progress-bar-colored' : '');
-    const wrap = document.createElement('div');
-    wrap.className = 'progress-sections';
-    const sec = getSection(i);
-    const idx = SECTIONS.indexOf(sec);
-    SECTIONS.forEach((s, j) => {
-        const el  = document.createElement('div');
-        el.className = 'progress-section' +
-            (j === idx ? ' active' : j < idx ? ' completed' : '');
-        const dot = document.createElement('span');
-        dot.className = 'progress-dot';
-        const lbl = document.createElement('span');
-        lbl.textContent = s;
-        el.appendChild(dot);
-        el.appendChild(lbl);
-        wrap.appendChild(el);
-    });
-    bar.appendChild(wrap);
-    slide.appendChild(bar);
+// Mostrar controles al mover el mouse
+function showControls() {
+    const navControls = document.getElementById('navControls');
+    navControls.classList.add('visible');
+    
+    // Cancelar timeout anterior si existe
+    clearTimeout(hideControlsTimeout);
+    
+    // Ocultar después de 3 segundos sin movimiento
+    hideControlsTimeout = setTimeout(() => {
+        navControls.classList.remove('visible');
+    }, 3000);
 }
 
-// ── Bootstrap ──────────────────────────────────────────────────────────────
-slides.forEach((s, i) => {
-    buildBar(s, i);
-    // All slides hidden by default; JS controls visibility
-    if (i === 0) {
-        s.style.display = 'flex';
-    } else {
-        s.style.display = 'none';
-    }
-});
+// Detectar movimiento del mouse
+document.addEventListener('mousemove', showControls);
 
-// ── Transition: new slide fades in on top, old slide hides after ──────────
-function go(to) {
-    if (to < 0 || to >= slides.length || to === current || locked) return;
-    locked = true;
-
-    const fromSlide = slides[current];
-    const toSlide   = slides[to];
-    const forward   = to > current;
-
-    // Place old slide underneath
-    fromSlide.style.zIndex = '1';
-
-    // Show new slide on top, start fade-in animation
-    toSlide.style.zIndex   = '2';
-    toSlide.style.display  = 'flex';
-    toSlide.classList.add(forward ? 'entering-next' : 'entering-prev');
-
+// Mantener visibles al pasar el mouse sobre los controles
+document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        // Clean up animation class
-        toSlide.classList.remove('entering-next', 'entering-prev');
-        toSlide.style.zIndex = '';
+        const navControls = document.getElementById('navControls');
+        if (navControls) {
+            navControls.addEventListener('mouseenter', () => {
+                clearTimeout(hideControlsTimeout);
+            });
+            navControls.addEventListener('mouseleave', () => {
+                hideControlsTimeout = setTimeout(() => {
+                    navControls.classList.remove('visible');
+                }, 1000);
+            });
+        }
+    }, 100);
+});
 
-        // Hide the old slide now that new one is fully visible
-        fromSlide.style.display = 'none';
-        fromSlide.style.zIndex  = '';
-
-        // Reset scroll on the slide we just left
-        if (fromSlide.scrollTop) fromSlide.scrollTop = 0;
-
-        current = to;
-        locked  = false;
-    }, DURATION);
+// Mostrar slide específica
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'flex' : 'none';
+    });
+    
+    document.getElementById('currentSlide').textContent = index + 1;
+    document.getElementById('prevBtn').disabled = index === 0;
+    document.getElementById('nextBtn').disabled = index === totalSlides - 1;
 }
 
-// ── Input: keyboard + presenter clicker ───────────────────────────────────
-document.addEventListener('keydown', e => {
-    switch (e.key) {
-        case 'ArrowRight': case ' ':         case 'PageDown': case 'Enter':
-            e.preventDefault(); go(current + 1); break;
-        case 'ArrowLeft':  case 'Backspace': case 'PageUp':
-            e.preventDefault(); go(current - 1); break;
-        case 'Home': e.preventDefault(); go(0);                 break;
-        case 'End':  e.preventDefault(); go(slides.length - 1); break;
+// Cambiar slide
+function changeSlide(direction) {
+    currentSlideIndex += direction;
+    currentSlideIndex = Math.max(0, Math.min(currentSlideIndex, totalSlides - 1));
+    showSlide(currentSlideIndex);
+}
+
+// Navegación con teclado
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        changeSlide(-1);
+    } else if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        changeSlide(1);
+    } else if (e.key === 'Home') {
+        currentSlideIndex = 0;
+        showSlide(currentSlideIndex);
+    } else if (e.key === 'End') {
+        currentSlideIndex = totalSlides - 1;
+        showSlide(currentSlideIndex);
     }
 });
 
-// Block all scroll / touch
-document.addEventListener('wheel',     e => e.preventDefault(), { passive: false });
-document.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+// Soporte para gestos táctiles (swipe)
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swipe left - siguiente slide
+            changeSlide(1);
+        } else {
+            // Swipe right - slide anterior
+            changeSlide(-1);
+        }
+    }
+}
+
+// Inicializar presentación
+window.addEventListener('DOMContentLoaded', () => {
+    createNavigationControls();
+    showSlide(0);
+    console.log(`✅ Presentación inicializada: ${totalSlides} slides`);
+    
+    // Mostrar hint de navegación por 4 segundos
+    showKeyboardHint();
+});
+
+// Mostrar hint inicial de navegación por teclado
+function showKeyboardHint() {
+    const hint = document.createElement('div');
+    hint.className = 'keyboard-hint';
+    hint.innerHTML = 'Usa las flechas ← → o mueve el mouse para navegar';
+    document.body.appendChild(hint);
+    
+    // Mostrar después de 500ms
+    setTimeout(() => {
+        hint.classList.add('show');
+    }, 500);
+    
+    // Ocultar después de 4 segundos
+    setTimeout(() => {
+        hint.classList.add('hide');
+        // Eliminar del DOM después de la animación
+        setTimeout(() => {
+            hint.remove();
+        }, 500);
+    }, 4500);
+    
+    // Ocultar si el usuario hace algo (click, tecla o movimiento)
+    const hideHint = () => {
+        if (hint && hint.parentNode) {
+            hint.classList.add('hide');
+            setTimeout(() => hint.remove(), 500);
+        }
+        // Remover listeners después de usarlos
+        document.removeEventListener('keydown', hideHint);
+        document.removeEventListener('click', hideHint);
+        document.removeEventListener('mousemove', hideOnMove);
+    };
+    
+    let moved = false;
+    const hideOnMove = () => {
+        if (!moved) {
+            moved = true;
+            return; // Ignorar el primer movimiento
+        }
+        hideHint();
+    };
+    
+    document.addEventListener('keydown', hideHint);
+    document.addEventListener('click', hideHint);
+    document.addEventListener('mousemove', hideOnMove);
+}
+
+// Modo presentación con fullscreen (F11 o doble click)
+document.addEventListener('dblclick', () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+});
+
+// Los controles ya están ocultos por defecto en fullscreen
+// Solo se mostrarán al mover el mouse gracias a showControls()
