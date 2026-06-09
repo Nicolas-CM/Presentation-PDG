@@ -394,148 +394,155 @@
     <div class="section-header">Protocolo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
     <div class="sec-tag">OE1 · Protocolo de Captura</div>
-    <h2>OBJETIVO ESPECÍFICO 1</h2>
-    <p>Definir un protocolo de captura experimental para las pruebas de golpeteo de dedos y de pronación/supinación que estandarice la colocación del dispositivo, el sistema de referencia de vectores de orientación y la postura del paciente.</p>
+    <h2>PROTOCOLO<br>DE CAPTURA</h2>
+    <p>Estandarización de la colocación del sensor, sistema de referencia y postura del paciente para garantizar reproducibilidad</p>
     <div class="sec-number">05</div>
-    <div class="page-number" style="color:rgba(255,255,255,0.2)">11</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">12</div>
 </div>
 
 <!-- ===== 13. LITERATURA Y DISEÑO EXPERIMENTAL ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
-    <div class="section-header">Protocolo</div>
-    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:28px;">LITERATURA</h2>
-    <p class="sub">Parámetros estandarizados sustentados en literatura científica</p>
-
-    <h3 style="margin-top:16px;margin-bottom:12px;">Base de literatura</h3>
-    <table class="st" style="margin-top:12px;">
-        <thead>
-            <tr><th>Componente</th><th>Autor / Año</th><th>Aporte principal</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>Postura</td><td>Kremer et al., 2023</td><td>Distintas posturas en MDS-UPDRS</td></tr>
-            <tr><td>Postura</td><td>Houdijk et al., 2015</td><td>Ajustes posturales naturales generan variabilidad en movimiento</td></tr>
-            <tr><td>Postura</td><td>Stins et al., 2015</td><td>Bipedestación introduce oscilaciones</td></tr>
-            <tr><td>Ubicación de IMU</td><td>di Biase et al., 2018</td><td>IMU en muñeca ofrece menor ruido</td></tr>
-            <tr><td>Ubicación de IMU</td><td>Höglund et al., 2021</td><td>Zona distal del antebrazo mayor estabilidad</td></tr>
-            <tr><td>Tipo de Movimiento</td><td>Sampaio et al., 2019 (MDS-UPDRS)</td><td>Define ejecución y criterios clínicos de las pruebas</td></tr>
-            <tr><td>Sistema de referencia</td><td>Tomaszewski et al., 2017</td><td>La orientación del sensor</td></tr>
-        </tbody>
-    </table>
-    <div class="page-number">12</div>
-</div>
-
-<!-- ===== 13.5 PARÁMETROS DEFINIDOS ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">Protocolo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">DISEÑO EXPERIMENTAL</h2>
-    <p class="sub">Especificaciones de captura estandarizadas</p>
+    <p class="sub">Parámetros estandarizados sustentados en literatura científica</p>
 
-    <div class="cols" style="gap:28px;margin-top:10px;">
-        <div>
-            <div style="display:flex;flex-direction:column;gap:8px;">
-                <div class="cd" style="padding:12px 16px;"><h3 style="font-size:13px;">Posición sentada</h3><p>Espalda recta, pies firmes en el suelo, sin apoyo de brazo.</p></div>
-                <div class="cd gr" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--green);">Sensor en muñeca</h3><p>Superficie dorsal distal del antebrazo del brazo evaluado.</p></div>
-                <div class="cd or" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--orange);">Orientación fija X, Y, Z</h3><p>Sistema de referencia con ejes preestablecidos para consistencia inter-sesión.</p></div>
-                <div class="cd pu" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--purple);">10 repeticiones por mano</h3><p>Una mano a la vez; registro separado de mano dominante y no dominante.</p></div>
-            </div>
-        </div>
-        <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;">
-            <img src="./assets/we-coordenadas.webp" alt="Sistema de coordenadas" style="max-width:100%;max-height:300px;object-fit:contain;">
-            <p style="font-style:italic;font-size:13px;color:var(--text-light);">Sistema de referencia</p>
-        </div>
-    </div>
+    <h3 style="margin-top:20px;margin-bottom:14px;font-size:18px;color:var(--blue);">Base de literatura</h3>
+    <table class="st" style="margin-top:12px;font-size:14px;">
+        <thead>
+            <tr><th style="padding:14px 16px;">Componente</th><th style="padding:14px 16px;">Autor / Año</th><th style="padding:14px 16px;">Aporte principal</th></tr>
+        </thead>
+        <tbody>
+            <tr><td style="padding:12px 16px;">Postura</td><td style="padding:12px 16px;">Kremer et al., 2023</td><td style="padding:12px 16px;">Distintas posturas en MDS-UPDRS</td></tr>
+            <tr><td style="padding:12px 16px;">Postura</td><td style="padding:12px 16px;">Houdijk et al., 2015</td><td style="padding:12px 16px;">Ajustes posturales naturales generan variabilidad en movimiento</td></tr>
+            <tr><td style="padding:12px 16px;">Postura</td><td style="padding:12px 16px;">Stins et al., 2015</td><td style="padding:12px 16px;">Bipedestación introduce oscilaciones</td></tr>
+            <tr><td style="padding:12px 16px;">Ubicación de IMU</td><td style="padding:12px 16px;">di Biase et al., 2018</td><td style="padding:12px 16px;">IMU en muñeca ofrece menor ruido</td></tr>
+            <tr><td style="padding:12px 16px;">Ubicación de IMU</td><td style="padding:12px 16px;">Höglund et al., 2021</td><td style="padding:12px 16px;">Zona distal del antebrazo mayor estabilidad</td></tr>
+            <tr><td style="padding:12px 16px;">Tipo de Movimiento</td><td style="padding:12px 16px;">Sampaio et al., 2019 (MDS-UPDRS)</td><td style="padding:12px 16px;">Define ejecución y criterios clínicos de las pruebas</td></tr>
+            <tr><td style="padding:12px 16px;">Sistema de referencia</td><td style="padding:12px 16px;">Tomaszewski et al., 2017</td><td style="padding:12px 16px;">La orientación del sensor</td></tr>
+        </tbody>
+    </table>
     <div class="page-number">13</div>
 </div>
 
-<!-- ===== 14. PROTOCOLO — PRONACIÓN/SUPINACIÓN ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
+<!-- ===== 14. PARÁMETROS DEFINIDOS ===== -->
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">Protocolo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:28px;">PRONACIÓN / SUPINACIÓN</h2>
-    <p class="sub">Prueba 3.6 · Pasos estandarizados del protocolo de captura</p>
+    <h2 style="margin-top:28px;">PARÁMETROS DEFINIDOS</h2>
+    <p class="sub">Especificaciones de captura estandarizadas</p>
 
-    <div class="cols" style="gap:28px;margin-top:10px;align-items:start;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;align-items:center;">
         <div>
-            <ul class="step-list">
-                <li><div class="step-num teal">1</div><span>Sentar al paciente con la espalda recta y los pies firmes en el suelo.</span></li>
-                <li><div class="step-num teal">2</div><span>Solicitar que extienda el brazo hacia el frente, a la altura del hombro, con el codo recto.</span></li>
-                <li><div class="step-num teal">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
-                <li><div class="step-num teal">4</div><span>Indicar al paciente que realice <strong>pronación y supinación alternadas</strong> de la mano 10 veces, tan rápido y completamente como pueda.</span></li>
-                <li><div class="step-num teal">5</div><span>Registrar <strong>solo una mano por vez</strong>.</span></li>
-                <li><div class="step-num teal">6</div><span>Asegurar que <strong>no existan movimientos compensatorios</strong> del tronco o del hombro durante la ejecución.</span></li>
-            </ul>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--blue);">
+                    <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:6px;">Posición sentada</h3>
+                    <p style="font-size:14px;line-height:1.6;">Espalda recta, pies firmes en el suelo, sin apoyo de brazo.</p>
+                </div>
+                <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--green);">
+                    <h3 style="font-size:15px;font-weight:700;color:var(--green);margin-bottom:6px;">Sensor en muñeca</h3>
+                    <p style="font-size:14px;line-height:1.6;">Superficie dorsal distal del antebrazo del brazo evaluado.</p>
+                </div>
+                <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--orange);">
+                    <h3 style="font-size:15px;font-weight:700;color:var(--orange);margin-bottom:6px;">Orientación fija X, Y, Z</h3>
+                    <p style="font-size:14px;line-height:1.6;">Sistema de referencia con ejes preestablecidos para consistencia inter-sesión.</p>
+                </div>
+                <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--purple);">
+                    <h3 style="font-size:15px;font-weight:700;color:var(--purple);margin-bottom:6px;">10 repeticiones por mano</h3>
+                    <p style="font-size:14px;line-height:1.6;">Una mano a la vez; registro separado de mano dominante y no dominante.</p>
+                </div>
+            </div>
         </div>
-        <div class="img-slide" style="padding:0;">
-            <img src="./assets/protocolo-pronacion.png" alt="Demostración — Pronación/Supinación" style="width:100%;max-height:300px;object-fit:contain;">
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;">
+            <img src="./assets/we-coordenadas.webp" alt="Sistema de coordenadas" style="max-width:100%;max-height:420px;object-fit:contain;">
+            <p style="font-style:italic;font-size:14px;color:var(--text-light);">Sistema de referencia IMU</p>
         </div>
     </div>
     <div class="page-number">14</div>
 </div>
 
-<!-- ===== 15. PROTOCOLO — GOLPETEO DE DEDOS ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
+<!-- ===== 15. PROTOCOLO — PRONACIÓN/SUPINACIÓN ===== -->
+<div class="slide slide-content" style="padding:40px 60px 50px;">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">PRONACIÓN / SUPINACIÓN</h2>
+    <p class="sub">Prueba 3.6 · Pasos estandarizados del protocolo de captura</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:24px;align-items:center;">
+        <div>
+            <ul class="step-list" style="gap:14px;">
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">1</div><span>Sentar al paciente con la espalda recta y los pies firmes en el suelo.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">2</div><span>Solicitar que extienda el brazo hacia el frente, a la altura del hombro, con el codo recto.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">4</div><span>Indicar al paciente que realice <strong>pronación y supinación alternadas</strong> de la mano 10 veces, tan rápido y completamente como pueda.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">5</div><span>Registrar <strong>solo una mano por vez</strong>.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num teal" style="width:32px;height:32px;font-size:14px;">6</div><span>Asegurar que <strong>no existan movimientos compensatorios</strong> del tronco o del hombro durante la ejecución.</span></li>
+            </ul>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;">
+            <img src="./assets/protocolo-pronacion.png" alt="Demostración — Pronación/Supinación" style="width:100%;max-height:420px;object-fit:contain;border-radius:10px;">
+        </div>
+    </div>
+    <div class="page-number">15</div>
+</div>
+
+<!-- ===== 16. PROTOCOLO — GOLPETEO DE DEDOS ===== -->
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">Protocolo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">GOLPETEO DE DEDOS</h2>
     <p class="sub">Prueba 3.4 · Pasos estandarizados del protocolo de captura</p>
 
-    <div class="cols" style="gap:28px;margin-top:10px;align-items:start;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:24px;align-items:center;">
         <div>
-            <ul class="step-list">
-                <li><div class="step-num">1</div><span>Sentar al paciente en posición estable, con la espalda recta.</span></li>
-                <li><div class="step-num">2</div><span>Solicitar que eleve la mano evaluada al frente a nivel de los ojos, con el <strong>codo a 90°</strong>.</span></li>
-                <li><div class="step-num">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
-                <li><div class="step-num">4</div><span>Indicar al paciente que realice <strong>10 golpes del pulgar contra el dedo índice</strong>, tan rápido y ampliamente como sea posible.</span></li>
-                <li><div class="step-num">5</div><span>Realizar la prueba en <strong>una mano a la vez</strong>.</span></li>
-                <li><div class="step-num">6</div><span>Verificar que el paciente no realice <strong>movimientos compensatorios</strong> del brazo o del tronco.</span></li>
+            <ul class="step-list" style="gap:14px;">
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">1</div><span>Sentar al paciente en posición estable, con la espalda recta.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">2</div><span>Solicitar que eleve la mano evaluada al frente a nivel de los ojos, con el <strong>codo a 90°</strong>.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">4</div><span>Indicar al paciente que realice <strong>10 golpes del pulgar contra el dedo índice</strong>, tan rápido y ampliamente como sea posible.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">5</div><span>Realizar la prueba en <strong>una mano a la vez</strong>.</span></li>
+                <li style="font-size:15px;line-height:1.7;"><div class="step-num" style="width:32px;height:32px;font-size:14px;">6</div><span>Verificar que el paciente no realice <strong>movimientos compensatorios</strong> del brazo o del tronco.</span></li>
             </ul>
         </div>
-        <div class="img-slide" style="padding:0;">
-            <img src="./assets/protocolo-golpeteo.png" alt="Demostración — Golpeteo de Dedos" style="width:100%;max-height:300px;object-fit:contain;">
-            </div>
+        <div style="display:flex;justify-content:center;align-items:center;">
+            <img src="./assets/protocolo-golpeteo.png" alt="Demostración — Golpeteo de Dedos" style="width:100%;max-height:420px;object-fit:contain;border-radius:10px;">
         </div>
-        
-    <div class="page-number">15</div>
     </div>
+    <div class="page-number">16</div>
 </div>
 
-<!-- ===== 16. VALIDACIÓN DEL PROTOCOLO ===== -->
-<div class="slide slide-content">
+<!-- ===== 17. VALIDACIÓN DEL PROTOCOLO ===== -->
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">Protocolo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">VALIDACIÓN DEL PROTOCOLO</h2>
     <p class="sub">Revisión con personal médico de la Fundación Valle del Lili</p>
 
-    <div class="cols" style="gap:32px;margin-top:16px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:28px;align-items:center;">
         <div>
-            <p style="font-size:15px;line-height:1.65;color:var(--text);">El protocolo fue revisado con personal médico de la <strong>Fundación Valle del Lili</strong>, orientada a validar sus componentes metodológicos y su viabilidad para una futura aplicación en contexto clínico.</p>
-            <div style="margin-top:18px;">
-                <h3 style="font-size:17px;font-weight:700;color:var(--blue);margin-bottom:10px;">Aspectos validados</h3>
-                <div style="display:flex;flex-direction:column;gap:8px;">
-                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
-                        <span style="font-size:14px;color:var(--text);">Colocación del dispositivo IMU</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
-                        <span style="font-size:14px;color:var(--text);">Sistema de referencia de vectores de orientación</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
-                        <span style="font-size:14px;color:var(--text);">Postura del paciente durante la prueba</span>
-                    </div>
+            <p style="font-size:16px;line-height:1.7;color:var(--text);margin-bottom:24px;">El protocolo fue revisado con personal médico de la <strong>Fundación Valle del Lili</strong>, orientada a validar sus componentes metodológicos y su viabilidad para una futura aplicación en contexto clínico.</p>
+            
+            <h3 style="font-size:18px;font-weight:700;color:var(--blue);margin-bottom:16px;">Aspectos validados</h3>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--bg-soft);border-radius:10px;border-left:4px solid var(--green);">
+                    <div style="width:12px;height:12px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                    <span style="font-size:15px;font-weight:600;color:var(--text);">Colocación del dispositivo IMU</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--bg-soft);border-radius:10px;border-left:4px solid var(--green);">
+                    <div style="width:12px;height:12px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                    <span style="font-size:15px;font-weight:600;color:var(--text);">Sistema de referencia de vectores de orientación</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--bg-soft);border-radius:10px;border-left:4px solid var(--green);">
+                    <div style="width:12px;height:12px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                    <span style="font-size:15px;font-weight:600;color:var(--text);">Postura del paciente durante la prueba</span>
                 </div>
             </div>
         </div>
-        <div>
-            <div class="img-slide" style="padding-top:16px;">
-                <img src="./assets/validacion-fvl.webp" alt="Validación FVL — foto/acta" style="height: 300px;object-fit:contain;border-radius:8px;">
-            </div>
+        <div style="display:flex;justify-content:center;align-items:center;">
+            <img src="./assets/validacion-fvl.webp" alt="Validación FVL — foto/acta" style="max-height:420px;object-fit:contain;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
         </div>
     </div>
-    <div class="page-number">16</div>
+    <div class="page-number">17</div>
 </div>
 
 <!-- ===== 17. SECCIÓN: OE2 — MÉTRICAS Y MODELO ===== -->
@@ -543,8 +550,8 @@
     <div class="section-header">Métricas</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
     <div class="sec-tag">OE2 · Métricas y Modelo ML</div>
-    <h2>PIPELINE · BASELINE<br>&amp; CLASIFICADOR</h2>
-    <p>Correspondencia entre métricas biomecánicas objetivas y la escala MDS-UPDRS</p>
+    <h2>OBJETIVO ESPECÍFICO 2</h2>
+    <p>Establecer una correspondencia entre las métricas objetivas calculadas y la escala MDS-UPDRS, comparando los resultados cuantitativos con las puntuaciones de neurólogos para objetivar los criterios clínicos de cada nivel de la escala.</p>
     <div class="sec-number">06</div>
     <div class="page-number" style="color:rgba(255,255,255,0.2)">17</div>
 </div>
@@ -876,8 +883,8 @@
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
     <div class="sec-tag">OE3 · Módulo en Vimov</div>
-    <h2>MÓDULO VIMOV<br>&amp; APP IMUs</h2>
-    <p>Arquitectura, tecnologías, interfaz clínica y pruebas de software</p>
+    <h2>OBJETIVO ESPECÍFICO 3</h2>
+    <p>Desarrollar un módulo integrado en Vimov, junto con una integración en la aplicación IMUs que permita la gestión de pruebas, la visualización de señales capturadas y la revisión de resultados cuantitativos de forma intuitiva por parte del personal clínico.</p>
     <div class="sec-number">07</div>
     <div class="page-number" style="color:rgba(255,255,255,0.2)">25</div>
 </div>
@@ -907,7 +914,7 @@
                     <p style="font-size:15px;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 3 (Componentes)</p>
                 </div>
             </div>
-            <p style="font-size:14px;color:var(--text-light);font-style:italic;margin-top:12px;">📐 Documentación completa de la arquitectura web</p>
+            <p style="font-size:14px;color:var(--text-light);font-style:italic;margin-top:12px;">Documentación completa de la arquitectura web</p>
         </div>
         <div>
             <h3 style="font-size:18px;font-weight:700;color:var(--teal);margin-bottom:14px;">Aplicación Móvil IMUs</h3>
@@ -923,7 +930,7 @@
                     <p style="font-size:15px;font-weight:600;color:var(--text);">Diagrama de flujo de datos</p>
                 </div>
             </div>
-            <p style="font-size:14px;color:var(--text-light);font-style:italic;margin-top:12px;">📱 Documentación de la app móvil de captura</p>
+            <p style="font-size:14px;color:var(--text-light);font-style:italic;margin-top:12px;">Documentación de la app móvil de captura</p>
         </div>
     </div>
     <div class="page-number">26</div>
@@ -1116,8 +1123,8 @@
     <div class="section-header">Validación</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
     <div class="sec-tag">OE4 · Validación en Laboratorio</div>
-    <h2>VALIDACIÓN<br>TRL 3</h2>
-    <p>Prueba experimental del concepto en condiciones controladas de laboratorio</p>
+    <h2>OBJETIVO ESPECÍFICO 4</h2>
+    <p>Validar el sistema mediante pruebas internas en el laboratorio, midiendo consistencia y utilidad clínica preliminar en condiciones controladas (TRL 3).</p>
     <div class="sec-number">08</div>
     <div class="page-number" style="color:rgba(255,255,255,0.2)">32</div>
 </div>
@@ -1207,83 +1214,133 @@
 </div>
 
 <!-- ===== 36. ANÁLISIS INFERENCIAL — PRONACIÓN/SUPINACIÓN ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">TRL 3</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">ANÁLISIS INFERENCIAL</h2>
     <p class="sub">Pronación / Supinación — Prueba 3.6</p>
 
-    <!-- Información compacta en grid superior -->
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;margin-bottom:16px;">
-        <div class="cd" style="border-left-color:var(--blue);padding:12px;border-left:4px solid var(--blue);">
-            <h3 style="font-size:12px;color:var(--blue);margin-bottom:4px;font-weight:700;">Kruskal–Wallis</h3>
-            <p style="font-size:11px;margin:0;">Todas las features principales muestran diferencias entre grupos. <strong>p &lt; 0.001</strong></p>
+    <!-- Información en grid superior -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px;margin-bottom:20px;">
+        <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--blue);">
+            <h3 style="font-size:15px;color:var(--blue);margin-bottom:8px;font-weight:700;">Kruskal–Wallis</h3>
+            <p style="font-size:14px;line-height:1.6;margin:0;">Todas las features principales muestran diferencias significativas entre grupos. <strong>p &lt; 0.001</strong></p>
         </div>
-        <div class="cd or" style="border-left-color:var(--orange);padding:12px;border-left:4px solid var(--orange);">
-            <h3 style="font-size:12px;color:var(--orange);margin-bottom:4px;font-weight:700;">Análisis Post-Hoc / Parejas</h3>
-            <p style="font-size:11px;margin:0;">Variables diferencian perfectamente estados avanzados (2–4) vs control (0). Frontera 0-1 más sutil.</p>
-        </div>
-    </div>
-
-    <!-- Grid inferior: Top 5 Biomarcadores en 5 columnas -->
-    <div style="margin-bottom:16px;">
-        <h3 style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:8px;">Top 5 Biomarcadores</h3>
-        <div class="bio-grid" style="grid-template-columns:repeat(5,1fr);gap:6px;">
-            <div class="bio-card" style="padding:8px;"><div class="bio-rank" style="font-size:9px;">Top 1</div><div class="bio-name" style="font-size:10px;">Cadencia</div><div class="bio-eta" style="font-size:13px;">0.80</div><div class="bio-label" style="font-size:8px;">Eta²</div></div>
-            <div class="bio-card" style="padding:8px;"><div class="bio-rank" style="font-size:9px;">Top 2</div><div class="bio-name" style="font-size:10px;">Int. Medio</div><div class="bio-eta" style="font-size:13px;">0.80</div><div class="bio-label" style="font-size:8px;">Eta²</div></div>
-            <div class="bio-card" style="padding:8px;"><div class="bio-rank" style="font-size:9px;">Top 3</div><div class="bio-name" style="font-size:10px;">Jerk RMS Ang.</div><div class="bio-eta" style="font-size:13px;">0.71</div><div class="bio-label" style="font-size:8px;">Eta²</div></div>
-            <div class="bio-card" style="padding:8px;"><div class="bio-rank" style="font-size:9px;">Top 4</div><div class="bio-name" style="font-size:10px;">Jerk RMS</div><div class="bio-eta" style="font-size:13px;">0.71</div><div class="bio-label" style="font-size:8px;">Eta²</div></div>
-            <div class="bio-card" style="padding:8px;"><div class="bio-rank" style="font-size:9px;">Top 5</div><div class="bio-name" style="font-size:10px;">Frecuencia</div><div class="bio-eta" style="font-size:13px;">0.67</div><div class="bio-label" style="font-size:8px;">Eta²</div></div>
+        <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--orange);">
+            <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Análisis Post-Hoc</h3>
+            <p style="font-size:14px;line-height:1.6;margin:0;">Variables diferencian perfectamente estados avanzados (2–4) vs control (0). Frontera 0-1 más sutil.</p>
         </div>
     </div>
 
-    <!-- Imagen grande abajo -->
-    <div style="display:flex;justify-content:center;margin-top:16px;flex:1;">
-        <img src="./assets/analisis-pronacion.png" alt="Análisis estadístico — Pronación" style="max-width:100%; max-height:280px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <!-- Top 5 Biomarcadores -->
+    <div style="margin-bottom:20px;">
+        <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Top 5 Biomarcadores</h3>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;">
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 1</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Cadencia</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.80</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 2</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Int. Medio</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.80</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 3</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS Ang.</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.71</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 4</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.71</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 5</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Frecuencia</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.67</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagen -->
+    <div style="display:flex;justify-content:center;margin-top:20px;">
+        <img src="./assets/analisis-pronacion.png" alt="Análisis estadístico — Pronación" style="max-width:100%; max-height:340px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">36</div>
 </div>
 
 <!-- ===== 37. ANÁLISIS INFERENCIAL — GOLPETEO DE DEDOS ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
+<div class="slide slide-content" style="padding:40px 60px 50px;">
     <div class="section-header">TRL 3</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:28px;">ANÁLISIS INFERENCIAL</h2>
     <p class="sub">Golpeteo de Dedos — Prueba 3.4</p>
 
-    <!-- Información compacta en grid superior -->
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;margin-bottom:12px;">
-        <div class="cd" style="border-left-color:var(--blue);padding:10px;border-left:4px solid var(--blue);">
-            <h3 style="font-size:11px;color:var(--blue);margin-bottom:3px;font-weight:700;">Kruskal–Wallis</h3>
-            <p style="font-size:10px;margin:0;">La mayoría de features muestran diferencias entre grupos. <strong>p &lt; 0.001</strong></p>
+    <!-- Información en grid superior -->
+    <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:16px;margin-top:20px;margin-bottom:20px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--blue);">
+                <h3 style="font-size:15px;color:var(--blue);margin-bottom:8px;font-weight:700;">Kruskal–Wallis</h3>
+                <p style="font-size:14px;line-height:1.6;margin:0;">La mayoría de features muestran diferencias entre grupos. <strong>p &lt; 0.001</strong></p>
+            </div>
+            <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--orange);">
+                <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Análisis Post-Hoc</h3>
+                <p style="font-size:14px;line-height:1.6;margin:0;"><strong>Cadencia, ITI y Jerk_rms</strong> discriminan todos los pares de Scores robustamente.</p>
+            </div>
         </div>
-        <div class="cd or" style="border-left-color:var(--orange);padding:10px;border-left:4px solid var(--orange);">
-            <h3 style="font-size:11px;color:var(--orange);margin-bottom:3px;font-weight:700;">Análisis Post-Hoc / Parejas</h3>
-            <p style="font-size:10px;margin:0;"><strong>Cadencia, ITI y Jerk_rms</strong> discriminan todos los pares de Scores robustamente. Métricas débiles (RMS_acc_lateral, N_hesitaciones) señalan los límites anatómicos del IMU de muñeca para movimientos distales.</p>
+        <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--purple);">
+            <h3 style="font-size:15px;color:var(--purple);margin-bottom:8px;font-weight:700;">Limitación — Amplitud</h3>
+            <p style="font-size:14px;line-height:1.6;margin:0;">Sin significancia estadística (p&gt;0.05). Límite anatómico del IMU de muñeca para movimientos distales.</p>
         </div>
     </div>
 
-    <!-- Segunda fila: Limitación y Top 5 -->
-    <div style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:12px;margin-bottom:12px;">
-        <div class="cd pu" style="border-left-color:var(--purple);padding:10px;border-left:4px solid var(--purple);">
-            <h3 style="font-size:11px;color:var(--purple);margin-bottom:3px;font-weight:700;">Métrica de Apertura (Amplitud)</h3>
-            <p style="font-size:10px;margin:0;">Sin significancia estadística (p&gt;0.05).</p>
-        </div>
-        <div>
-            <h3 style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:6px;">Top 5 Biomarcadores</h3>
-            <div class="bio-grid" style="grid-template-columns:repeat(5,1fr);gap:5px;">
-                <div class="bio-card teal" style="padding:7px;"><div class="bio-rank" style="font-size:8px;">Top 1</div><div class="bio-name" style="font-size:9px;">Cadencia</div><div class="bio-eta" style="font-size:12px;color:var(--teal);">0.70</div><div class="bio-label" style="font-size:7px;">Eta²</div></div>
-                <div class="bio-card teal" style="padding:7px;"><div class="bio-rank" style="font-size:8px;">Top 2</div><div class="bio-name" style="font-size:9px;">Int. Medio</div><div class="bio-eta" style="font-size:12px;color:var(--teal);">0.65</div><div class="bio-label" style="font-size:7px;">Eta²</div></div>
-                <div class="bio-card teal" style="padding:7px;"><div class="bio-rank" style="font-size:8px;">Top 3</div><div class="bio-name" style="font-size:9px;">Int. STD</div><div class="bio-eta" style="font-size:12px;color:var(--teal);">0.62</div><div class="bio-label" style="font-size:7px;">Eta²</div></div>
-                <div class="bio-card teal" style="padding:7px;"><div class="bio-rank" style="font-size:8px;">Top 4</div><div class="bio-name" style="font-size:9px;">Jerk RMS</div><div class="bio-eta" style="font-size:12px;color:var(--teal);">0.59</div><div class="bio-label" style="font-size:7px;">Eta²</div></div>
-                <div class="bio-card teal" style="padding:7px;"><div class="bio-rank" style="font-size:8px;">Top 5</div><div class="bio-name" style="font-size:9px;">Comp. Lateral</div><div class="bio-eta" style="font-size:12px;color:var(--teal);">0.54</div><div class="bio-label" style="font-size:7px;">Eta²</div></div>
+    <!-- Top 5 Biomarcadores -->
+    <div style="margin-bottom:20px;">
+        <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">Top 5 Biomarcadores</h3>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;">
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 1</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Cadencia</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.70</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 2</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Int. Medio</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.65</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 3</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Int. STD</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.62</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 4</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Jerk RMS</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.59</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
+            </div>
+            <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
+                <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 5</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Comp. Lateral</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.54</div>
+                <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
         </div>
     </div>
 
-    <!-- Imagen grande abajo -->
-    <div style="display:flex;justify-content:center;margin-top:12px;flex:1;">
-        <img src="./assets/analisis-golpeteo.png" alt="Análisis estadístico — Golpeteo" style="max-width:100%; max-height:280px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <!-- Imagen -->
+    <div style="display:flex;justify-content:center;margin-top:20px;">
+        <img src="./assets/analisis-golpeteo.png" alt="Análisis estadístico — Golpeteo" style="max-width:100%; max-height:340px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">37</div>
 </div>
@@ -1388,8 +1445,8 @@
 <div class="slide slide-vimov-cierre">
     <div class="section-header">Conclusiones</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
-    <h1>¡GRACIAS!</h1>
-    <p class="cierre-sub">Evaluación motora cuantitativa para una clínica más objetiva y reproducible</p>
+    <h1 style="color: #e5e7eb;">¡GRACIAS!</h1>
+    <p style="color: #e5e7eb;" class="cierre-sub">Evaluación motora cuantitativa para una clínica más objetiva y reproducible</p>
     <div class="cierre-credits">
         <strong>Vimov · Módulo MDS-UPDRS Parte III</strong><br>
         Davide Flamini · Nicolás Cuéllar · Andrés Cabezas<br>

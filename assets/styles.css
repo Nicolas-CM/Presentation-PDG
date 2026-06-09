@@ -76,13 +76,14 @@ p {
    ══════════════════════════════════════════ */
 .slide-container {
     width: 100%;
+    min-height: 100vh;
     background: #fff;
 }
 
 .slide {
-    width: 1280px;
-    height: 720px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     position: relative;
     background: var(--bg);
     display: flex;
@@ -309,8 +310,10 @@ p {
     }
     
     .slide {
+        width: 1280px;
+        height: 720px;
         page-break-after: always;
-        margin: 0;
+        margin: 0 auto;
     }
     
     .nav-controls {
@@ -323,9 +326,8 @@ p {
    ══════════════════════════════════════════ */
 @media screen and (max-width: 1280px) {
     .slide {
-        width: 100%;
-        height: auto;
-        min-height: 720px;
+        width: 100vw;
+        height: 100vh;
     }
 }
 
