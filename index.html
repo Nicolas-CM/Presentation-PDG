@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vimov — MDS-UPDRS Parte III · Universidad Icesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+        /* ── Overrides / additions for Vimov ── */
+        :root {
+            --teal:   #1AA8A0;
+            --indigo: #3B5BDB;
+        }
+
+        /* Portada: imagen lateral izquierda + panel azul derecho */
+        .slide-vimov-portada {
+            display: flex;
+            flex-direction: row;
+            background: #fff;
+            overflow: hidden;
+        }
+        .portada-left {
+            width: 44%;
+            position: relative;
+            flex-shrink: 0;
+            background: var(--blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 56px 48px;
+            overflow: hidden;
+        }
+        .portada-left::before {
+            content: '';
+            position: absolute;
+            top: -20%; left: -20%;
+            width: 480px; height: 480px;
+            background: var(--purple);
+            border-radius: 50%;
+            opacity: 0.10;
+        }
+        .portada-left::after {
+            content: '';
+            position: absolute;
+            bottom: -10%; right: -10%;
+            width: 300px; height: 300px;
+            background: var(--teal);
+            border-radius: 50%;
+            opacity: 0.12;
+        }
+        .portada-img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        .portada-img-placeholder img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            position: absolute; inset: 0;
+        }
+        .portada-left-content {
+            position: relative;
+            z-index: 2;
+        }
+        .portada-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 14px;
+        }
+        .portada-left h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+        .portada-left .portada-sub {
+            font-size: 15px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.82);
+            line-height: 1.6;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.08);
+            border-left: 4px solid var(--teal);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .portada-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 56px 56px 56px 52px;
+            background: #fff;
+        }
+        .portada-right-top {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .portada-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 7px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            width: fit-content;
+        }
+        .portada-chip span { color: var(--blue); }
+
+        .portada-section-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+        .portada-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .portada-info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            padding: 14px 16px;
+            background: var(--bg-soft);
+            border-radius: 8px;
+            border-left: 3px solid var(--border);
+        }
+        .portada-info-row.blue { border-left-color: var(--blue); }
+        .portada-info-row.teal { border-left-color: var(--teal); }
+        .portada-info-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+        }
+        .portada-info-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+        }
+        .portada-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 8px 0;
+        }
+        .portada-year-badge {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--bg-soft);
+            line-height: 1;
+            letter-spacing: -0.04em;
+            user-select: none;
+        }
+
+        /* Slide de sección (colored alternativo, más clínico) */
+        .slide-section {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--indigo) 100%);
+            color: #fff;
+            padding: 70px 80px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-section::before {
+            content: '';
+            position: absolute;
+            top: -20%; right: -10%;
+            width: 520px; height: 520px;
+            background: var(--teal);
+            border-radius: 50%;
+            opacity: 0.08;
+        }
+        .slide-section::after {
+            content: '';
+            position: absolute;
+            bottom: -25%; left: 50%;
+            width: 350px; height: 350px;
+            background: var(--purple);
+            border-radius: 50%;
+            opacity: 0.07;
+        }
+        .slide-section .sec-number {
+            font-size: 110px;
+            font-weight: 800;
+            opacity: 0.06;
+            position: absolute;
+            bottom: 44px; right: 70px;
+            line-height: 1;
+        }
+        .slide-section h2 {
+            font-size: 50px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: #fff;
+            letter-spacing: -0.02em;
+            position: relative; z-index: 2;
+        }
+        .slide-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 680px;
+            opacity: 0.80;
+            position: relative; z-index: 2;
+        }
+        .slide-section .sec-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 7px 16px;
+            border-radius: 6px;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 22px;
+            position: relative; z-index: 2;
+        }
+
+        /* Imagen centrada con caption */
+        .img-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            padding: 10px 0 6px;
+            gap: 10px;
+        }
+        .img-slide img {
+            max-width: 86%;
+            max-height: 440px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        .img-slide .img-caption {
+            font-size: 12px;
+            color: var(--text-light);
+            font-style: italic;
+            text-align: center;
+        }
+        /* placeholder de imagen */
+        .img-placeholder {
+            background: var(--bg-soft);
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 32px;
+        }
+        .img-placeholder .ip-icon {
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            background: var(--blue);
+            opacity: 0.15;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .img-placeholder .ip-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue);
+            opacity: 0.5;
+        }
+        .img-placeholder .ip-filename {
+            font-size: 11px;
+            color: var(--text-light);
+            font-family: monospace;
+            background: var(--border);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        /* Step list (protocolo) */
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 14.5px;
+            line-height: 1.55;
+            color: var(--text);
+        }
+        .step-num {
+            min-width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .step-num.teal { background: var(--teal); }
+
+        /* Biomarcador pill */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .bio-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            box-shadow: var(--card-shadow);
+        }
+        .bio-card .bio-rank {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .bio-card .bio-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 6px;
+        }
+        .bio-card .bio-eta {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--green);
+        }
+        .bio-card .bio-label {
+            font-size: 10px;
+            color: var(--text-light);
+        }
+        .bio-card.teal .bio-name { color: var(--teal); }
+
+        /* Referencia slide */
+        .ref-block {
+            font-size: 12px;
+            line-height: 1.65;
+            color: var(--text-mid);
+            column-count: 2;
+            column-gap: 40px;
+            margin-top: 14px;
+        }
+        .ref-block p {
+            break-inside: avoid;
+            margin-bottom: 10px;
+        }
+
+        /* Cierre Vimov */
+        .slide-vimov-cierre {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--indigo) 100%);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-vimov-cierre::before {
+            content: '';
+            position: absolute;
+            top: -25%; right: -10%;
+            width: 500px; height: 500px;
+            background: var(--teal);
+            border-radius: 50%;
+            opacity: 0.08;
+        }
+        .slide-vimov-cierre::after {
+            content: '';
+            position: absolute;
+            bottom: -20%; left: -5%;
+            width: 380px; height: 380px;
+            background: var(--purple);
+            border-radius: 50%;
+            opacity: 0.07;
+        }
+        .slide-vimov-cierre h1 {
+            font-size: 72px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 14px;
+            position: relative; z-index: 1;
+        }
+        .slide-vimov-cierre .cierre-sub {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.80;
+            max-width: 600px;
+            line-height: 1.55;
+            position: relative; z-index: 1;
+        }
+        .cierre-credits {
+            position: relative; z-index: 1;
+            margin-top: 44px;
+            font-size: 15px;
+            opacity: 0.65;
+            line-height: 1.7;
+        }
+
+        /* AUC table personalizada */
+        .auc-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: var(--bg-soft);
+            margin-bottom: 6px;
+        }
+        .auc-score {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-mid);
+            width: 90px;
+            flex-shrink: 0;
+        }
+        .auc-bar-wrap {
+            flex: 1;
+            background: var(--border);
+            border-radius: 6px;
+            height: 10px;
+            overflow: hidden;
+        }
+        .auc-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            background: var(--blue);
+            transition: width 0.3s;
+        }
+        .auc-bar-fill.green { background: var(--green); }
+        .auc-bar-fill.orange { background: var(--orange); }
+        .auc-value {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text);
+            width: 52px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+        .auc-label {
+            font-size: 11px;
+            color: var(--text-light);
+            width: 76px;
+            flex-shrink: 0;
+        }
+
+        /* Validation score big */
+        .val-score-big {
+            font-size: 80px;
+            font-weight: 800;
+            color: var(--blue);
+            line-height: 1;
+        }
+        .val-score-big.teal { color: var(--teal); }
+
+        /* TRL badge */
+        .trl-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--blue);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            margin: 14px 0;
+        }
+        .trl-num {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container" id="slideContainer">
+
+<!-- ===== 1. PORTADA ===== -->
+<div class="slide slide-vimov-portada">
+    <div class="section-header">Inicio</div>
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="portada-left">
+        <!-- Imagen de fondo (campus/laboratorio) -->
+        <div class="portada-img-placeholder">
+            <img src="./assets/portada-bg.jpg" alt="Vimov laboratorio">
+        </div>
+        <div class="portada-left-content">
+            <div class="portada-eyebrow">PDG 2 · Ingeniería de Sistemas</div>
+            <h1>VIMOV</h1>
+            <div class="portada-sub">
+                Módulo para el análisis de pruebas motoras de la MDS-UPDRS Parte III — golpeteo de dedos y pronación/supinación
+            </div>
+        </div>
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="portada-right">
+        <div class="portada-right-top">
+            <img src="./assets/logo-icesi.png" alt="Icesi" style="height:42px;width:auto;margin-bottom:6px;">
+            <div class="portada-chip">Proyecto de Grado <span>· Facultad Barberi</span></div>
+        </div>
+
+        <div class="portada-info-block">
+            <div class="portada-info-row blue">
+                <div class="portada-info-label">Integrantes</div>
+                <div class="portada-info-value">Davide Flamini · Nicolás Cuéllar · Andrés Cabezas</div>
+            </div>
+            <div class="portada-info-row teal">
+                <div class="portada-info-label">Tutora</div>
+                <div class="portada-info-value">Monica María Rojas Rincón, Msc.</div>
+            </div>
+            <div class="portada-info-row">
+                <div class="portada-info-label">Facultad</div>
+                <div class="portada-info-value">Barberi de Ingeniería, Diseño y Ciencias Aplicadas</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="portada-divider"></div>
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;">
+                <div style="font-size:13px;color:var(--text-light);line-height:1.6;">
+                    Universidad Icesi<br>
+                    <strong style="color:var(--text);">2026</strong>
+                </div>
+                <div class="portada-year-badge">26</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-number" style="color:rgba(0,0,0,0.12)">1</div>
+</div>
+
+<!-- ===== 2. AGENDA ===== -->
+<div class="slide slide-content" style="padding:40px 56px 50px;">
+    <div class="section-header">Inicio</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">AGENDA</h2>
+    <p class="sub">Estructura de la sustentación</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--blue);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">01</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--blue)">Contexto</div><div style="font-size:11px;color:var(--text-light)">Parkinson y la escala MDS-UPDRS</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--purple);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">02</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--purple)">Marco Teórico</div><div style="font-size:11px;color:var(--text-light)">Bradicinesia, IMUs, ML, estándares</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--blue);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">03</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--blue)">Estado del Arte</div><div style="font-size:11px;color:var(--text-light)">Comparativa de soluciones existentes</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--orange);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">04</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--orange)">Objetivos</div><div style="font-size:11px;color:var(--text-light)">General y 4 objetivos específicos</div></div>
+            </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--teal);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">05</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--teal)">Protocolo de Captura</div><div style="font-size:11px;color:var(--text-light)">OE1 · Estandarización y validación clínica</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--blue);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">06</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--blue)">Métricas y Modelo ML</div><div style="font-size:11px;color:var(--text-light)">OE2 · Pipeline, baseline y clasificador LDA</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--green);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">07</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--green)">Módulo en Vimov</div><div style="font-size:11px;color:var(--text-light)">OE3 · Arquitectura, app IMUs y pruebas</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;background:var(--bg-soft);border-radius:10px;padding:12px 16px;border-left:4px solid var(--purple);">
+                <div style="min-width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">08</div>
+                <div><div style="font-size:13px;font-weight:700;color:var(--purple)">Validación TRL 3 · Conclusiones</div><div style="font-size:11px;color:var(--text-light)">OE4 · Resultados y trabajo futuro</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">2</div>
+</div>
+
+<!-- ===== 3. SECCIÓN: CONTEXTO ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Contexto</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">01 · Contexto</div>
+    <h2>CONTEXTO</h2>
+    <p>La enfermedad de Parkinson y la necesidad de evaluación motora objetiva dentro del ecosistema Vimov–IMUs</p>
+    <div class="sec-number">01</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">3</div>
+</div>
+
+<!-- ===== 4. CONTEXTO (contenido) ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Contexto</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">CONTEXTO</h2>
+    <p class="sub">El problema clínico y el ecosistema Vimov</p>
+
+    <div class="cols" style="gap:32px;">
+        <div>
+            <h3>Enfermedad de Parkinson</h3>
+            <p>Afecta a <strong>6.2 millones de personas</strong> en el mundo. Es la segunda enfermedad neurodegenerativa más frecuente y su prevalencia crece con el envejecimiento poblacional.</p>
+            <p style="margin-top:10px;">La <strong>bradicinesia</strong> — enlentecimiento de movimientos voluntarios — es su síntoma motor central y el criterio clínico más importante para el diagnóstico y seguimiento.</p>
+            <div class="hb" style="margin-top:14px;">
+                <h4>Escala MDS-UPDRS Parte III</h4>
+                <p>Estándar internacional para evaluar síntomas motores (puntaje 0–4). Las pruebas 3.4 (golpeteo de dedos) y 3.6 (pronación/supinación) son clave para detectar bradicinesia.</p>
+            </div>
+        </div>
+        <div>
+            <h3>Ecosistema Vimov</h3>
+            <p>El grupo de investigación conjunto <strong>FVL–Icesi</strong> ha desarrollado Vimov: una plataforma clínica web para seguimiento de pacientes con condiciones del movimiento.</p>
+            <p style="margin-top:10px;">La evaluación actual depende del juicio subjetivo del neurólogo, introduciendo variabilidad inter-evaluador y limitando la escalabilidad del seguimiento.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;">
+                <div class="cd"><h3>Problema</h3><p>Evaluación subjetiva, no reproducible, difícil de escalar en contexto clínico.</p></div>
+                <div class="cd or"><h3>Oportunidad</h3><p>Integrar sensores IMU para cuantificar el movimiento de forma objetiva y automática.</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">4</div>
+</div>
+
+<!-- ===== 5. ÁRBOL DEL PROBLEMA ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Contexto</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">ÁRBOL DEL PROBLEMA</h2>
+    <p class="sub">Causas, problema central y efectos</p>
+    <div class="img-slide" style="flex:1;">
+        <div class="img-placeholder" style="width:88%;min-height:380px;">
+            <div style="font-size:32px;opacity:0.15;">🌳</div>
+            <div class="ip-label">Diagrama — Árbol del Problema</div>
+            <div class="ip-filename">assets/arbol-problema.png</div>
+        </div>
+    </div>
+    <div class="page-number">5</div>
+</div>
+
+<!-- ===== 6. SECCIÓN: MARCO TEÓRICO ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Marco Teórico</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">02 · Marco Teórico</div>
+    <h2>MARCO TEÓRICO</h2>
+    <p>Fundamentos clínicos, técnicos y normativos que sustentan la solución propuesta</p>
+    <div class="sec-number">02</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">6</div>
+</div>
+
+<!-- ===== 7. MARCO TEÓRICO (contenido) ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Marco Teórico</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">MARCO TEÓRICO</h2>
+    <p class="sub">Cinco pilares conceptuales de la solución</p>
+
+    <div class="cg3" style="grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px;">
+        <div class="cd" style="padding:16px;">
+            <h3 style="font-size:13px;margin-bottom:8px;">Bradicinesia</h3>
+            <p style="font-size:12px;">Síntoma motor central del Parkinson. <em style="color:var(--text-light);">(Kandel et al., 2013)</em></p>
+        </div>
+        <div class="cd or" style="padding:16px;">
+            <h3 style="font-size:13px;color:var(--orange);margin-bottom:8px;">MDS-UPDRS Parte III</h3>
+            <p style="font-size:12px;">Estándar internacional 0–4. <em style="color:var(--text-light);">(Sampaio et al., 2019)</em></p>
+        </div>
+        <div class="cd gr" style="padding:16px;">
+            <h3 style="font-size:13px;color:var(--green);margin-bottom:8px;">Sensores IMU</h3>
+            <p style="font-size:12px;">Acelerómetro + giroscopio para captura de movimiento. <em style="color:var(--text-light);">(Britting, 1971)</em></p>
+        </div>
+        <div class="cd pu" style="padding:16px;">
+            <h3 style="font-size:13px;color:var(--purple);margin-bottom:8px;">Software Clínico</h3>
+            <p style="font-size:12px;">Calidad, seguridad y usabilidad. <em style="color:var(--text-light);">SWEBOK · IEEE · IEC 62304</em></p>
+        </div>
+        <div class="cd" style="border-left-color:var(--teal);padding:16px;">
+            <h3 style="font-size:13px;color:var(--teal);margin-bottom:8px;">Machine Learning</h3>
+            <p style="font-size:12px;">Modelos que aprenden patrones a partir de datos biomecánicos. <em style="color:var(--text-light);">(Mitchell, 1997)</em></p>
+        </div>
+    </div>
+
+    <div style="margin-top:18px;">
+        <h3 style="font-size:17px;font-weight:700;color:var(--blue);margin-bottom:10px;">Sistema de Coordenadas IMU</h3>
+        <div class="cols" style="gap:24px;">
+            <div>
+                <p style="font-size:14px;line-height:1.6;color:var(--text);">La orientación del sensor define cómo se interpretan los ejes X, Y, Z. La estandarización del sistema de referencia es crítica para que las señales sean comparables entre sesiones y pacientes.</p>
+                <p style="font-size:13px;color:var(--text-light);margin-top:8px;">Fuente: <em>Tomaszewski et al., 2017 · doi:10.1515/rgg-2017-0013</em></p>
+            </div>
+            <div class="img-slide" style="padding:0;">
+                <div class="img-placeholder" style="min-height:140px;width:100%;">
+                    <div class="ip-label">Sistema de coordenadas IMU</div>
+                    <div class="ip-filename">assets/sistema-coordenadas.png</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">7</div>
+</div>
+
+<!-- ===== 8. SECCIÓN: ESTADO DEL ARTE ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Estado del Arte</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">03 · Estado del Arte</div>
+    <h2>ESTADO DEL ARTE</h2>
+    <p>Comparativa de trabajos relacionados con evaluación objetiva de Parkinson mediante sensores</p>
+    <div class="sec-number">03</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">8</div>
+</div>
+
+<!-- ===== 9. ESTADO DEL ARTE (tabla) ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Estado del Arte</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">ESTADO DEL ARTE</h2>
+    <p class="sub">Matriz comparativa de soluciones existentes vs. este proyecto</p>
+
+    <table class="st" style="margin-top:14px;">
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Höglund et al. (2021)</th>
+                <th>Sánchez-Fernández (2023)</th>
+                <th>Dai et al. (2015)</th>
+                <th>Choi et al. (2016)</th>
+                <th>Yu et al. (2023)</th>
+                <th class="or">Este Proyecto (Vimov)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>IMU</strong></td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+            </tr>
+            <tr>
+                <td><strong>Captura por video</strong></td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+            </tr>
+            <tr>
+                <td><strong>Prueba 3.4 (golpeteo)</strong></td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="ck">✓</td>
+            </tr>
+            <tr>
+                <td><strong>Prueba 3.6 (pronación)</strong></td>
+                <td class="ck">✓</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+            </tr>
+            <tr>
+                <td><strong>Protocolo estándar</strong></td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+                <td class="ck">✓</td>
+            </tr>
+            <tr>
+                <td><strong>Integración plataforma clínica</strong></td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="no">—</td>
+                <td class="ck">✓</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="hb" style="margin-top:16px;">
+        <h4>Diferenciador clave</h4>
+        <p>Vimov es la única solución que combina <strong>ambas pruebas estandarizadas, captura por IMU y la integración dentro de una plataforma clínica real</strong>, cerrando la brecha entre investigación y práctica clínica.</p>
+    </div>
+    <div class="page-number">9</div>
+</div>
+
+<!-- ===== 10. SECCIÓN: OBJETIVOS ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Objetivos</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">04 · Objetivos</div>
+    <h2>OBJETIVOS</h2>
+    <p>General y cuatro objetivos específicos que estructuran el desarrollo del módulo</p>
+    <div class="sec-number">04</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">10</div>
+</div>
+
+<!-- ===== 11. OBJETIVO GENERAL ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Objetivos</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">OBJETIVO GENERAL</h2>
+    <p class="sub">Propósito central del proyecto de grado</p>
+
+    <div style="background:var(--bg-soft);border-radius:14px;padding:28px 32px;border-left:5px solid var(--blue);margin-top:10px;margin-bottom:20px;">
+        <p style="font-size:17px;line-height:1.7;color:var(--text);">Desarrollar un <strong>módulo integrado en el ecosistema Vimov</strong> que permita medir y analizar de forma objetiva las pruebas de <strong>golpeteo de dedos</strong> y <strong>pronación/supinación</strong> de la mano, correspondientes a la Parte III de la escala MDS-UPDRS, con el fin de complementar la evaluación clínica en pacientes con enfermedad de Parkinson.</p>
+    </div>
+
+    <h3 style="font-size:18px;font-weight:700;color:var(--blue);margin-bottom:14px;">Objetivos Específicos</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;background:var(--bg-soft);border-radius:10px;padding:16px;">
+            <div style="min-width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px;">Protocolo estandarizado</div><div style="font-size:13px;line-height:1.5;color:var(--text);">Definir el protocolo de captura experimental que estandarice colocación del dispositivo, sistema de referencia y postura del paciente.</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;background:var(--bg-soft);border-radius:10px;padding:16px;">
+            <div style="min-width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:4px;">Correspondencia con MDS-UPDRS</div><div style="font-size:13px;line-height:1.5;color:var(--text);">Establecer la correspondencia entre métricas objetivas y la escala, comparando con puntajes de neurólogos.</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;background:var(--bg-soft);border-radius:10px;padding:16px;">
+            <div style="min-width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:4px;">Módulo en Vimov + app IMUs</div><div style="font-size:13px;line-height:1.5;color:var(--text);">Desarrollar el módulo integrado en Vimov y en la aplicación IMUs para gestión, visualización y revisión de resultados.</div></div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;background:var(--bg-soft);border-radius:10px;padding:16px;">
+            <div style="min-width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+            <div><div style="font-size:13px;font-weight:700;color:var(--orange);margin-bottom:4px;">Validación en laboratorio (TRL 3)</div><div style="font-size:13px;line-height:1.5;color:var(--text);">Validar el sistema midiendo consistencia y utilidad clínica preliminar en condiciones controladas.</div></div>
+        </div>
+    </div>
+    <div class="page-number">11</div>
+</div>
+
+<!-- ===== 12. SECCIÓN: OE1 — PROTOCOLO ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">OE1 · Protocolo de Captura</div>
+    <h2>PROTOCOLO<br>DE CAPTURA</h2>
+    <p>Estandarización de la colocación del sensor, sistema de referencia y postura del paciente para garantizar reproducibilidad</p>
+    <div class="sec-number">05</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">12</div>
+</div>
+
+<!-- ===== 13. LITERATURA Y DISEÑO EXPERIMENTAL ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">DISEÑO EXPERIMENTAL</h2>
+    <p class="sub">Parámetros estandarizados sustentados en literatura científica</p>
+
+    <div class="cols" style="gap:28px;margin-top:10px;">
+        <div>
+            <h3>Base de literatura</h3>
+            <table class="st">
+                <thead>
+                    <tr><th>Componente</th><th>Referencia</th><th>Aporte</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Postura</td><td>Kremer et al., 2023</td><td>Distintas posturas en MDS-UPDRS</td></tr>
+                    <tr><td>Postura</td><td>Houdijk et al., 2015</td><td>Variabilidad postural en movimiento</td></tr>
+                    <tr><td>Postura</td><td>Stins et al., 2015</td><td>Bipedestación introduce oscilaciones</td></tr>
+                    <tr><td>Ubicación IMU</td><td>di Biase et al., 2018</td><td>Muñeca ofrece menor ruido</td></tr>
+                    <tr><td>Ubicación IMU</td><td>Höglund et al., 2021</td><td>Zona distal del antebrazo: mayor estabilidad</td></tr>
+                    <tr><td>Tipo movimiento</td><td>Sampaio et al., 2019</td><td>Criterios clínicos de las pruebas</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3>Parámetros definidos</h3>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;">
+                <div class="cd" style="padding:12px 16px;"><h3 style="font-size:13px;">Posición sentada</h3><p>Espalda recta, pies firmes en el suelo, sin apoyo de brazo.</p></div>
+                <div class="cd gr" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--green);">Sensor en muñeca</h3><p>Superficie dorsal distal del antebrazo del brazo evaluado.</p></div>
+                <div class="cd or" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--orange);">Orientación fija X, Y, Z</h3><p>Sistema de referencia con ejes preestablecidos para consistencia inter-sesión.</p></div>
+                <div class="cd pu" style="padding:12px 16px;"><h3 style="font-size:13px;color:var(--purple);">10 repeticiones por mano</h3><p>Una mano a la vez; registro separado de mano dominante y no dominante.</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">13</div>
+</div>
+
+<!-- ===== 14. PROTOCOLO — PRONACIÓN/SUPINACIÓN ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">PRONACIÓN / SUPINACIÓN</h2>
+    <p class="sub">Prueba 3.6 · Pasos estandarizados del protocolo de captura</p>
+
+    <div class="cols" style="gap:28px;margin-top:10px;align-items:start;">
+        <div>
+            <ul class="step-list">
+                <li><div class="step-num teal">1</div><span>Sentar al paciente con la espalda recta y los pies firmes en el suelo.</span></li>
+                <li><div class="step-num teal">2</div><span>Solicitar que extienda el brazo hacia el frente, a la altura del hombro, con el codo recto.</span></li>
+                <li><div class="step-num teal">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
+                <li><div class="step-num teal">4</div><span>Indicar al paciente que realice <strong>pronación y supinación alternadas</strong> de la mano 10 veces, tan rápido y completamente como pueda.</span></li>
+                <li><div class="step-num teal">5</div><span>Registrar <strong>solo una mano por vez</strong>.</span></li>
+                <li><div class="step-num teal">6</div><span>Asegurar que <strong>no existan movimientos compensatorios</strong> del tronco o del hombro durante la ejecución.</span></li>
+            </ul>
+        </div>
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:300px;width:100%;">
+                <div style="font-size:28px;opacity:0.15;">🤚</div>
+                <div class="ip-label">Demostración — Pronación/Supinación</div>
+                <div class="ip-filename">assets/protocolo-pronacion.png</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">14</div>
+</div>
+
+<!-- ===== 15. PROTOCOLO — GOLPETEO DE DEDOS ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">GOLPETEO DE DEDOS</h2>
+    <p class="sub">Prueba 3.4 · Pasos estandarizados del protocolo de captura</p>
+
+    <div class="cols" style="gap:28px;margin-top:10px;align-items:start;">
+        <div>
+            <ul class="step-list">
+                <li><div class="step-num">1</div><span>Sentar al paciente en posición estable, con la espalda recta.</span></li>
+                <li><div class="step-num">2</div><span>Solicitar que eleve la mano evaluada al frente a nivel de los ojos, con el <strong>codo a 90°</strong>.</span></li>
+                <li><div class="step-num">3</div><span>Colocar la IMU en la muñeca del brazo evaluado, sobre la <strong>superficie dorsal distal del antebrazo</strong>.</span></li>
+                <li><div class="step-num">4</div><span>Indicar al paciente que realice <strong>10 golpes del pulgar contra el dedo índice</strong>, tan rápido y ampliamente como sea posible.</span></li>
+                <li><div class="step-num">5</div><span>Realizar la prueba en <strong>una mano a la vez</strong>.</span></li>
+                <li><div class="step-num">6</div><span>Verificar que el paciente no realice <strong>movimientos compensatorios</strong> del brazo o del tronco.</span></li>
+            </ul>
+        </div>
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:300px;width:100%;">
+                <div style="font-size:28px;opacity:0.15;">👆</div>
+                <div class="ip-label">Demostración — Golpeteo de Dedos</div>
+                <div class="ip-filename">assets/protocolo-golpeteo.png</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">15</div>
+</div>
+
+<!-- ===== 16. VALIDACIÓN DEL PROTOCOLO ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Protocolo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">VALIDACIÓN DEL PROTOCOLO</h2>
+    <p class="sub">Revisión con personal médico de la Fundación Valle del Lili</p>
+
+    <div class="cols" style="gap:32px;margin-top:16px;">
+        <div>
+            <p style="font-size:15px;line-height:1.65;color:var(--text);">El protocolo fue revisado con personal médico de la <strong>Fundación Valle del Lili</strong>, orientada a validar sus componentes metodológicos y su viabilidad para una futura aplicación en contexto clínico.</p>
+            <div style="margin-top:18px;">
+                <h3 style="font-size:17px;font-weight:700;color:var(--blue);margin-bottom:10px;">Aspectos validados</h3>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                        <span style="font-size:14px;color:var(--text);">Colocación del dispositivo IMU</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                        <span style="font-size:14px;color:var(--text);">Sistema de referencia de vectores de orientación</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg-soft);border-radius:8px;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
+                        <span style="font-size:14px;color:var(--text);">Postura del paciente durante la prueba</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="hb" style="background:var(--blue);border-left-color:var(--teal);">
+                <h4 style="color:var(--teal);">Resultado de la validación</h4>
+                <p style="color:rgba(255,255,255,0.9);font-size:14px;line-height:1.6;">El personal médico confirmó la <strong style="color:#fff;">viabilidad metodológica</strong> del protocolo para su aplicación en contexto clínico. Se incorporaron observaciones sobre la posición del brazo en la prueba de golpeteo para mayor consistencia con la práctica neurológica estándar.</p>
+            </div>
+            <div class="img-slide" style="padding-top:16px;">
+                <div class="img-placeholder" style="min-height:160px;width:100%;">
+                    <div class="ip-label">Validación FVL — foto/acta</div>
+                    <div class="ip-filename">assets/validacion-fvl.png</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">16</div>
+</div>
+
+<!-- ===== 17. SECCIÓN: OE2 — MÉTRICAS Y MODELO ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">OE2 · Métricas y Modelo ML</div>
+    <h2>PIPELINE · BASELINE<br>&amp; CLASIFICADOR</h2>
+    <p>Correspondencia entre métricas biomecánicas objetivas y la escala MDS-UPDRS</p>
+    <div class="sec-number">06</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">17</div>
+</div>
+
+<!-- ===== 18. PIPELINE ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">PIPELINE DE PROCESAMIENTO</h2>
+    <p class="sub">Etapas de limpieza, segmentación y extracción de métricas cinemáticas</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:10px;">Etapa 1 — Limpieza y acondicionamiento</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--blue);">
+                    <strong style="color:var(--blue);flex-shrink:0;">①</strong> Eliminación de duplicados temporales antes del remuestreo para evitar inconsistencias en el vector de tiempo.
+                </div>
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--blue);">
+                    <strong style="color:var(--blue);flex-shrink:0;">②</strong> Filtrado de ruido y componentes no asociados al movimiento voluntario del paciente.
+                </div>
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--blue);">
+                    <strong style="color:var(--blue);flex-shrink:0;">③</strong> Identificación automática del eje de movimiento predominante a partir de acelerómetro y giroscopio.
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:10px;">Etapa 2 — Segmentación y extracción</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--teal);">
+                    <strong style="color:var(--teal);flex-shrink:0;">④</strong> Detección automática de movimientos sobre la señal filtrada del giroscopio.
+                </div>
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--teal);">
+                    <strong style="color:var(--teal);flex-shrink:0;">⑤</strong> Validación y selección de ciclos completos; eliminación de ciclos incompletos o inestables.
+                </div>
+                <div style="display:flex;gap:10px;font-size:13px;line-height:1.5;color:var(--text);padding:10px 14px;background:var(--bg-soft);border-radius:8px;border-left:3px solid var(--teal);">
+                    <strong style="color:var(--teal);flex-shrink:0;">⑥</strong> Cálculo de <strong>19–22 métricas cinemáticas</strong>: amplitud, frecuencia, velocidad angular, variabilidad temporal y suavidad del movimiento.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="img-slide" style="padding-top:14px;flex:1;">
+        <div class="img-placeholder" style="min-height:120px;width:88%;">
+            <div class="ip-label">Diagrama del Pipeline</div>
+            <div class="ip-filename">assets/pipeline-diagrama.png</div>
+        </div>
+    </div>
+    <div class="page-number">18</div>
+</div>
+
+<!-- ===== 19. BASELINE ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">BASELINE — POBLACIÓN SANA</h2>
+    <p class="sub">Rangos normativos (P5–P95) a partir de 23 participantes sin diagnóstico de Parkinson</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:10px;">Pronación / Supinación — Top métricas</h3>
+            <table class="st">
+                <thead><tr><th>Métrica</th><th>Media</th><th>CV(%)</th><th>Relevancia</th></tr></thead>
+                <tbody>
+                    <tr><td>Vel. Pico Media (°/s)</td><td>484.3</td><td>25.4%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Amplitud Media (°/s)</td><td>968.5</td><td>25.4%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Regularidad (%)</td><td>84.5</td><td>5.2%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Jerk Angular RMS (°/s²)</td><td>3 598 9</td><td>38.2%</td><td style="color:var(--teal);font-weight:700;">Media-Alta</td></tr>
+                    <tr><td>Frecuencia Dominante (Hz)</td><td>1.291</td><td>11.6%</td><td style="color:var(--teal);font-weight:700;">Media-Alta</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:10px;">Golpeteo de Dedos — Top métricas</h3>
+            <table class="st">
+                <thead><tr><th>Métrica</th><th>Media</th><th>CV(%)</th><th>Relevancia</th></tr></thead>
+                <tbody>
+                    <tr><td>Cadencia (Hz)</td><td>1.694</td><td>28.6%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>ITI Media (s)</td><td>0.650</td><td>35.8%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Amplitud Angular Media (°)</td><td>1.982</td><td>58.8%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Regularidad (%)</td><td>61.4</td><td>21.4%</td><td style="color:var(--orange);font-weight:700;">Alta</td></tr>
+                    <tr><td>Jerk Angular RMS (°/s²)</td><td>10.29</td><td>48.8%</td><td style="color:var(--teal);font-weight:700;">Media-Alta</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="cols" style="gap:28px;margin-top:14px;">
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:90px;width:100%;">
+                <div class="ip-label">Gráficas Baseline Pronación</div>
+                <div class="ip-filename">assets/baseline-pronacion.png</div>
+            </div>
+        </div>
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:90px;width:100%;">
+                <div class="ip-label">Gráficas Baseline Golpeteo</div>
+                <div class="ip-filename">assets/baseline-golpeteo.png</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">19</div>
+</div>
+
+<!-- ===== 20. MODELO LDA ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">MODELO CLASIFICADOR — LDA</h2>
+    <p class="sub">Linear Discriminant Analysis con regularización — validación LOSO</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:10px;">¿Por qué LDA?</h3>
+            <p style="font-size:14px;line-height:1.6;color:var(--text);">Con <strong>N=3 sujetos por score</strong> en estadios 1–4, los modelos complejos (SVM, Random Forest) tienen más parámetros que grados de libertad efectivos, garantizando sobreajuste. <strong>LDA con regularización</strong> es la alternativa más robusta para este tamaño de muestra.</p>
+
+            <div style="margin-top:14px;">
+                <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Configuración (idéntica en ambas pruebas)</h3>
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                    <div class="cd" style="padding:10px 14px;"><p style="font-size:13px;"><strong>Solver:</strong> lsqr (mínimos cuadrados regularizados)</p></div>
+                    <div class="cd or" style="padding:10px 14px;"><p style="font-size:13px;"><strong>Regularización:</strong> shrinkage = 0.95</p></div>
+                    <div class="cd gr" style="padding:10px 14px;"><p style="font-size:13px;"><strong>Preprocesamiento:</strong> StandardScaler antes de LDA</p></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:10px;">Validación LOSO</h3>
+            <p style="font-size:14px;line-height:1.6;color:var(--text);">Con N=3 sujetos por score, la validación cruzada estándar mezclaría datos del mismo sujeto en train y test, inflando las métricas. <strong>Leave-One-Subject-Out (LOSO)</strong> garantiza que el modelo nunca ve al sujeto de test durante el entrenamiento.</p>
+            <div style="margin-top:12px;">
+                <div style="font-size:13px;font-weight:700;color:var(--text-mid);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em;">Métricas calculadas</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                    <div class="cd" style="padding:10px;"><p style="font-size:12px;">Accuracy global</p></div>
+                    <div class="cd or" style="padding:10px;"><p style="font-size:12px;">AUC one-vs-rest (OvR) por score</p></div>
+                    <div class="cd gr" style="padding:10px;"><p style="font-size:12px;">AUC macro</p></div>
+                    <div class="cd pu" style="padding:10px;"><p style="font-size:12px;">Matriz de confusión normalizada</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">20</div>
+</div>
+
+<!-- ===== 21. ANÁLISIS INFERENCIAL ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">ANÁLISIS INFERENCIAL</h2>
+    <p class="sub">Herramientas estadísticas para confirmar la discriminación entre estadios</p>
+
+    <div class="cg3" style="grid-template-columns:repeat(4,1fr);margin-top:16px;gap:12px;">
+        <div class="cd" style="padding:18px;">
+            <h3 style="font-size:14px;">Kruskal-Wallis</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Permite comparar los puntajes entre grupos. <strong>p &lt; 0.001</strong> en la mayoría de variables, confirmando diferencias estadísticamente reales.</p>
+        </div>
+        <div class="cd or" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--orange);">Eta-cuadrado (η²)</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Mide el tamaño del efecto. Valores <strong>&gt; 0.26</strong> indican una diferencia grande y obvia entre los grupos.</p>
+        </div>
+        <div class="cd gr" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--green);">Prueba Post-hoc</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Compara los puntajes uno a uno (0 vs 1, 2 vs 3) para confirmar si el sensor puede notar cuando la gravedad sube un solo escalón.</p>
+        </div>
+        <div class="cd pu" style="padding:18px;">
+            <h3 style="font-size:14px;color:var(--purple);">Corrección Bonferroni</h3>
+            <p style="font-size:12.5px;margin-top:6px;">Filtro matemático para evitar <strong>falsos positivos</strong> al realizar múltiples comparaciones simultáneas.</p>
+        </div>
+    </div>
+
+    <div class="cols" style="gap:28px;margin-top:18px;">
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:160px;width:100%;">
+                <div class="ip-label">Análisis estadístico — Pronación</div>
+                <div class="ip-filename">assets/analisis-pronacion.png</div>
+            </div>
+        </div>
+        <div class="img-slide" style="padding:0;">
+            <div class="img-placeholder" style="min-height:160px;width:100%;">
+                <div class="ip-label">Análisis estadístico — Golpeteo</div>
+                <div class="ip-filename">assets/analisis-golpeteo.png</div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">21</div>
+</div>
+
+<!-- ===== 22. RESULTADO PRONACIÓN ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">RESULTADO — PRONACIÓN/SUPINACIÓN</h2>
+    <p class="sub">Modelo LDA ajustado · shrinkage=0.95, amplitud corregida</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Resultados generales</h3>
+            <div class="mg" style="grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px 0;">
+                <div class="mb"><div class="mv">84.4%</div><div class="ml">Accuracy Train</div></div>
+                <div class="mb gr"><div class="mv" style="font-size:28px;">75.96%</div><div class="ml">Accuracy LOSO</div></div>
+                <div class="mb or" style="grid-column:1/-1;"><div class="mv">92.38%</div><div class="ml">AUC Macro</div></div>
+            </div>
+            <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Top 5 features discriminativas</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+                <div class="auc-row"><span class="auc-score">intervalo_medio</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87%;"></div></div><span class="auc-value">3.48</span></div>
+                <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:77%;"></div></div><span class="auc-value">3.07</span></div>
+                <div class="auc-row"><span class="auc-score">amplitud_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:55%;"></div></div><span class="auc-value">2.21</span></div>
+                <div class="auc-row"><span class="auc-score">amplitud_max</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:52%;"></div></div><span class="auc-value">2.07</span></div>
+                <div class="auc-row"><span class="auc-score">frecuencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:41%;"></div></div><span class="auc-value">1.66</span></div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">AUC por estadio (one-vs-rest)</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:81.3%;"></div></div><span class="auc-value">0.813</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
+                <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:88%;"></div></div><span class="auc-value">0.880</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
+                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:92.8%;"></div></div><span class="auc-value">0.928</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.8%;"></div></div><span class="auc-value">0.998</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.9%;"></div></div><span class="auc-value">0.999</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+            </div>
+            <div class="img-slide" style="padding-top:12px;">
+                <div class="img-placeholder" style="min-height:100px;width:100%;">
+                    <div class="ip-label">Matriz de confusión — Pronación</div>
+                    <div class="ip-filename">assets/confusion-pronacion.png</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">22</div>
+</div>
+
+<!-- ===== 23. RESULTADO GOLPETEO ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">RESULTADO — GOLPETEO DE DEDOS</h2>
+    <p class="sub">Modelo LDA ajustado · shrinkage=0.95, amplitud corregida</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Resultados generales</h3>
+            <div class="mg" style="grid-template-columns:1fr 1fr;gap:10px;margin:0 0 14px 0;">
+                <div class="mb"><div class="mv">80.2%</div><div class="ml">Accuracy Train</div></div>
+                <div class="mb or"><div class="mv" style="font-size:28px;">57.19%</div><div class="ml">Accuracy LOSO</div></div>
+                <div class="mb gr" style="grid-column:1/-1;"><div class="mv">84.44%</div><div class="ml">AUC Macro</div></div>
+            </div>
+            <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Top 5 features discriminativas</h3>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+                <div class="auc-row"><span class="auc-score">iti_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:74%;"></div></div><span class="auc-value">2.97</span></div>
+                <div class="auc-row"><span class="auc-score">iti_std</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:69%;"></div></div><span class="auc-value">2.75</span></div>
+                <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:67%;"></div></div><span class="auc-value">2.70</span></div>
+                <div class="auc-row"><span class="auc-score">compensacion_lateral</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:40%;"></div></div><span class="auc-value">1.61</span></div>
+                <div class="auc-row"><span class="auc-score">rms_acc_lateral</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:39%;"></div></div><span class="auc-value">1.60</span></div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">AUC por estadio (one-vs-rest)</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:75.4%;"></div></div><span class="auc-value">0.754</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
+                <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:89%;"></div></div><span class="auc-value">0.890</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
+                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87.3%;"></div></div><span class="auc-value">0.873</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
+                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:98.7%;"></div></div><span class="auc-value">0.987</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.7%;"></div></div><span class="auc-value">0.997</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+            </div>
+            <div class="img-slide" style="padding-top:12px;">
+                <div class="img-placeholder" style="min-height:100px;width:100%;">
+                    <div class="ip-label">Matriz de confusión — Golpeteo</div>
+                    <div class="ip-filename">assets/confusion-golpeteo.png</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">23</div>
+</div>
+
+<!-- ===== 24. TOP 5 BIOMARCADORES ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Métricas</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">TOP BIOMARCADORES</h2>
+    <p class="sub">Variables con mayor poder discriminativo (η² Kruskal-Wallis)</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:14px;">
+        <div>
+            <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--blue);"></div> Pronación / Supinación</div>
+            <div class="bio-grid" style="grid-template-columns:repeat(3,1fr);">
+                <div class="bio-card"><div class="bio-rank">Top 1</div><div class="bio-name">Cadencia</div><div class="bio-eta">0.80</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card"><div class="bio-rank">Top 2</div><div class="bio-name">Intervalo Medio</div><div class="bio-eta">0.80</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card"><div class="bio-rank">Top 3</div><div class="bio-name">Jerk RMS Angular</div><div class="bio-eta">0.71</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card"><div class="bio-rank">Top 4</div><div class="bio-name">Jerk RMS</div><div class="bio-eta">0.71</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card"><div class="bio-rank">Top 5</div><div class="bio-name">Frecuencia</div><div class="bio-eta">0.67</div><div class="bio-label">Eta²</div></div>
+            </div>
+            <div class="hb" style="margin-top:12px;">
+                <h4>Hallazgo clave</h4>
+                <p>Las variables diferencian perfectamente los estados avanzados (Scores 2–4) frente al grupo control. La frontera sano/leve (0 vs 1) es más sutil.</p>
+            </div>
+        </div>
+        <div>
+            <div style="font-size:14px;font-weight:700;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><div style="width:10px;height:10px;border-radius:50%;background:var(--teal);"></div> Golpeteo de Dedos</div>
+            <div class="bio-grid" style="grid-template-columns:repeat(3,1fr);">
+                <div class="bio-card teal"><div class="bio-rank">Top 1</div><div class="bio-name">Cadencia</div><div class="bio-eta" style="color:var(--teal);">0.70</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card teal"><div class="bio-rank">Top 2</div><div class="bio-name">Intervalo Medio</div><div class="bio-eta" style="color:var(--teal);">0.65</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card teal"><div class="bio-rank">Top 3</div><div class="bio-name">Intervalo STD</div><div class="bio-eta" style="color:var(--teal);">0.62</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card teal"><div class="bio-rank">Top 4</div><div class="bio-name">Jerk RMS</div><div class="bio-eta" style="color:var(--teal);">0.59</div><div class="bio-label">Eta²</div></div>
+                <div class="bio-card teal"><div class="bio-rank">Top 5</div><div class="bio-name">Comp. Lateral</div><div class="bio-eta" style="color:var(--teal);">0.54</div><div class="bio-label">Eta²</div></div>
+            </div>
+            <div class="hb gr" style="margin-top:12px;">
+                <h4>Limitación identificada</h4>
+                <p>Métricas de amplitud (rms_acc_lateral, N_hesitaciones) sin significancia estadística (p&gt;0.05): señalan los límites anatómicos del IMU de muñeca para movimientos distales.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">24</div>
+</div>
+
+<!-- ===== 25. SECCIÓN: OE3 — MÓDULO VIMOV ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">OE3 · Módulo en Vimov</div>
+    <h2>MÓDULO VIMOV<br>&amp; APP IMUs</h2>
+    <p>Arquitectura, tecnologías, interfaz clínica y pruebas de software</p>
+    <div class="sec-number">07</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">25</div>
+</div>
+
+<!-- ===== 26. ARQUITECTURA BASE ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">ANÁLISIS DE LA ARQUITECTURA BASE</h2>
+    <p class="sub">Diagramas realizados para Vimov y la aplicación móvil IMUs</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:10px;">Arquitectura Vimov</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div class="cd" style="padding:11px 14px;"><p style="font-size:13px;">Diagrama C4 – Nivel 1 (Contexto)</p></div>
+                <div class="cd" style="padding:11px 14px;"><p style="font-size:13px;">Diagrama C4 – Nivel 2 (Contenedores)</p></div>
+                <div class="cd" style="padding:11px 14px;"><p style="font-size:13px;">Diagrama C4 – Nivel 3 (Componentes)</p></div>
+                <div class="cd or" style="padding:11px 14px;"><p style="font-size:13px;">Modelo Entidad–Relación (MER)</p></div>
+            </div>
+            <div class="img-slide" style="padding-top:12px;">
+                <div class="img-placeholder" style="min-height:120px;width:100%;">
+                    <div class="ip-label">Modelo C4 Nivel 2 — Vimov</div>
+                    <div class="ip-filename">assets/c4-nivel2-vimov.png</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:10px;">Aplicación Móvil IMUs</h3>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+                <div class="cd" style="border-left-color:var(--teal);padding:11px 14px;"><p style="font-size:13px;">Diagrama de clases</p></div>
+                <div class="cd" style="border-left-color:var(--teal);padding:11px 14px;"><p style="font-size:13px;">Diagrama de secuencia</p></div>
+                <div class="cd or" style="padding:11px 14px;"><p style="font-size:13px;">Diagrama de flujo de datos</p></div>
+            </div>
+            <div class="img-slide" style="padding-top:12px;">
+                <div class="img-placeholder" style="min-height:160px;width:100%;">
+                    <div class="ip-label">Diagrama de Flujo de Datos — IMUs App</div>
+                    <div class="ip-filename">assets/flujo-datos-imus.png</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">26</div>
+</div>
+
+<!-- ===== 27. TECNOLOGÍAS ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">TECNOLOGÍAS USADAS</h2>
+    <p class="sub">Stack tecnológico de Vimov y de la aplicación móvil IMUs</p>
+
+    <div class="cols" style="gap:32px;margin-top:14px;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">Vimov — Plataforma Web</h3>
+            <div class="img-slide" style="padding:0;margin-bottom:14px;">
+                <div class="img-placeholder" style="min-height:180px;width:100%;">
+                    <div class="ip-label">Stack tecnológico Vimov</div>
+                    <div class="ip-filename">assets/tech-vimov.png</div>
+                </div>
+            </div>
+            <div class="tp">
+                <span class="p">React</span>
+                <span class="p">TypeScript</span>
+                <span class="g">FastAPI</span>
+                <span class="g">Python</span>
+                <span class="o">PostgreSQL</span>
+                <span>Docker</span>
+                <span>NumPy / Pandas</span>
+                <span>scikit-learn</span>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">App IMUs — Móvil</h3>
+            <div class="img-slide" style="padding:0;margin-bottom:14px;">
+                <div class="img-placeholder" style="min-height:180px;width:100%;">
+                    <div class="ip-label">Stack tecnológico App IMUs</div>
+                    <div class="ip-filename">assets/tech-imus.png</div>
+                </div>
+            </div>
+            <div class="tp">
+                <span class="p">Flutter</span>
+                <span class="p">Dart</span>
+                <span class="g">BLE (Bluetooth)</span>
+                <span class="o">IMU SDK</span>
+                <span>REST API</span>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">27</div>
+</div>
+
+<!-- ===== 28. DEMO APP IMUS ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">APLICACIÓN IMUs</h2>
+    <p class="sub">Interfaz móvil para captura, visualización y control de sesiones</p>
+    <div class="vp">
+        <div class="vb"></div>
+        <p>Video demo — App IMUs · <span style="font-family:monospace;font-size:14px;">assets/demo-app-imus.mp4</span></p>
+    </div>
+    <div class="page-number">28</div>
+</div>
+
+<!-- ===== 29. DEMO VIMOV ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">MÓDULO VIMOV</h2>
+    <p class="sub">Gestión de pruebas, visualización de señales y revisión de resultados cuantitativos</p>
+    <div class="vp" style="background:linear-gradient(135deg,#16162A 60%,#0A2244);">
+        <div class="vb" style="background:var(--teal);"></div>
+        <p>Video demo — Módulo Vimov · <span style="font-family:monospace;font-size:14px;">assets/demo-vimov.mp4</span></p>
+    </div>
+    <div class="page-number">29</div>
+</div>
+
+<!-- ===== 30. PRUEBAS DE SOFTWARE ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">PRUEBAS DE SOFTWARE</h2>
+    <p class="sub">Cobertura y tipos de prueba en App IMUs y en Vimov</p>
+
+    <div class="cols" style="gap:28px;margin-top:14px;">
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">App IMUs</h3>
+            <table class="st">
+                <thead><tr><th>Tipo de prueba</th><th style="text-align:right;">Cantidad</th></tr></thead>
+                <tbody>
+                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">122</td></tr>
+                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">48</td></tr>
+                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">64</td></tr>
+                    <tr style="background:var(--blue);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>234</strong></td></tr>
+                </tbody>
+            </table>
+            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">84%</div><div class="ml">Coverage Features</div></div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">Vimov</h3>
+            <table class="st">
+                <thead><tr><th>Tipo de prueba</th><th style="text-align:right;">Cantidad</th></tr></thead>
+                <tbody>
+                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">74</td></tr>
+                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">100</td></tr>
+                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">88</td></tr>
+                    <tr style="background:var(--teal);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>262</strong></td></tr>
+                </tbody>
+            </table>
+            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">98%</div><div class="ml">Coverage Features</div></div>
+        </div>
+    </div>
+
+    <div class="hb" style="margin-top:16px;background:var(--blue);border-left-color:var(--teal);">
+        <h4 style="color:var(--teal);">Total combinado</h4>
+        <p style="color:rgba(255,255,255,0.9);">496 pruebas en total entre ambos sistemas, con cobertura de features del 84% en App IMUs y <strong>98%</strong> en Vimov.</p>
+    </div>
+    <div class="page-number">30</div>
+</div>
+
+<!-- ===== 31. VALIDACIÓN STAKEHOLDER ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Módulo</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">VALIDACIÓN DE USUARIO</h2>
+    <p class="sub">Evaluación de utilidad de la solución — Profesor Nicolás Salazar</p>
+
+    <div class="cols" style="gap:28px;margin-top:16px;align-items:center;">
+        <div style="text-align:center;background:var(--bg-soft);border-radius:16px;padding:36px;">
+            <div style="font-size:13px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">App IMUs</div>
+            <div class="val-score-big">4.5</div>
+            <div style="font-size:13px;color:var(--text-light);margin-top:8px;">/5.0</div>
+            <div style="margin-top:14px;font-size:13px;color:var(--text-mid);line-height:1.5;">Calificación sobre la utilidad<br>de la solución (escala 1–5)</div>
+            <div style="margin-top:16px;display:flex;justify-content:center;gap:5px;">
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--border);"></div>
+            </div>
+        </div>
+        <div style="text-align:center;background:var(--bg-soft);border-radius:16px;padding:36px;">
+            <div style="font-size:13px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Vimov</div>
+            <div class="val-score-big teal">4.0</div>
+            <div style="font-size:13px;color:var(--text-light);margin-top:8px;">/5.0</div>
+            <div style="margin-top:14px;font-size:13px;color:var(--text-mid);line-height:1.5;">Calificación sobre la utilidad<br>de la solución (escala 1–5)</div>
+            <div style="margin-top:16px;display:flex;justify-content:center;gap:5px;">
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
+                <div style="width:36px;height:6px;border-radius:3px;background:var(--border);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="hb" style="margin-top:18px;">
+        <h4>Evaluador</h4>
+        <p>Profesor <strong>Nicolás Salazar</strong> — validación orientada a la utilidad clínica de ambos sistemas en el contexto del proyecto de investigación Vimov–FVL.</p>
+    </div>
+    <div class="page-number">31</div>
+</div>
+
+<!-- ===== 32. SECCIÓN: OE4 — VALIDACIÓN TRL 3 ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Validación</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">OE4 · Validación en Laboratorio</div>
+    <h2>VALIDACIÓN<br>TRL 3</h2>
+    <p>Prueba experimental del concepto en condiciones controladas de laboratorio</p>
+    <div class="sec-number">08</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">32</div>
+</div>
+
+<!-- ===== 33. TRL 3 Y METODOLOGÍA ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Validación</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">METODOLOGÍA EXPERIMENTAL</h2>
+    <p class="sub">TRL 3 — Prueba de concepto en laboratorio con simulación de estadios MDS-UPDRS</p>
+
+    <div class="cols" style="gap:28px;margin-top:12px;align-items:start;">
+        <div>
+            <div class="trl-badge">
+                <div class="trl-num">TRL 3</div>
+                <div><div style="font-size:11px;opacity:0.7;font-weight:400;">Technology Readiness Level</div>Prueba experimental del concepto</div>
+            </div>
+            <p style="font-size:14px;line-height:1.6;color:var(--text);margin-top:14px;">En este nivel se demuestra que la solución es <strong>técnicamente viable</strong>, los componentes principales funcionan de manera integrada, y el sistema puede evaluarse en condiciones controladas de laboratorio.</p>
+            <div style="margin-top:14px;">
+                <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px;">Participantes</h3>
+                <div class="cd" style="padding:14px;"><p style="font-size:14px;"><strong>3 participantes sanos</strong> sin diagnóstico de enfermedad de Parkinson.</p></div>
+            </div>
+        </div>
+        <div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:10px;">Estrategia experimental</h3>
+            <p style="font-size:14px;line-height:1.6;color:var(--text);">Se diseñó un entorno de <strong>simulación que guiaba de forma visual y auditiva</strong> las métricas definidas por la MDS-UPDRS, modulando artificialmente velocidad, interrupciones y amplitud.</p>
+            <div class="img-slide" style="padding-top:12px;">
+                <div class="img-placeholder" style="min-height:130px;width:100%;">
+                    <div class="ip-label">Guía sonora — simulación</div>
+                    <div class="ip-filename">assets/guia-sonora.png</div>
+                </div>
+            </div>
+            <div class="mg" style="grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0 0;">
+                <div class="mb"><div class="mv" style="font-size:24px;">4</div><div class="ml">Estadios simulados</div></div>
+                <div class="mb or"><div class="mv" style="font-size:24px;">10</div><div class="ml">Sim. por estadio</div></div>
+                <div class="mb gr"><div class="mv" style="font-size:24px;">2</div><div class="ml">Manos evaluadas</div></div>
+                <div class="mb pu"><div class="mv" style="font-size:24px;">480</div><div class="ml">Sim. experimentales</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">33</div>
+</div>
+
+<!-- ===== 34. SECCIÓN: CONCLUSIONES ===== -->
+<div class="slide slide-section">
+    <div class="section-header">Conclusiones</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <div class="sec-tag">Cierre · Conclusiones</div>
+    <h2>CONCLUSIONES<br>&amp; TRABAJO FUTURO</h2>
+    <p>Viabilidad técnica demostrada, limitaciones identificadas y próximos pasos del ecosistema Vimov</p>
+    <div class="sec-number">09</div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">34</div>
+</div>
+
+<!-- ===== 35. CONCLUSIONES ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Conclusiones</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">CONCLUSIONES</h2>
+    <p class="sub">Cumplimiento de objetivos y hallazgos principales</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
+        <div class="cd" style="padding:18px;">
+            <h3>Integración técnica ✓</h3>
+            <p>Vimov e IMUs completamente integrados. El módulo opera de extremo a extremo: captura, procesamiento y visualización de resultados clínicos.</p>
+        </div>
+        <div class="cd or" style="padding:18px;">
+            <h3>IMU válido para bradicinesia ✓</h3>
+            <p>En ambas pruebas se obtuvo <strong>η² &gt; 0.70</strong> y <strong>AUC 0.88</strong> (LOSO), confirmando la capacidad del sensor para detectar enlentecimiento e irregularidad del movimiento.</p>
+        </div>
+        <div class="cd" style="border-left-color:var(--teal);padding:18px;">
+            <h3 style="color:var(--teal);">Limitación identificada</h3>
+            <p>La <strong>amplitud en Finger Tapping</strong> no logró significancia estadística, evidenciando los límites anatómicos de un IMU de muñeca para movimientos distales.</p>
+        </div>
+        <div class="cd pu" style="padding:18px;">
+            <h3>Restricción muestral</h3>
+            <p>La <strong>falta de pacientes</strong> con diagnóstico real de Parkinson limitó el estudio a condiciones de laboratorio (TRL 3), sin posibilidad de generalización clínica poblacional.</p>
+        </div>
+    </div>
+
+    <div class="hb" style="background:var(--blue);border-left-color:var(--teal);margin-top:14px;">
+        <h4 style="color:var(--teal);">Conclusión principal</h4>
+        <p style="color:rgba(255,255,255,0.9);">Este trabajo demuestra la <strong style="color:#fff;">viabilidad de integrar evaluación motora cuantitativa</strong> dentro del ecosistema clínico Vimov–IMUs, contribuyendo hacia evaluaciones más objetivas, reproducibles y basadas en evidencia cuantitativa.</p>
+    </div>
+    <div class="page-number">35</div>
+</div>
+
+<!-- ===== 36. TRABAJO FUTURO ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Conclusiones</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">TRABAJO FUTURO</h2>
+    <p class="sub">Extensiones identificadas para evolucionar el módulo Vimov–IMUs</p>
+
+    <ol class="bl" style="margin-top:16px;">
+        <li><strong>Integración multimodal:</strong> Incorporar visión por computador para la prueba de golpeteo de dedos, complementando la captura IMU con análisis de vídeo para superar las limitaciones de movimientos distales.</li>
+        <li><strong>Validación clínica real:</strong> Extender la evaluación a pacientes diagnosticados con enfermedad de Parkinson en la Fundación Valle del Lili, avanzando hacia TRL 4–5.</li>
+        <li><strong>Evolución del modelo predictivo:</strong> Mejorar la sensibilidad, especificidad y generalización del clasificador LDA, explorando modelos con mayor capacidad para muestras pequeñas.</li>
+        <li><strong>Expansión a más pruebas MDS-UPDRS:</strong> Incluir otras pruebas motoras de la Parte III (rigidez, temblor en reposo) para construir un perfil motor completo del paciente.</li>
+    </ol>
+    <div class="page-number">36</div>
+</div>
+
+<!-- ===== 37. REFERENCIAS ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">Conclusiones</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">REFERENCIAS</h2>
+    <p class="sub">Bibliografía principal del proyecto</p>
+
+    <div class="ref-block">
+        <p>Bourque, P., & Fairley, R. E. (2014). <em>Guide to the Software Engineering Body of Knowledge (SWEBOK 2014).</em> IEEE Computer Society.</p>
+        <p>Britting, K. R. (1971). <em>Inertial navigation systems analysis.</em> Wiley-Interscience.</p>
+        <p>Choi, J. H. et al. (2016). Development of an assessment method of forearm pronation/supination based on mobile phone accelerometer data. <em>IJBSBT, 8</em>(2). https://doi.org/10.14257/ijbsbt.2016.8.2.01</p>
+        <p>Dai, H. et al. (2015). Quantitative assessment of parkinsonian bradykinesia based on an IMU. <em>BioMedical Engineering Online, 14</em>(1). https://doi.org/10.1186/s12938-015-0067-8</p>
+        <p>di Biase, L. et al. (2018). Quantitative analysis of bradykinesia and rigidity in Parkinson's disease. <em>Frontiers in Neurology, 9.</em> https://doi.org/10.3389/fneur.2018.00121</p>
+        <p>Dorsey, E. R. et al. (2018). The emerging evidence of the Parkinson pandemic. <em>Journal of Parkinson's Disease, 8</em>(s1). https://doi.org/10.3233/JPD-181474</p>
+        <p>Goetz, C. G. et al. (2008). MDS-Sponsored Revision of the Unified Parkinson's Disease Rating Scale. <em>Movement Disorders, 23</em>(15). https://doi.org/10.1002/mds.22340</p>
+        <p>Höglund, G. et al. (2021). The importance of IMU placement in assessing upper limb motion. <em>Medical Engineering and Physics, 92.</em> https://doi.org/10.1016/j.medengphy.2021.03.010</p>
+        <p>Kandel, E. R. et al. (2013). <em>Principles of neural science.</em> McGraw-Hill.</p>
+        <p>Kremer, N. I. et al. (2023). Supine MDS-UPDRS-III Assessment: An Explorative Study. <em>Journal of Clinical Medicine, 12</em>(9). https://doi.org/10.3390/jcm12093108</p>
+        <p>Postuma, R. B. et al. (2015). MDS clinical diagnostic criteria for Parkinson's disease. <em>Movement Disorders, 30</em>(12). https://doi.org/10.1002/mds.26424</p>
+        <p>Sampaio, C. et al. (2019). <em>MDS-UPDRS.</em> MDS Official Translation.</p>
+        <p>Sánchez-Fernández, L. P. et al. (2023). A Computer Method for Pronation-Supination Assessment in Parkinson's Disease. <em>Bioengineering, 10</em>(5). https://doi.org/10.3390/bioengineering10050588</p>
+        <p>Tomaszewski, M. et al. (2017). Orientation sensor systems. https://doi.org/10.1515/rgg-2017-0013</p>
+        <p>Yu, T. et al. (2023). Clinically Informed Automated Assessment of Finger Tapping Videos in Parkinson's Disease. <em>Sensors, 23</em>(22). https://doi.org/10.3390/s23229149</p>
+    </div>
+    <div class="page-number">37</div>
+</div>
+
+<!-- ===== 38. CIERRE ===== -->
+<div class="slide slide-vimov-cierre">
+    <div class="section-header">Conclusiones</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
+    <h1>¡GRACIAS!</h1>
+    <p class="cierre-sub">Evaluación motora cuantitativa para una clínica más objetiva y reproducible</p>
+    <div class="cierre-credits">
+        <strong>Vimov · Módulo MDS-UPDRS Parte III</strong><br>
+        Davide Flamini · Nicolás Cuéllar · Andrés Cabezas<br>
+        <span style="font-size:13px;opacity:0.7;">Universidad Icesi · Facultad Barberi · 2026</span>
+    </div>
+    <div class="page-number" style="color:rgba(255,255,255,0.2)">38</div>
+</div>
+
+</div>
+<script src="./assets/presentation.js"></script>
+</body>
+</html>
