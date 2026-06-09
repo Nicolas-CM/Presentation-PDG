@@ -387,14 +387,6 @@ p {
     z-index: 0;
 }
 
-.portada-img-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    inset: 0;
-}
-
 .portada-left-content {
     position: relative;
     z-index: 2;
@@ -589,6 +581,7 @@ p {
     font-size: 18px;
     line-height: 1.6;
     max-width: 680px;
+    color: #fff;
     opacity: 0.80;
     position: relative;
     z-index: 2;
