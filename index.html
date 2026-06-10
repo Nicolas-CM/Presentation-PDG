@@ -103,7 +103,7 @@
             line-height:1.6;
             color:#475569;
         ">
-            <strong>6.2 millones</strong> de personas viven con enfermedad de Parkinson en el mundo.
+            <strong>más de 10 millones</strong> de personas viven con enfermedad de Parkinson en el mundo (Parkinson's Foundation, 2024).
         </p>
     </div>
 
@@ -233,7 +233,7 @@
         </div>
         <div class="cd or" style="padding:16px;">
             <h3 style="font-size:13px;color:var(--orange);margin-bottom:8px;">MDS-UPDRS Parte III</h3>
-            <p style="font-size:12px;">Estándar internacional 0–4. <em style="color:var(--text-light);">(Sampaio et al., 2019)</em></p>
+            <p style="font-size:12px;">Estándar internacional 0–4. <em style="color:var(--text-light);">(Goetz et al., 2008)</em></p>
         </div>
         <div class="cd gr" style="padding:16px;">
             <h3 style="font-size:13px;color:var(--green);margin-bottom:8px;">Sensores IMU</h3>
@@ -281,15 +281,16 @@
     <h2 style="margin-top:28px;">ESTADO DEL ARTE</h2>
     <p class="sub">Matriz comparativa de soluciones existentes vs. este proyecto</p>
 
-    <table class="st" style="margin-top:14px;border-collapse:collapse;border:1px solid #d0d0d0;"><thead><tr><th style="border:1px solid #d0d0d0;">Característica</th><th style="border:1px solid #d0d0d0;">Höglund et al. (2021)</th><th style="border:1px solid #d0d0d0;">Sánchez-Fernández (2023)</th><th style="border:1px solid #d0d0d0;">Dai et al. (2015)</th><th style="border:1px solid #d0d0d0;">Choi et al. (2016)</th><th style="border:1px solid #d0d0d0;">Yu et al. (2023)</th><th class="or" style="border:1px solid #d0d0d0;">Este Proyecto (Vimov)</th></tr></thead>
+    <table class="st" style="margin-top:14px;border-collapse:collapse;border:1px solid #d0d0d0;font-size:13px;"><thead><tr><th style="border:1px solid #d0d0d0;">Característica</th><th style="border:1px solid #d0d0d0;">Höglund et al. (2021)</th><th style="border:1px solid #d0d0d0;">Sánchez-Fernández (2023)</th><th style="border:1px solid #d0d0d0;">Dai et al. (2015)</th><th style="border:1px solid #d0d0d0;">Choi et al. (2016)</th><th style="border:1px solid #d0d0d0;">Yu et al. (2023)</th><th style="border:1px solid #d0d0d0;">Bremm et al. (2024)</th><th class="or" style="border:1px solid #d0d0d0;">Este Proyecto (Vimov)</th></tr></thead>
         <tbody>
             <tr>
                 <td style="border:1px solid #d0d0d0;"><strong>IMU</strong></td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
-                <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
+                <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
+                <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
             </tr>
             <tr>
@@ -300,6 +301,7 @@
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
+                <td style="border:1px solid #d0d0d0;" class="no"></td>
             </tr>
             <tr>
                 <td style="border:1px solid #d0d0d0;"><strong>Prueba 3.4 (golpeteo)</strong></td>
@@ -307,6 +309,7 @@
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
+                <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
             </tr>
@@ -318,18 +321,21 @@
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
+                <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
             </tr>
             <tr>
                 <td style="border:1px solid #d0d0d0;"><strong>Protocolo estándar</strong></td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
-                <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
+                <td style="border:1px solid #d0d0d0;" class="no">△</td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
+                <td style="border:1px solid #d0d0d0;" class="no">△</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
                 <td style="border:1px solid #d0d0d0;" class="ck">✓</td>
             </tr>
             <tr>
                 <td style="border:1px solid #d0d0d0;"><strong>Integración plataforma clínica</strong></td>
+                <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
                 <td style="border:1px solid #d0d0d0;" class="no"></td>
@@ -389,6 +395,34 @@
     <div class="page-number">10</div>
 </div>
 
+<!-- ===== 11.5 HIPÓTESIS DE INVESTIGACIÓN ===== -->
+<div class="slide slide-content">
+    <div class="section-header">Objetivos</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">HIPÓTESIS DE INVESTIGACIÓN</h2>
+
+    <div style="background:var(--bg-soft);border-radius:14px;padding:28px 32px;border-left:5px solid var(--blue);margin-top:16px;margin-bottom:24px;">
+        <p style="font-size:16px;line-height:1.8;color:var(--text);">Las características cinemáticas obtenidas mediante una <strong>unidad de medición inercial (IMU)</strong> ubicada en la muñeca permiten <strong>diferenciar de manera significativa</strong> los niveles de severidad motora establecidos por la escala MDS-UPDRS en las pruebas de golpeteo de dedos y pronación/supinación.</p>
+    </div>
+
+    <h3 style="font-size:17px;font-weight:700;color:var(--blue);margin-bottom:16px;">Condiciones esperadas</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+        <div style="background:var(--bg-soft);border-radius:10px;padding:18px 20px;border-left:4px solid var(--blue);">
+            <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:8px;text-transform:uppercase;">Diferencias significativas</div>
+            <p style="font-size:14px;line-height:1.6;">Las métricas extraídas presentan diferencias estadísticamente significativas entre los grupos evaluados.</p>
+        </div>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:18px 20px;border-left:4px solid var(--teal);">
+            <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:8px;text-transform:uppercase;">Discriminación de severidad</div>
+            <p style="font-size:14px;line-height:1.6;">Las métricas permiten discriminar los distintos niveles de severidad mediante técnicas de clasificación.</p>
+        </div>
+        <div style="background:var(--bg-soft);border-radius:10px;padding:18px 20px;border-left:4px solid var(--green);">
+            <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:8px;text-transform:uppercase;">Viabilidad TRL 3</div>
+            <p style="font-size:14px;line-height:1.6;">Los resultados proveen evidencia de viabilidad tecnológica del sistema en entorno controlado de laboratorio.</p>
+        </div>
+    </div>
+    <div class="page-number">11</div>
+</div>
+
 <!-- ===== 12. SECCIÓN: OE1 — PROTOCOLO ===== -->
 <div class="slide slide-section">
     <div class="section-header">Protocolo</div>
@@ -418,7 +452,7 @@
             <tr><td style="padding:12px 16px;">Postura</td><td style="padding:12px 16px;">Stins et al., 2015</td><td style="padding:12px 16px;">Bipedestación introduce oscilaciones</td></tr>
             <tr><td style="padding:12px 16px;">Ubicación de IMU</td><td style="padding:12px 16px;">di Biase et al., 2018</td><td style="padding:12px 16px;">IMU en muñeca ofrece menor ruido</td></tr>
             <tr><td style="padding:12px 16px;">Ubicación de IMU</td><td style="padding:12px 16px;">Höglund et al., 2021</td><td style="padding:12px 16px;">Zona distal del antebrazo mayor estabilidad</td></tr>
-            <tr><td style="padding:12px 16px;">Tipo de Movimiento</td><td style="padding:12px 16px;">Sampaio et al., 2019 (MDS-UPDRS)</td><td style="padding:12px 16px;">Define ejecución y criterios clínicos de las pruebas</td></tr>
+            <tr><td style="padding:12px 16px;">Tipo de Movimiento</td><td style="padding:12px 16px;">Goetz et al., 2008 (MDS-UPDRS)</td><td style="padding:12px 16px;">Define ejecución y criterios clínicos de las pruebas</td></tr>
             <tr><td style="padding:12px 16px;">Sistema de referencia</td><td style="padding:12px 16px;">Tomaszewski et al., 2017</td><td style="padding:12px 16px;">La orientación del sensor</td></tr>
         </tbody>
     </table>
@@ -732,35 +766,40 @@
             <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:16px;">📊 Resultados Generales</h3>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--blue);text-align:center;">
-                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">84.4%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">83.1%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy Train</div>
                 </div>
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--green);text-align:center;">
-                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">75.96%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">73.4%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy LOSO</div>
                 </div>
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--orange);text-align:center;grid-column:1/-1;">
-                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">92.38%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">91.4%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">AUC Macro</div>
                 </div>
             </div>
 
             <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">⭐ Top 5 Features Discriminativas</h3>
-            <div style="display:flex;flex-direction:column;gap:6px;">
-                <div class="auc-row"><span class="auc-score">intervalo_medio</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87%;"></div></div><span class="auc-value">3.48</span></div>
-                <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:77%;"></div></div><span class="auc-value">3.07</span></div>
-                <div class="auc-row"><span class="auc-score">amplitud_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:55%;"></div></div><span class="auc-value">2.21</span></div>
-                <div class="auc-row"><span class="auc-score">amplitud_max</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:52%;"></div></div><span class="auc-value">2.07</span></div>
-                <div class="auc-row"><span class="auc-score">frecuencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:41%;"></div></div><span class="auc-value">1.66</span></div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">cadencia</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:100%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">100%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">amplitud_media</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:74%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">74%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">amplitud_max</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:70%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">70%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">amplitud_angular_media</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:57%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">57%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">frecuencia</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:56%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">56%</span></div>
             </div>
         </div>
 
         <div style="flex:0.4;background:var(--bg-soft);padding:20px;border-radius:12px;border-left:6px solid var(--blue);">
             <div style="font-size:11px;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">📈 Interpretación</div>
             <div style="font-size:13px;line-height:1.7;color:var(--text);">
-                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 75.96% indica una capacidad predictiva robusta en validación cruzada sin dejar uno fuera.</p>
-                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 92.38% demuestra excelente discriminación entre estadios.</p>
-                <p><strong>Features clave:</strong> El intervalo entre movimientos es el predictor más importante, seguido de cadencia y amplitud.</p>
+                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 73.4% indica una capacidad predictiva robusta bajo validación cruzada LOSO.</p>
+                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 91.4% demuestra excelente discriminación entre estadios.</p>
+                <p style="margin-bottom:12px;"><strong>Features clave:</strong> cadencia, amplitud media, frecuencia y compensación lateral.</p>
+                <div style="background:white;border-radius:8px;padding:12px;border-left:3px solid var(--green);margin-top:4px;">
+                    <div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:6px;text-transform:uppercase;">🔁 Estabilidad por semilla</div>
+                    <p style="margin-bottom:4px;font-size:12px;">Accuracy: <strong>74.37% ± 1.01%</strong></p>
+                    <p style="margin-bottom:0;font-size:12px;">AUC macro: <strong>91.61% ± 0.32%</strong></p>
+                </div>
             </div>
         </div>
     </div>
@@ -810,35 +849,40 @@
             <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:16px;">📊 Resultados Generales</h3>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--blue);text-align:center;">
-                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">80.2%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--blue);margin-bottom:4px;">79.7%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy Train</div>
                 </div>
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--orange);text-align:center;">
-                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">57.19%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--orange);margin-bottom:4px;">58.75%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">Accuracy LOSO</div>
                 </div>
                 <div style="background:#fff;padding:16px;border-radius:10px;border:2px solid var(--green);text-align:center;grid-column:1/-1;">
-                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">84.44%</div>
+                    <div style="font-size:32px;font-weight:900;color:var(--green);margin-bottom:4px;">84.97%</div>
                     <div style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;">AUC Macro</div>
                 </div>
             </div>
 
             <h3 style="font-size:16px;font-weight:700;color:var(--blue);margin-bottom:12px;">⭐ Top 5 Features Discriminativas</h3>
-            <div style="display:flex;align-content: center;flex-direction:column;gap:6px;">
-                <div class="auc-row"><span class="auc-score">iti_media</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:74%;"></div></div><span class="auc-value">2.97</span></div>
-                <div class="auc-row"><span class="auc-score">iti_std</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:69%;"></div></div><span class="auc-value">2.75</span></div>
-                <div class="auc-row"><span class="auc-score">cadencia</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:67%;"></div></div><span class="auc-value">2.70</span></div>
-                <div class="auc-row"><span class="auc-score">compensacion_lateral</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:40%;"></div></div><span class="auc-value">1.61</span></div>
-                <div class="auc-row"><span class="auc-score">rms_acc_lateral</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:39%;"></div></div><span class="auc-value">1.60</span></div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">iti_media</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:100%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">100%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">iti_std</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:89%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">89%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">cadencia</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:86%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">86%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">compensacion_lateral</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:51%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">51%</span></div>
+                <div class="auc-row" style="display:grid;grid-template-columns:170px 1fr 56px;align-items:center;gap:12px;"><span class="auc-score" style="font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">rms_acc_lateral</span><div class="auc-bar-wrap" style="position:relative;height:12px;background:var(--border);border-radius:6px;overflow:hidden;"><div class="auc-bar-fill" style="height:100%;background:var(--blue);border-radius:6px;width:51%;"></div></div><span class="auc-value" style="text-align:right;font-weight:700;font-size:13px;color:var(--text);">51%</span></div>
             </div>
         </div>
 
         <div style="flex:0.4;background:var(--bg-soft);padding:20px;border-radius:12px;border-left:6px solid var(--blue);">
             <div style="font-size:11px;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">📈 Interpretación</div>
             <div style="font-size:13px;line-height:1.7;color:var(--text);">
-                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 57.19% refleja mayor complejidad en discriminación de golpeteo comparado con pronación.</p>
-                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 84.44% sigue siendo robusto, especialmente en estadios avanzados.</p>
-                <p><strong>Features clave:</strong> Variabilidad de intervalos entre golpes (ITI) es fundamental para detección de bradicinesia.</p>
+                <p style="margin-bottom:12px;"><strong>Accuracy LOSO:</strong> 58.75% refleja mayor complejidad en discriminación de golpeteo comparado con pronación.</p>
+                <p style="margin-bottom:12px;"><strong>AUC Macro:</strong> 84.97% sigue siendo robusto, especialmente en estadios avanzados.</p>
+                <p style="margin-bottom:12px;"><strong>Features clave:</strong> ITI media, ITI std y cadencia son los principales discriminadores.</p>
+                <div style="background:white;border-radius:8px;padding:12px;border-left:3px solid var(--teal);margin-top:4px;">
+                    <div style="font-size:11px;font-weight:700;color:var(--teal);margin-bottom:6px;text-transform:uppercase;">🔁 Estabilidad por semilla</div>
+                    <p style="margin-bottom:4px;font-size:12px;">Accuracy: <strong>58.50% ± 1.02%</strong></p>
+                    <p style="margin-bottom:0;font-size:12px;">AUC macro: <strong>85.10% ± 0.20%</strong></p>
+                </div>
             </div>
         </div>
     </div>
@@ -940,24 +984,24 @@
 <div class="slide slide-content" style="padding:36px 56px 50px;">
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:28px;">ARQUITECTURA VIMOV</h2>
-    <p class="sub">Diagramas de contexto, contenedores, componentes y relaciones</p>
+    <h2 style="margin-top:28px;font-size:30px;">MODELO C4 - NIVEL 2: ARQUITECTURA VIMOV</h2>
+    <p class="sub" style="font-size:18px;">Diagramas de contexto, contenedores, componentes y relaciones</p>
 
-    <div class="img-slide" style="padding-top:12px;text-align:center;display:flex;justify-content:center;align-items:center;flex:1;">
-        <img src="./assets/c4-nivel2-vimov.png" alt="Arquitectura Vimov — Diagramas C4" style="max-width:100%; max-height:500px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <div class="img-slide" style="padding-top:8px;text-align:center;display:flex;justify-content:center;align-items:center;flex:1;">
+        <img src="./assets/c4-nivel2-vimov.png" alt="Arquitectura Vimov — Diagramas C4" style="max-width:100%; max-height:580px; width:100%; object-fit:contain; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">27</div>
 </div>
 
-<!-- ===== 28. ARQUITECTURA APP IMUs ===== -->
+<!-- ===== 28. DIAGRAMA DE FLUJO DE DATOS (APP IMUs) ===== -->
 <div class="slide slide-content" style="padding:36px 56px 50px;">
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:28px;">ARQUITECTURA APP IMUs</h2>
-    <p class="sub">Diagramas de clases, secuencia y flujo de datos</p>
+    <h2 style="margin-top:28px;font-size:30px;">DIAGRAMA DE FLUJO DE DATOS</h2>
+    <p class="sub" style="font-size:18px;">Aplicación móvil IMUs — flujo de captura, procesamiento y almacenamiento</p>
 
-    <div class="img-slide" style="padding-top:12px;text-align:center;display:flex;justify-content:center;align-items:center;flex:1;">
-        <img src="./assets/flujo-datos-imus.png" alt="Arquitectura App IMUs — Diagramas" style="max-width:100%; max-height:500px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <div class="img-slide" style="padding-top:8px;text-align:center;display:flex;justify-content:center;align-items:center;flex:1;">
+        <img src="./assets/flujo-datos-imus.png" alt="Diagrama de flujo de datos — App IMUs" style="max-width:100%; max-height:580px; width:100%; object-fit:contain; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">28</div>
 </div>
@@ -975,32 +1019,17 @@
             <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
                 <img src="./assets/tech-vimov.png" alt="Stack tecnológico Vimov Frontend" style="max-width:100%; max-height:280px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
             </div>
-            <div class="tp" style="font-size:13px;">
-                <span class="p">React</span>
-                <span class="p">TypeScript</span>
-                <span>Docker</span>
-            </div>
         </div>
         <div style="display:flex;flex-direction:column;">
             <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:14px;">Vimov — Backend</h3>
             <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
                 <img src="./assets/tech-vimov2.png" alt="Stack tecnológico Vimov Backend" style="max-width:100%; max-height:280px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
             </div>
-            <div class="tp" style="font-size:13px;">
-                <span class="g">FastAPI</span>
-                <span class="g">Python</span>
-                <span class="o">PostgreSQL</span>
-            </div>
         </div>
         <div style="display:flex;flex-direction:column;">
             <h3 style="font-size:16px;font-weight:700;color:var(--orange);margin-bottom:14px;">App IMUs — Móvil</h3>
             <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
                 <img src="./assets/tech-imus.png" alt="Stack tecnológico App IMUs" style="max-width:100%; max-height:280px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.1);">
-            </div>
-            <div class="tp" style="font-size:13px;">
-                <span class="p">Flutter</span>
-                <span class="p">Dart</span>
-                <span class="g">BLE</span>
             </div>
         </div>
     </div>
@@ -1056,73 +1085,36 @@
                     <tr style="background:var(--blue);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>234</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">84%</div><div class="ml">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">83%</div><div class="ml">Coverage Features</div></div>
         </div>
         <div>
             <h3 style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px;">Vimov</h3>
             <table class="st">
                 <thead><tr><th>Tipo de prueba</th><th style="text-align:right;">Cantidad</th></tr></thead>
                 <tbody>
-                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">74</td></tr>
-                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">100</td></tr>
-                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">88</td></tr>
-                    <tr style="background:var(--teal);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>262</strong></td></tr>
+                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">53</td></tr>
+                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">161</td></tr>
+                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">72</td></tr>
+                    <tr style="background:var(--teal);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>286</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">98%</div><div class="ml">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:12px;padding:16px;"><div class="mv">96%</div><div class="ml">Coverage Features</div></div>
         </div>
     </div>
 
     <div class="hb" style="margin-top:16px;background:var(--blue);border-left-color:var(--teal);">
         <h4 style="color:var(--teal);">Total combinado</h4>
-        <p style="color:rgba(255,255,255,0.9);">496 pruebas en total entre ambos sistemas, con cobertura de features del 84% en App IMUs y <strong>98%</strong> en Vimov.</p>
+        <p style="color:rgba(255,255,255,0.9);">520 pruebas en total entre ambos sistemas, con cobertura de features del 83% en App IMUs y <strong>96%</strong> en Vimov.</p>
+    </div>
+
+    <div class="hb" style="margin-top:12px;">
+        <h4>✓ Validación con stakeholder</h4>
+        <p>El sistema fue validado con el stakeholder <strong>Nicolás Salazar</strong> (investigador i2t) mediante una <strong>prueba de uso libre</strong>, en la que evaluó de forma general la app IMUs y la plataforma Vimov simulando el rol de personal clínico, cubriendo el flujo de captura, la experiencia de usuario y la interpretación de los resultados.</p>
     </div>
     <div class="page-number">32</div>
 </div>
 
-<!-- ===== 32. VALIDACIÓN STAKEHOLDER ===== -->
-<div class="slide slide-content" style="padding:36px 56px 50px;">
-    <div class="section-header">Módulo</div>
-    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:28px;">VALIDACIÓN DE USUARIO</h2>
-    <p class="sub">Evaluación de utilidad de la solución — Profesor Nicolás Salazar</p>
 
-    <div class="cols" style="gap:28px;margin-top:16px;align-items:center;">
-        <div style="text-align:center;background:var(--bg-soft);border-radius:16px;padding:36px;">
-            <div style="font-size:13px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">App IMUs</div>
-            <div class="val-score-big">4.5</div>
-            <div style="font-size:13px;color:var(--text-light);margin-top:8px;">/5.0</div>
-            <div style="margin-top:14px;font-size:13px;color:var(--text-mid);line-height:1.5;">Calificación sobre la utilidad<br>de la solución (escala 1–5)</div>
-            <div style="margin-top:16px;display:flex;justify-content:center;gap:5px;">
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--blue);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--border);"></div>
-            </div>
-        </div>
-        <div style="text-align:center;background:var(--bg-soft);border-radius:16px;padding:36px;">
-            <div style="font-size:13px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Vimov</div>
-            <div class="val-score-big teal">4.0</div>
-            <div style="font-size:13px;color:var(--text-light);margin-top:8px;">/5.0</div>
-            <div style="margin-top:14px;font-size:13px;color:var(--text-mid);line-height:1.5;">Calificación sobre la utilidad<br>de la solución (escala 1–5)</div>
-            <div style="margin-top:16px;display:flex;justify-content:center;gap:5px;">
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--teal);"></div>
-                <div style="width:36px;height:6px;border-radius:3px;background:var(--border);"></div>
-            </div>
-        </div>
-    </div>
-    <div class="hb" style="margin-top:18px;">
-        <h4>Evaluador</h4>
-        <p>Profesor <strong>Nicolás Salazar</strong> — validación orientada a la utilidad clínica de ambos sistemas en el contexto del proyecto de investigación Vimov–FVL.</p>
-    </div>
-    <div class="page-number">32</div>
-</div>
-
-<!-- ===== 33. SECCIÓN: OE4 — VALIDACIÓN TRL 3 ===== -->
 <div class="slide slide-section">
     <div class="section-header">Validación</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo" style="filter:brightness(0) invert(1);">
@@ -1231,8 +1223,8 @@
             <p style="font-size:14px;line-height:1.6;margin:0;">Todas las features principales muestran diferencias significativas entre grupos. <strong>p &lt; 0.001</strong></p>
         </div>
         <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--orange);">
-            <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Análisis Post-Hoc</h3>
-            <p style="font-size:14px;line-height:1.6;margin:0;">Variables diferencian perfectamente estados avanzados (2–4) vs control (0). Frontera 0-1 más sutil.</p>
+            <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Significancia Bonferroni</h3>
+            <p style="font-size:14px;line-height:1.6;margin:0;"><strong>Cadencia, frecuencia, jerk RMS y jerk RMS angular</strong> (η² entre 0.45–0.56) alcanzan significancia tras corrección Bonferroni: 4 de 14 variables.</p>
         </div>
     </div>
 
@@ -1243,31 +1235,31 @@
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 1</div>
                 <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Cadencia</div>
-                <div style="font-size:24px;font-weight:800;color:var(--green);">0.80</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.556</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 2</div>
-                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Int. Medio</div>
-                <div style="font-size:24px;font-weight:800;color:var(--green);">0.80</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Frecuencia</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.480</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 3</div>
-                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS Ang.</div>
-                <div style="font-size:24px;font-weight:800;color:var(--green);">0.71</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.472</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 4</div>
-                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS</div>
-                <div style="font-size:24px;font-weight:800;color:var(--green);">0.71</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Jerk RMS Ang.</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.451</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 5</div>
-                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Frecuencia</div>
-                <div style="font-size:24px;font-weight:800;color:var(--green);">0.67</div>
+                <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:6px;">Amp. Media</div>
+                <div style="font-size:24px;font-weight:800;color:var(--green);">0.283</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
         </div>
@@ -1295,8 +1287,8 @@
                 <p style="font-size:14px;line-height:1.6;margin:0;">La mayoría de features muestran diferencias entre grupos. <strong>p &lt; 0.001</strong></p>
             </div>
             <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--orange);">
-                <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Análisis Post-Hoc</h3>
-                <p style="font-size:14px;line-height:1.6;margin:0;"><strong>Cadencia, ITI y Jerk_rms</strong> discriminan todos los pares de Scores robustamente.</p>
+                <h3 style="font-size:15px;color:var(--orange);margin-bottom:8px;font-weight:700;">Significancia Bonferroni</h3>
+                <p style="font-size:14px;line-height:1.6;margin:0;"><strong>ITI std, jerk RMS, ITI media y cadencia</strong> (η² entre 0.52–0.63) alcanzan significancia tras corrección Bonferroni: 4 de 18 variables.</p>
             </div>
         </div>
         <div style="background:var(--bg-soft);padding:18px 20px;border-radius:10px;border-left:4px solid var(--purple);">
@@ -1311,32 +1303,32 @@
         <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;">
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 1</div>
-                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Cadencia</div>
-                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.70</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">ITI STD</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.628</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 2</div>
-                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Int. Medio</div>
-                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.65</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Jerk RMS</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.552</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 3</div>
-                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Int. STD</div>
-                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.62</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">ITI Media</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.524</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 4</div>
-                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Jerk RMS</div>
-                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.59</div>
+                <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Cadencia</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.524</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
             <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--card-shadow);">
                 <div style="font-size:11px;font-weight:700;color:var(--text-light);text-transform:uppercase;margin-bottom:4px;">Top 5</div>
                 <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:6px;">Comp. Lateral</div>
-                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.54</div>
+                <div style="font-size:24px;font-weight:800;color:var(--teal);">0.382</div>
                 <div style="font-size:10px;color:var(--text-light);">Eta²</div>
             </div>
         </div>
@@ -1349,6 +1341,38 @@
     <div class="page-number">37</div>
 </div>
 
+
+<!-- ===== 38. CORRELACIÓN DE SPEARMAN ===== -->
+<div class="slide slide-content" style="padding:36px 56px 50px;">
+    <div class="section-header">TRL 3</div>
+    <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
+    <h2 style="margin-top:28px;">CORRELACIÓN DE SPEARMAN</h2>
+    <p class="sub">Relación monotónica entre métricas cinemáticas y severidad MDS-UPDRS</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px;">
+        <!-- Pronación -->
+        <div>
+            <h3 style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:10px;">Pronación / Supinación</h3>
+            <div style="display:flex;justify-content:center;">
+                <img src="./assets/spearman-pronacion.png" alt="Spearman — Pronación/Supinación" style="max-width:100%;max-height:360px;object-fit:contain;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid var(--border);">
+            </div>
+            <div style="margin-top:12px;background:var(--bg-soft);border-radius:8px;padding:12px 16px;border-left:4px solid var(--blue);">
+                <p style="font-size:13px;line-height:1.6;margin:0;">Cadencia, jerk RMS y frecuencia presentan las correlaciones negativas más fuertes con el score, consistentes con un movimiento más lento y menos dinámico a mayor severidad.</p>
+            </div>
+        </div>
+        <!-- Golpeteo -->
+        <div>
+            <h3 style="font-size:15px;font-weight:700;color:var(--teal);margin-bottom:10px;">Golpeteo de Dedos</h3>
+            <div style="display:flex;justify-content:center;">
+                <img src="./assets/spearman-finger.png" alt="Spearman — Golpeteo de Dedos" style="max-width:100%;max-height:360px;object-fit:contain;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.08);border:1px solid var(--border);">
+            </div>
+            <div style="margin-top:12px;background:var(--bg-soft);border-radius:8px;padding:12px 16px;border-left:4px solid var(--teal);">
+                <p style="font-size:13px;line-height:1.6;margin:0;">jerk RMS (ρ=−0.775), cadencia (ρ=−0.733) e ITI media (ρ=+0.733) muestran correlaciones fuertes y clínicamente coherentes con la escala MDS-UPDRS.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-number">38</div>
+</div>
 
 <!-- ===== 39. SECCIÓN: CONCLUSIONES ===== -->
 <div class="slide slide-section">
@@ -1375,16 +1399,21 @@
         </div>
         <div class="cd or" style="padding:18px;">
             <h3>IMU válido para bradicinesia ✓</h3>
-            <p>En ambas pruebas se obtuvo <strong>η² &gt; 0.70</strong> y <strong>AUC 0.88</strong> (LOSO), confirmando la capacidad del sensor para detectar enlentecimiento e irregularidad del movimiento.</p>
+            <p>En pronación/supinación se obtuvo <strong>η² hasta 0.556</strong> y <strong>AUC macro 0.883</strong> (LOSO), confirmando la capacidad del sensor para detectar enlentecimiento e irregularidad del movimiento.</p>
         </div>
         <div class="cd" style="border-left-color:var(--teal);padding:18px;">
             <h3 style="color:var(--teal);">Limitación identificada</h3>
-            <p>La <strong>amplitud en Finger Tapping</strong> no logró significancia estadística, evidenciando los límites anatómicos de un IMU de muñeca para movimientos distales.</p>
+            <p>La <strong>amplitud en Golpeteo de dedos</strong> no logró significancia estadística, evidenciando los límites anatómicos de un IMU de muñeca para movimientos distales.</p>
         </div>
         <div class="cd pu" style="padding:18px;">
             <h3>Restricción muestral</h3>
             <p>La <strong>falta de pacientes</strong> con diagnóstico real de Parkinson limitó el estudio a condiciones de laboratorio (TRL 3), sin posibilidad de generalización clínica poblacional.</p>
         </div>
+    </div>
+
+    <div style="background:#FFF7ED;border-left:4px solid var(--orange);border-radius:10px;padding:16px 20px;margin-top:14px;">
+        <h4 style="font-size:14px;font-weight:700;color:var(--orange);margin-bottom:6px;">⚠ Alcance real del OE2</h4>
+        <p style="font-size:13px;line-height:1.6;color:var(--text);">La correspondencia con la escala MDS-UPDRS se estableció contra <strong>scores simulados por los integrantes</strong> del proyecto siguiendo los criterios conductuales de la escala, no contra puntuaciones asignadas por neurólogos clínicos. La validación contra evaluaciones clínicas reales queda pendiente para TRL 4.</p>
     </div>
 
     <div class="hb" style="background:var(--blue);border-left-color:var(--teal);margin-top:14px;">
@@ -1437,7 +1466,7 @@
         <p>Kandel, E. R. et al. (2013). <em>Principles of neural science.</em> McGraw-Hill.</p>
         <p>Kremer, N. I. et al. (2023). Supine MDS-UPDRS-III Assessment: An Explorative Study. <em>Journal of Clinical Medicine, 12</em>(9). https://doi.org/10.3390/jcm12093108</p>
         <p>Postuma, R. B. et al. (2015). MDS clinical diagnostic criteria for Parkinson's disease. <em>Movement Disorders, 30</em>(12). https://doi.org/10.1002/mds.26424</p>
-        <p>Sampaio, C. et al. (2019). <em>MDS-UPDRS.</em> MDS Official Translation.</p>
+        <p>Su, D. et al. (2025). Projections for prevalence of Parkinson's disease and its driving factors in 195 countries and territories to 2050. <em>BMJ.</em> https://doi.org/10.1136/bmj-2024080952</p>
         <p>Sánchez-Fernández, L. P. et al. (2023). A Computer Method for Pronation-Supination Assessment in Parkinson's Disease. <em>Bioengineering, 10</em>(5). https://doi.org/10.3390/bioengineering10050588</p>
         <p>Tomaszewski, M. et al. (2017). Orientation sensor systems. https://doi.org/10.1515/rgg-2017-0013</p>
         <p>Yu, T. et al. (2023). Clinically Informed Automated Assessment of Finger Tapping Videos in Parkinson's Disease. <em>Sensors, 23</em>(22). https://doi.org/10.3390/s23229149</p>
