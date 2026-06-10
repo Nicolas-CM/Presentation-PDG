@@ -225,11 +225,14 @@ p {
 
 .cd {
     background: #fff;
-    padding: clamp(10px, 1.2vw, 20px) clamp(12px, 1.5vw, 24px);
+    padding: clamp(16px, 2vw, 32px) clamp(18px, 2.2vw, 36px);
     border-radius: clamp(6px, 0.7vw, 12px);
     box-shadow: var(--card-shadow);
     border-left: clamp(3px, 0.3vw, 5px) solid var(--blue);
 }
+
+.cd h3 { font-size: clamp(14px, 1.5vw, 24px); margin-bottom: 0.8em; }
+.cd p { font-size: clamp(12px, 1.3vw, 20px); line-height: 1.6; }
 
 .cd.or { border-left-color: var(--orange); }
 .cd.gr { border-left-color: var(--green); }
@@ -723,6 +726,7 @@ p {
 
 .auc-score   { font-size: clamp(10px, 1vw, 16px); font-weight: 700; color: var(--text-mid); width: 9rem; flex-shrink: 0; }
 .auc-bar-wrap{ flex: 1; background: var(--border); border-radius: 4px; height: clamp(8px, 0.9vw, 14px); overflow: hidden; }
+.auc-bar-fill{ width: 100%; height: 100%; border-radius: 4px; }
 .auc-value   { font-size: clamp(11px, 1.1vw, 18px); font-weight: 800; color: var(--text); width: 3.5rem; text-align: right; flex-shrink: 0; }
 .auc-label   { font-size: clamp(10px, 0.9vw, 14px); color: var(--text-light); width: 5.5rem; flex-shrink: 0; }
 

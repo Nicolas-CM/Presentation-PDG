@@ -75,49 +75,24 @@
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2 style="margin-top:1rem;">CONTEXTO</h2>
 
-    <div class="cols" style="margin-top:1rem;">
-
-    <div class="cd">
-        <h3 style="color:#5454e9;">
-            Parkinson
-        </h3>
-
-        <p>
-            <strong>Más de 10 millones</strong> de personas viven con enfermedad de Parkinson en el mundo (Parkinson's Foundation, 2024).
-        </p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp20);margin-top:var(--sp12);">
+        <div class="cd" style="padding:var(--sp24) var(--sp30);">
+            <h3 style="font-size:var(--fs36);margin-bottom:var(--sp8);">Parkinson</h3>
+            <p style="font-size:var(--fs28);"><strong>Más de 10 millones</strong> de personas viven con enfermedad de Parkinson en el mundo (Parkinson's Foundation, 2024).</p>
+        </div>
+        <div class="cd or" style="padding:var(--sp24) var(--sp30);">
+            <h3 style="font-size:var(--fs36);color:var(--orange);margin-bottom:var(--sp8);">Escala MDS-UPDRS</h3>
+            <p style="font-size:var(--fs28);">Estándar internacional para la evaluación de síntomas motores en Parkinson.</p>
+        </div>
+        <div class="cd" style="border-left-color:var(--teal);padding:var(--sp24) var(--sp30);">
+            <h3 style="color:var(--teal);font-size:var(--fs36);margin-bottom:var(--sp8);">Pruebas clave</h3>
+            <p style="font-size:var(--fs28);">Golpeteo de dedos y movimientos de pronación/supinación para evaluar bradicinesia.</p>
+        </div>
+        <div class="cd pu" style="padding:var(--sp24) var(--sp30);">
+            <h3 style="color:var(--purple);font-size:var(--fs36);margin-bottom:var(--sp8);">Vimov</h3>
+            <p style="font-size:var(--fs28);">Plataforma desarrollada por el grupo de investigación conjunto FVL–Icesi.</p>
+        </div>
     </div>
-
-    <div class="cd">
-        <h3 style="color:#5454e9;">
-            Escala MDS-UPDRS
-        </h3>
-
-        <p>
-            Estándar internacional para la evaluación de síntomas motores en Parkinson.
-        </p>
-    </div>
-
-    <div class="cd">
-        <h3 style="color:#5454e9;">
-            Pruebas clave
-        </h3>
-
-        <p>
-            Golpeteo de dedos y movimientos de pronación/supinación para evaluar bradicinesia.
-        </p>
-    </div>
-
-    <div class="cd">
-        <h3 style="color:#5454e9;">
-            Vimov
-        </h3>
-
-        <p>
-            Plataforma desarrollada por el grupo de investigación conjunto FVL–Icesi.
-        </p>
-    </div>
-
-</div>
     <div class="page-number">2</div>
 </div>
 
@@ -557,7 +532,7 @@
                 </div>
                 <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--teal);">
                     <strong style="color:var(--teal);flex-shrink:0;font-size:var(--fs24);">⑥</strong> 
-                    <span>Cálculo de <strong>19 métricas</strong> (Pronación) y <strong>22 métricas</strong> (Golpeteo de dedos).</span>
+                    <span>Cálculo de <strong>16 métricas</strong> (Pronación) y <strong>20 métricas</strong> (Golpeteo de dedos).</span>
                 </div>
             </div>
         </div>
@@ -739,14 +714,14 @@
         <div style="display:flex;flex-direction:column;min-height:0;">
             <h3 style="font-size:1.6rem;font-weight:700;color:var(--blue);margin-bottom:1rem;">Pronación — Top métricas</h3>
             <div style="flex:1;overflow-y:auto;">
-                <table class="st" style="font-size:1.35rem;width:100%;">
-                    <thead><tr><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Métrica</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Media</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">CV</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Rel.</th></tr></thead>
+                <table class="st" style="font-size:1.6rem;width:100%;">
+                    <thead><tr><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Métrica</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Media</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">CV</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Rel.</th></tr></thead>
                     <tbody>
-                        <tr><td style="padding:1rem 1.2rem;">Vel. Pico (°/s)</td><td style="padding:1rem 1.2rem;">484.3</td><td style="padding:1rem 1.2rem;">25.4%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Amplitud (°)</td><td style="padding:1rem 1.2rem;">968.5</td><td style="padding:1rem 1.2rem;">25.4%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Regularidad (%)</td><td style="padding:1rem 1.2rem;">84.5</td><td style="padding:1rem 1.2rem;">5.2%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Jerk RMS (°/s²)</td><td style="padding:1rem 1.2rem;">3598.9</td><td style="padding:1rem 1.2rem;">38.2%</td><td style="padding:1rem 1.2rem;color:var(--teal);font-weight:600;">M-A</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Frecuencia (Hz)</td><td style="padding:1rem 1.2rem;">1.291</td><td style="padding:1rem 1.2rem;">11.6%</td><td style="padding:1rem 1.2rem;color:var(--teal);font-weight:600;">M-A</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Vel. Pico (°/s)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">484.3</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">25.4%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Amplitud (°)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">968.5</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">25.4%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Regularidad (%)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">84.5</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">5.2%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Jerk RMS (°/s²)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">3598.9</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">38.2%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--teal);font-weight:600;">M-A</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Frecuencia (Hz)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">1.291</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">11.6%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--teal);font-weight:600;">M-A</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -754,14 +729,14 @@
         <div style="display:flex;flex-direction:column;min-height:0;">
             <h3 style="font-size:1.6rem;font-weight:700;color:var(--teal);margin-bottom:1rem;">Golpeteo — Top métricas</h3>
             <div style="flex:1;overflow-y:auto;">
-                <table class="st" style="font-size:1.35rem;width:100%;">
-                    <thead><tr><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Métrica</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Media</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">CV</th><th style="padding:1.1rem 1.2rem;font-size:1.4rem;">Rel.</th></tr></thead>
+                <table class="st" style="font-size:1.6rem;width:100%;">
+                    <thead><tr><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Métrica</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Media</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">CV</th><th style="padding:1.4rem 1.4rem;font-size:1.6rem;">Rel.</th></tr></thead>
                     <tbody>
-                        <tr><td style="padding:1rem 1.2rem;">Cadencia (Hz)</td><td style="padding:1rem 1.2rem;">1.694</td><td style="padding:1rem 1.2rem;">28.6%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">ITI Media (s)</td><td style="padding:1rem 1.2rem;">0.650</td><td style="padding:1rem 1.2rem;">35.8%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Amplitud (°)</td><td style="padding:1rem 1.2rem;">1.982</td><td style="padding:1rem 1.2rem;">58.8%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Regularidad (%)</td><td style="padding:1rem 1.2rem;">61.4</td><td style="padding:1rem 1.2rem;">21.4%</td><td style="padding:1rem 1.2rem;color:var(--orange);font-weight:600;">Alta</td></tr>
-                        <tr><td style="padding:1rem 1.2rem;">Jerk RMS (°/s²)</td><td style="padding:1rem 1.2rem;">10.29</td><td style="padding:1rem 1.2rem;">48.8%</td><td style="padding:1rem 1.2rem;color:var(--teal);font-weight:600;">M-A</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Cadencia (Hz)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">1.694</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">28.6%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">ITI Media (s)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">0.650</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">35.8%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Amplitud (°)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">1.982</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">58.8%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Regularidad (%)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">61.4</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">21.4%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--orange);font-weight:600;">Alta</td></tr>
+                        <tr><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">Jerk RMS (°/s²)</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">10.29</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;">48.8%</td><td style="padding:1.3rem 1.4rem;font-size:1.5rem;color:var(--teal);font-weight:600;">M-A</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -860,52 +835,52 @@
               <!-- Filas de barras -->
               <div style="display:flex;flex-direction:column;gap:var(--sp6);" id="lda-bars-pron">
                 <!-- Fila 1: Cadencia 3.1153 → azul (≥2.0) -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">cadencia</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:100%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">3.1153</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">cadencia</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:100%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">3.1153</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 2: amplitud_media 2.3115 → azul (≥2.0) -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">amplitud_media</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:74.2%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">2.3115</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">amplitud_media</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:74.2%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">2.3115</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 3: amplitud_max 2.1709 → azul (≥2.0) -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">amplitud_max</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:69.7%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">2.1709</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">amplitud_max</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:69.7%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">2.1709</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 4: amplitud_angular_media 1.7787 → verde (1.5–2.0) -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">amp. angular media</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:57.1%;height:100%;background:var(--green);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">1.7787</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">amp. angular media</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:57.1%;height:100%;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">1.7787</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 5: frecuencia 1.7454 → verde (1.5–2.0) -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">frecuencia</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:56.0%;height:100%;background:var(--green);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">1.7454</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">frecuencia</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:56.0%;height:100%;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">1.7454</span>
                     </div>
                   </div>
                 </div>
@@ -949,24 +924,24 @@
     <h2>MATRIZ DE CONFUSIÓN — PRONACIÓN</h2>
     <p class="sub">Performance por estadio (one-vs-rest) y análisis de desempeño</p>
 
-    <div class="cols" style="gap:var(--sp32);margin-top:var(--sp16);align-items:center;">
-        <div style="flex:0.6;">
+    <div class="cols" style="gap:var(--sp32);margin-top:var(--sp16);align-items:flex-start;">
+        <div style="flex:0.55;">
             <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">🎯 AUC por Estadio</h3>
-            <div style="display:flex;flex-direction:column;gap:var(--sp8);">
-                <div class="auc-row"><span class="auc-score">Score 0</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:81%;"></div></div><span class="auc-value">0.81</span></div>
-                <div class="auc-row"><span class="auc-score">Score 1</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:88%;"></div></div><span class="auc-value">0.88</span></div>
-                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:92.8%;"></div></div><span class="auc-value">0.928</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.8%;"></div></div><span class="auc-value">0.998</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.9%;"></div></div><span class="auc-value">0.999</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+            <div style="display:flex;flex-direction:column;gap:var(--sp12);">
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:14rem;">Score 0</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:81%;background:var(--gray-1);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.81</span><span class="auc-label" style="color:var(--gray-1);font-size:1.1rem;">Aceptable</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:14rem;">Score 1</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:88%;background:var(--blue);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.88</span><span class="auc-label" style="color:var(--blue);font-size:1.1rem;">Bueno</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:14rem;">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:92.8%;background:var(--blue);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.928</span><span class="auc-label" style="color:var(--blue);font-size:1.1rem;">Bueno</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:14rem;">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:99.8%;background:var(--green);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.998</span><span class="auc-label" style="color:var(--green);font-size:1.1rem;">Excelente</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:14rem;">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:99.9%;background:var(--green);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.999</span><span class="auc-label" style="color:var(--green);font-size:1.1rem;">Excelente</span></div>
             </div>
         </div>
 
-        <div style="flex:0.4;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <img src="./assets/confusion-pronacion.png" alt="Matriz de confusión — Pronación" style="max-width:100%; max-height:60vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+        <div style="flex:0.5;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <img src="./assets/confusion-pronacion.png" alt="Matriz de confusión — Pronación" style="max-width:100%; max-height:80vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
         </div>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp18);">
+    <div class="hb" style="margin-top:var(--sp60);">
         <h4 style="font-size:var(--fs32);">✓ Conclusión Pronación</h4>
         <p style="font-size:var(--fs28);">El modelo LDA demuestra excelente capacidad discriminativa, especialmente en estadios severos. La prueba de pronación/supinación es altamente predictiva de bradicinesia.</p>
     </div>
@@ -1003,54 +978,54 @@
               <div style="font-size:var(--fs13);font-weight:700;color:var(--text);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:var(--sp2);">⭐ Top 5 Features Discriminativas</div>
               <div style="font-size:var(--fs11);color:var(--text-mid);margin-bottom:var(--sp10);">Mayor valor = mayor poder de separación entre grupos</div>
               <!-- Filas de barras -->
-              <div style="display:flex;flex-direction:column;gap:var(--sp6);">
+              <div style="display:flex;flex-direction:column;gap:1rem;">
                 <!-- Fila 1: iti_media 3.2158 → azul (≥2.0) → 100% -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">iti_media</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:100%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">3.2158</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">iti_media</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:100%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">3.2158</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 2: iti_std 2.8550 → azul (≥2.0) → 88.8% -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">iti_std</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:88.8%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">2.8550</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">iti_std</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:88.8%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">2.8550</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 3: cadencia 2.7771 → azul (≥2.0) → 86.4% -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">cadencia</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:86.4%;height:100%;background:var(--blue);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">2.7771</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">cadencia</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:86.4%;height:100%;background:var(--blue);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">2.7771</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 4: compensacion_lateral 1.6479 → verde (1.5–2.0) → 51.2% -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">comp. lateral</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:51.2%;height:100%;background:var(--green);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">1.6479</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">comp. lateral</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:51.2%;height:100%;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">1.6479</span>
                     </div>
                   </div>
                 </div>
                 <!-- Fila 5: rms_acc_lateral 1.6437 → verde (1.5–2.0) → 51.1% -->
-                <div style="display:grid;grid-template-columns:18px 170px 1fr;align-items:center;gap:var(--sp8);">
-                  <span style="font-size:var(--fs10);font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:var(--sp18);height:var(--sp18);display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</span>
-                  <span style="font-size:var(--fs12);font-weight:600;color:var(--text);">rms_acc_lateral</span>
-                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:4px;height:var(--sp22);overflow:hidden;">
-                    <div style="width:51.1%;height:100%;background:var(--green);border-radius:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:7px;">
-                      <span style="font-size:var(--fs11);font-weight:700;color:#fff;">1.6437</span>
+                <div style="display:grid;grid-template-columns:2.5rem 18rem 1fr;align-items:center;gap:1rem;">
+                  <span style="font-size:1.3rem;font-weight:800;color:var(--text-mid);text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:50%;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</span>
+                  <span style="font-size:1.4rem;font-weight:600;color:var(--text);">rms_acc_lateral</span>
+                  <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;height:3.2rem;overflow:hidden;">
+                    <div style="width:51.1%;height:100%;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:1rem;">
+                      <span style="font-size:1.3rem;font-weight:700;color:#fff;">1.6437</span>
                     </div>
                   </div>
                 </div>
@@ -1094,24 +1069,24 @@
     <h2>MATRIZ DE CONFUSIÓN — GOLPETEO</h2>
     <p class="sub">Performance por estadio (one-vs-rest) y análisis de desempeño</p>
 
-    <div class="cols" style="gap:var(--sp32);margin-top:var(--sp16);align-items:center;">
-        <div style="flex:0.6;">
+    <div class="cols" style="gap:var(--sp32);margin-top:var(--sp16);align-items:flex-start;">
+        <div style="flex:0.55;">
             <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">🎯 AUC por Estadio</h3>
-            <div style="display:flex;flex-direction:column;gap:var(--sp8);">
-                <div class="auc-row"><span class="auc-score">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill orange" style="width:75.4%;"></div></div><span class="auc-value">0.754</span><span class="auc-label" style="color:var(--orange);">Aceptable</span></div>
-                <div class="auc-row"><span class="auc-score">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:89%;"></div></div><span class="auc-value">0.890</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
-                <div class="auc-row"><span class="auc-score">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87.3%;"></div></div><span class="auc-value">0.873</span><span class="auc-label" style="color:var(--blue);">Bueno</span></div>
-                <div class="auc-row"><span class="auc-score">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:98.7%;"></div></div><span class="auc-value">0.987</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
-                <div class="auc-row"><span class="auc-score">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill green" style="width:99.7%;"></div></div><span class="auc-value">0.997</span><span class="auc-label" style="color:var(--green);">Excelente</span></div>
+            <div style="display:flex;flex-direction:column;gap:var(--sp12);">
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:16rem;">Score 0 (sano)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:75.4%;background:var(--gray-1);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.754</span><span class="auc-label" style="color:var(--gray-1);font-size:1.1rem;">Aceptable</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:16rem;">Score 1 (leve)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:89%;background:var(--blue);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.890</span><span class="auc-label" style="color:var(--blue);font-size:1.1rem;">Bueno</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:16rem;">Score 2 (moderado)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:87.3%;background:var(--blue);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.873</span><span class="auc-label" style="color:var(--blue);font-size:1.1rem;">Bueno</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:16rem;">Score 3 (severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:98.7%;background:var(--green);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.987</span><span class="auc-label" style="color:var(--green);font-size:1.1rem;">Excelente</span></div>
+                <div class="auc-row" style="gap:1rem;align-items:center;"><span class="auc-score" style="font-size:1.3rem;min-width:16rem;">Score 4 (muy severo)</span><div class="auc-bar-wrap"><div class="auc-bar-fill" style="width:99.7%;background:var(--green);"></div></div><span class="auc-value" style="font-size:1.4rem;min-width:4rem;text-align:right;">0.997</span><span class="auc-label" style="color:var(--green);font-size:1.1rem;">Excelente</span></div>
             </div>
         </div>
 
-        <div style="flex:0.4;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-            <img src="./assets/confusion-golpeteo.png" alt="Matriz de confusión — Golpeteo" style="max-width:100%; max-height:60vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+        <div style="flex:0.5;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+            <img src="./assets/confusion-golpeteo.png" alt="Matriz de confusión — Golpeteo" style="max-width:100%; max-height:80vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
         </div>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp18);">
+    <div class="hb" style="margin-top:var(--sp60);">
         <h4 style="font-size:var(--fs32);">✓ Conclusión Golpeteo</h4>
         <p style="font-size:var(--fs28);">El modelo LDA muestra buena discriminación en estadios leve-moderado, con excelencia en estadios severos. La prueba de golpeteo complementa el análisis de bradicinesia.</p>
     </div>
@@ -1140,39 +1115,39 @@
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp40);margin-top:var(--sp32);">
         <div>
-            <h3 style="font-size:var(--fs18);font-weight:700;color:var(--blue);margin-bottom:var(--sp14);">Arquitectura Vimov</h3>
-            <p style="font-size:var(--fs14);color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas C4 y modelo de datos</p>
+            <h3 style="font-size:1.8rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp14);">Arquitectura Vimov</h3>
+            <p style="font-size:1.3rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas C4 y modelo de datos</p>
             <div style="display:flex;flex-direction:column;gap:var(--sp12);margin-bottom:var(--sp20);">
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama C4 – Nivel 1 (Contexto)</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 1 (Contexto)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama C4 – Nivel 2 (Contenedores)</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 2 (Contenedores)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Modelo Entidad–Relación (MER)</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Modelo Entidad–Relación (MER)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--orange);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama C4 – Nivel 3 (Componentes)</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 3 (Componentes)</p>
                 </div>
             </div>
-            <p style="font-size:var(--fs14);color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación completa de la arquitectura web</p>
+            <p style="font-size:1.3rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación completa de la arquitectura web</p>
         </div>
         <div>
-            <h3 style="font-size:var(--fs18);font-weight:700;color:var(--teal);margin-bottom:var(--sp14);">Aplicación Móvil IMUs</h3>
-            <p style="font-size:var(--fs14);color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas de diseño y flujo</p>
+            <h3 style="font-size:1.8rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp14);">Aplicación Móvil IMUs</h3>
+            <p style="font-size:1.3rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas de diseño y flujo</p>
             <div style="display:flex;flex-direction:column;gap:var(--sp12);margin-bottom:var(--sp20);">
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama de clases</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de clases</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama de secuencia</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de secuencia</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--orange);">
-                    <p style="font-size:var(--fs15);font-weight:600;color:var(--text);">Diagrama de flujo de datos</p>
+                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de flujo de datos</p>
                 </div>
             </div>
-            <p style="font-size:var(--fs14);color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación de la app móvil de captura</p>
+            <p style="font-size:1.3rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación de la app móvil de captura</p>
         </div>
     </div>
     <div class="page-number">27</div>
@@ -1209,23 +1184,27 @@
     <h2>TECNOLOGÍAS USADAS</h2>
     <p class="sub">Stack tecnológico de Vimov y de la aplicación móvil IMUs</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--sp28);margin-top:var(--sp24);">
-        <div style="display:flex;flex-direction:column;">
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--blue);margin-bottom:var(--sp14);">Vimov — Frontend</h3>
-            <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp16);">
-                <img src="./assets/tech-vimov.png" alt="Stack tecnológico Vimov Frontend" style="max-width:100%; max-height:40vh; border-radius:var(--sp8); box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp40);margin-top:var(--sp40);padding:0 var(--sp60);">
+        <div style="display:flex;flex-direction:column;align-items:center;width:100%;max-width:90%;">
+            <h3 style="font-size:2.5rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp24);text-align:center;">Vimov — Frontend</h3>
+            <div style="display:flex;align-items:center;justify-content:center;width:100%;">
+                <img src="./assets/tech-vimov2.png" alt="Stack tecnológico Vimov Frontend" style="width:80%;height:auto;max-height:18vh;object-fit:contain;border-radius:var(--sp8);box-shadow:0 2px 12px rgba(0,0,0,0.1);">
             </div>
         </div>
-        <div style="display:flex;flex-direction:column;">
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp14);">Vimov — Backend</h3>
-            <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp16);">
-                <img src="./assets/tech-vimov2.png" alt="Stack tecnológico Vimov Backend" style="max-width:100%; max-height:40vh; border-radius:var(--sp8); box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+        
+        <div style="display:flex;gap:var(--sp60);justify-content:center;align-items:center;width:100%;">
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:45%;">
+                <h3 style="font-size:2.5rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp24);text-align:center;">Vimov — Backend</h3>
+                <div style="display:flex;align-items:center;justify-content:center;width:100%;">
+                    <img src="./assets/tech-vimov.png" alt="Stack tecnológico Vimov Backend" style="width:80%;height:auto;max-height:18vh;object-fit:contain;border-radius:var(--sp8);box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+                </div>
             </div>
-        </div>
-        <div style="display:flex;flex-direction:column;">
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--orange);margin-bottom:var(--sp14);">App IMUs — Móvil</h3>
-            <div style="flex:1;display:flex;align-items:center;justify-content:center;margin-bottom:var(--sp16);">
-                <img src="./assets/tech-imus.png" alt="Stack tecnológico App IMUs" style="max-width:100%; max-height:40vh; border-radius:var(--sp8); box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+            
+            <div style="display:flex;flex-direction:column;align-items:center;flex:1;max-width:45%;">
+                <h3 style="font-size:2.5rem;font-weight:700;color:var(--orange);margin-bottom:var(--sp24);text-align:center;">App IMUs — Móvil</h3>
+                <div style="display:flex;align-items:center;justify-content:center;width:100%;">
+                    <img src="./assets/tech-imus.png" alt="Stack tecnológico App IMUs" style="width:80%;height:auto;max-height:18vh;object-fit:contain;border-radius:var(--sp8);box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+                </div>
             </div>
         </div>
     </div>
@@ -1239,7 +1218,7 @@
     <h2>APLICACIÓN IMUs</h2>
     <p class="sub">Interfaz móvil para captura, visualización y control de sesiones</p>
     <div class="vp" style="display:flex;align-items:center;justify-content:center;padding-top:10px;">
-        <video controls autoplay muted playsinline loop style="display:block;width:clamp(250px, 40vw, 380px);max-height:70vh;border-radius:var(--sp12);box-shadow:0 8px 30px rgba(0,0,0,0.18);">
+        <video controls autoplay muted playsinline loop style="display:block;width:clamp(350px, 50vw, 550px);max-height:80vh;border-radius:var(--sp12);box-shadow:0 8px 30px rgba(0,0,0,0.18);">
             <source src="./assets/demo-app-imus.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
@@ -1253,8 +1232,8 @@
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2>MÓDULO VIMOV</h2>
     <p class="sub">Gestión de pruebas, visualización de señales y revisión de resultados cuantitativos</p>
-    <div class="vp" style="background:none;padding:var(--sp8);border-radius:var(--sp6);display:flex;align-items:center;justify-content:center;">
-        <video controls autoplay muted playsinline loop style="display:block;width:clamp(400px, 90vw, 1000px);max-height:65vh;border-radius:var(--sp6);box-shadow:0 10px 36px rgba(0,0,0,0.12);">
+    <div class="vp" style="background:none;padding:0;border-radius:var(--sp6);display:flex;align-items:center;justify-content:center;flex:1;width:100%;">
+        <video controls autoplay muted playsinline loop style="display:block;width:100%;max-width:100%;height:auto;max-height:85vh;object-fit:contain;border-radius:var(--sp6);box-shadow:0 10px 36px rgba(0,0,0,0.12);">
             <source src="./assets/demo-vimov.mp4" type="video/mp4">
             Tu navegador no soporta la etiqueta de video.
         </video>
@@ -1269,43 +1248,43 @@
     <h2>PRUEBAS DE SOFTWARE</h2>
     <p class="sub">Cobertura y tipos de prueba en App IMUs y en Vimov</p>
 
-    <div class="cols" style="gap:var(--sp28);margin-top:var(--sp14);">
+    <div class="cols" style="gap:var(--sp28);margin-top:var(--sp20);">
         <div>
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--blue);margin-bottom:var(--sp12);">App IMUs</h3>
-            <table class="st" style="font-size:var(--fs28);">
-                <thead><tr><th>Tipo de prueba</th><th style="text-align:right;">Cantidad</th></tr></thead>
+            <h3 style="font-size:2rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp16);">App IMUs</h3>
+            <table class="st" style="font-size:1.8rem;">
+                <thead><tr><th style="font-size:1.6rem;padding:var(--sp16) var(--sp20);">Tipo de prueba</th><th style="text-align:right;font-size:1.6rem;padding:var(--sp16) var(--sp20);">Cantidad</th></tr></thead>
                 <tbody>
-                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">122</td></tr>
-                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">48</td></tr>
-                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">64</td></tr>
-                    <tr style="background:var(--blue);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>234</strong></td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">122</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">48</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">64</td></tr>
+                    <tr style="background:var(--blue);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>234</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:var(--sp12);padding:var(--sp24);"><div class="mv" style="font-size:var(--fs48);">83%</div><div class="ml" style="font-size:var(--fs24);">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32);"><div class="mv" style="font-size:3.5rem;font-weight:800;">83%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
         </div>
         <div>
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp12);">Vimov</h3>
-            <table class="st" style="font-size:var(--fs28);">
-                <thead><tr><th>Tipo de prueba</th><th style="text-align:right;">Cantidad</th></tr></thead>
+            <h3 style="font-size:2rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">Vimov</h3>
+            <table class="st" style="font-size:1.8rem;">
+                <thead><tr><th style="font-size:1.6rem;padding:var(--sp16) var(--sp20);">Tipo de prueba</th><th style="text-align:right;font-size:1.6rem;padding:var(--sp16) var(--sp20);">Cantidad</th></tr></thead>
                 <tbody>
-                    <tr><td>Regresión</td><td style="text-align:right;font-weight:600;">53</td></tr>
-                    <tr><td>Unitarias</td><td style="text-align:right;font-weight:600;">161</td></tr>
-                    <tr><td>Integración</td><td style="text-align:right;font-weight:600;">72</td></tr>
-                    <tr style="background:var(--teal);color:#fff;"><td><strong>Total</strong></td><td style="text-align:right;"><strong>286</strong></td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">53</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">161</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">72</td></tr>
+                    <tr style="background:var(--teal);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>286</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:var(--sp12);padding:var(--sp24);"><div class="mv" style="font-size:var(--fs48);">96%</div><div class="ml" style="font-size:var(--fs24);">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32);"><div class="mv" style="font-size:3.5rem;font-weight:800;">96%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
         </div>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp16);background:var(--blue);border-left-color:var(--teal);">
-        <h4 style="color:var(--teal);font-size:var(--fs32);">Total combinado</h4>
-        <p style="color:rgba(255,255,255,0.95);font-size:var(--fs28);">520 pruebas en total entre ambos sistemas, con cobertura de features del 83% en App IMUs y <strong>96%</strong> en Vimov.</p>
+    <div class="hb" style="margin-top:var(--sp24);background:var(--blue);border-left-color:var(--teal);padding:var(--sp28) var(--sp32);">
+        <h4 style="color:var(--teal);font-size:1.8rem;margin-bottom:var(--sp12);">Total combinado</h4>
+        <p style="color:rgba(255,255,255,0.95);font-size:1.5rem;">520 pruebas en total entre ambos sistemas, con cobertura de features del 83% en App IMUs y <strong>96%</strong> en Vimov.</p>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp12);">
-        <h4 style="font-size:var(--fs32);">✓ Validación con stakeholder</h4>
-        <p style="font-size:var(--fs28);">El sistema fue validado con el stakeholder <strong>Nicolás Salazar</strong> (investigador i2t) mediante una <strong>prueba de uso libre</strong>, en la que evaluó de forma general la app IMUs y la plataforma Vimov simulando el rol de personal clínico, cubriendo el flujo de captura, la experiencia de usuario y la interpretación de los resultados.</p>
+    <div class="hb" style="margin-top:var(--sp16);padding:var(--sp28) var(--sp32);">
+        <h4 style="font-size:1.8rem;margin-bottom:var(--sp12);">✓ Validación con stakeholder</h4>
+        <p style="font-size:1.5rem;">El sistema fue validado con el stakeholder <strong>Nicolás Salazar</strong> (investigador i2t) mediante una <strong>prueba de uso libre</strong>, en la que evaluó de forma general la app IMUs y la plataforma Vimov simulando el rol de personal clínico, cubriendo el flujo de captura, la experiencia de usuario y la interpretación de los resultados.</p>
     </div>
     <div class="page-number">33</div>
 </div>
@@ -1616,18 +1595,26 @@
     <h2>TRABAJO FUTURO</h2>
     <p class="sub">Extensiones identificadas para evolucionar el módulo Vimov–IMUs</p>
 
-    <ol class="bl" style="margin-top:var(--sp24);display:flex;flex-direction:column;gap:var(--sp16);">
-        <li style="font-size:var(--fs15);line-height:1.7;padding:var(--sp18) var(--sp24);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-            <strong style="font-size:var(--fs16);color:var(--blue);">Integración multimodal:</strong> Incorporar visión por computador para la prueba de golpeteo de dedos, complementando la captura IMU con análisis de vídeo para superar las limitaciones de movimientos distales.
+    <ol class="bl" style="margin-top:var(--sp32);display:flex;flex-direction:column;gap:var(--sp20);list-style:none;counter-reset:item;padding:0;">
+        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--blue);counter-increment:item;position:relative;padding-left:var(--sp60);">
+            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--blue);">1</span>
+            <strong style="font-size:1.6rem;color:var(--blue);display:block;margin-bottom:var(--sp8);">Integración multimodal:</strong> Incorporar visión por computador para la prueba de golpeteo de dedos, complementando la captura IMU con análisis de vídeo para superar las limitaciones de movimientos distales.
         </li>
-        <li style="font-size:var(--fs15);line-height:1.7;padding:var(--sp18) var(--sp24);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-            <strong style="font-size:var(--fs16);color:var(--teal);">Validación clínica real:</strong> Extender la evaluación a pacientes diagnosticados con enfermedad de Parkinson en la Fundación Valle del Lili, avanzando hacia TRL 4–5.
+        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--teal);counter-increment:item;position:relative;padding-left:var(--sp60);">
+            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--teal);">2</span>
+            <strong style="font-size:1.6rem;color:var(--teal);display:block;margin-bottom:var(--sp8);">Validación clínica real:</strong> Extender la evaluación a pacientes diagnosticados con enfermedad de Parkinson en la Fundación Valle del Lili, avanzando hacia TRL 4–5.
         </li>
-        <li style="font-size:var(--fs15);line-height:1.7;padding:var(--sp18) var(--sp24);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--orange);">
-            <strong style="font-size:var(--fs16);color:var(--orange);">Evolución del modelo predictivo:</strong> Mejorar la sensibilidad, especificidad y generalización del clasificador LDA, explorando modelos con mayor capacidad para muestras pequeñas.
+        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--orange);counter-increment:item;position:relative;padding-left:var(--sp60);">
+            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--orange);">3</span>
+            <strong style="font-size:1.6rem;color:var(--orange);display:block;margin-bottom:var(--sp8);">Evolución del modelo predictivo:</strong> Mejorar la sensibilidad, especificidad y generalización del clasificador LDA, explorando modelos con mayor capacidad para muestras pequeñas.
         </li>
-        <li style="font-size:var(--fs15);line-height:1.7;padding:var(--sp18) var(--sp24);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--green);">
-            <strong style="font-size:var(--fs16);color:var(--green);">Expansión a más pruebas MDS-UPDRS:</strong> Incluir otras pruebas motoras de la Parte III (rigidez, temblor en reposo) para construir un perfil motor completo del paciente.
+        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--purple);counter-increment:item;position:relative;padding-left:var(--sp60);">
+            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--purple);">4</span>
+            <strong style="font-size:1.6rem;color:var(--purple);display:block;margin-bottom:var(--sp8);">Reposicionamiento del IMU:</strong> Explorar ubicaciones alternativas del sensor para la prueba de golpeteo de dedos, como un guante instrumentado o sensores en la falange distal para capturar directamente la amplitud del movimiento, limitación principal del modelo actual.
+        </li>
+        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--green);counter-increment:item;position:relative;padding-left:var(--sp60);">
+            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--green);">5</span>
+            <strong style="font-size:1.6rem;color:var(--green);display:block;margin-bottom:var(--sp8);">Expansión a más pruebas MDS-UPDRS:</strong> Incluir otras pruebas motoras de la Parte III (rigidez, temblor en reposo) para construir un perfil motor completo del paciente.
         </li>
     </ol>
     <div class="page-number">42</div>
