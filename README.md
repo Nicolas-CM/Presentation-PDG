@@ -2,7 +2,7 @@
 
 Presentación interactiva para el proyecto de grado sobre evaluación motora en enfermedad de Parkinson usando el ecosistema Vimov e IMUs.
 
-## 🎨 Identidad Visual
+## Identidad Visual
 
 La presentación utiliza la **paleta de colores oficial de la Universidad Icesi**:
 
@@ -18,7 +18,7 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
 - **Gris 1** - Pantone 423 C (#88898c)
 - **Gris 2** - Pantone 420 C (#cecfd4)
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 ├── index.html              # Contenido de la presentación
@@ -31,7 +31,7 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
 └── README.md              # Este archivo
 ```
 
-## 🚀 Cómo Usar
+##  Cómo Usar
 
 1. **Abrir la presentación**: Abre `index.html` en tu navegador web moderno (Chrome, Firefox, Edge)
 
@@ -52,7 +52,7 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
    - Presiona `F11` o doble click en cualquier parte
    - Los controles se volverán semi-transparentes y aparecerán al pasar el mouse
 
-## 📊 Contenido de la Presentación
+##  Contenido de la Presentación
 
 ### 38 Slides organizados en 8 secciones:
 
@@ -69,7 +69,7 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
 11. **Conclusiones** - Resumen y trabajo futuro
 12. **Referencias** - Bibliografía científica
 
-## 🎓 Equipo
+##  Equipo
 
 - **Integrantes**: Davide Flamini · Nicolás Cuéllar · Andrés Cabezas
 - **Tutora**: Monica María Rojas Rincón, Msc.
@@ -77,7 +77,7 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
 - **Universidad**: Icesi
 - **Año**: 2026
 
-## 🛠️ Tecnologías
+## ️ Tecnologías
 
 - HTML5 semántico
 - CSS3 con variables personalizadas
@@ -85,13 +85,13 @@ La presentación utiliza la **paleta de colores oficial de la Universidad Icesi*
 - Tipografía: Plus Jakarta Sans (Google Fonts)
 - Responsive design
 
-## 📝 Notas Técnicas
+##  Notas Técnicas
 
 - **Perfil de Color**: Adobe RGB para manejo uniforme
 - **Resolución óptima**: 1280×720px (16:9)
 - **Navegadores compatibles**: Chrome 90+, Firefox 88+, Edge 90+
 - **Impresión**: Optimizada para PDF con page-break
 
-## 📄 Licencia
+##  Licencia
 
 Universidad Icesi © 2026. Todos los derechos reservados.
