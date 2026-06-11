@@ -101,9 +101,9 @@
     <div class="section-header">Contexto</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2>FLUJO DE VIMOV</h2>
-    <p class="sub">Flujo de datos e integración de componentes</p>
+    <p class="sub">Integración de componentes</p>
     <div class="img-slide">
-        <img src="./assets/vimov-flow.webp" alt="Arquitectura Vimov">
+        <img src="./assets/vimov-flow.png" alt="Arquitectura Vimov">
     </div>
     <div class="page-number">3</div>
 </div>
@@ -152,7 +152,7 @@
 
         <div class="cols" style="gap:2rem;flex:1;align-items:center;">
             <div style="flex:1;">
-                <h3 style="color:var(--blue);margin-bottom:0.8rem;font-size:1.8rem;">Sistema de Coordenadas IMU</h3>
+                <h3 style="color:var(--blue);margin-bottom:0.8rem;font-size:2rem;">Sistema de Coordenadas IMU</h3>
                 <p style="font-size:2rem;line-height:1.6;">La orientación del sensor define cómo se interpretan los ejes X, Y, Z. La estandarización del sistema de referencia es crítica para que las señales sean comparables entre sesiones y pacientes.</p>
                 <p style="font-size:1.1rem;color:var(--text-light);margin-top:1rem;">Fuente: <em>Tomaszewski et al., 2017 · doi:10.1515/rgg-2017-0013</em></p>
             </div>
@@ -182,7 +182,7 @@
     <p class="sub" style="margin-bottom:1rem;">Matriz comparativa de soluciones existentes vs. este proyecto</p>
 
     <div style="flex:1;overflow-y:auto;display:flex;flex-direction:column;">
-        <table class="st" style="margin-top:0;border-collapse:collapse;border:1px solid #d0d0d0;font-size:1.2rem;flex:1;"><thead><tr><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Característica</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Höglund et al. (2021)</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Sánchez-Fernández (2023)</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Dai et al. (2015)</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Choi et al. (2016)</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Yu et al. (2023)</th><th style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Bremm et al. (2024)</th><th class="or" style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Este Proyecto (Vimov)</th></tr></thead>
+        <table class="st" style="margin-top:0;border-collapse:collapse;border:1px solid #d0d0d0;font-size:1.2rem;flex:1;"><thead><tr><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Característica</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Höglund et al. (2021)</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Sánchez-Fernández (2023)</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Dai et al. (2015)</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Choi et al. (2016)</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Yu et al. (2023)</th><th style="border:1px solid #d0d0d0;font-size:1.6rem;padding:0.8rem 0.6rem;">Bremm et al. (2024)</th><th class="or" style="border:1px solid #d0d0d0;font-size:1.1rem;padding:0.8rem 0.6rem;">Este Proyecto (Vimov)</th></tr></thead>
         <tbody>
             <tr>
                 <td style="border:1px solid #d0d0d0;padding:0.8rem 0.6rem;"><strong>IMU</strong></td>
@@ -275,23 +275,23 @@
         <p style="font-size:1.65rem;line-height:1.6;">Desarrollar un <strong>módulo integrado en el ecosistema Vimov</strong> que permita medir y analizar de forma objetiva las pruebas de <strong>golpeteo de dedos</strong> y <strong>pronación/supinación</strong> de la mano, correspondientes a la Parte III de la escala MDS-UPDRS, con el fin de complementar la evaluación clínica en pacientes con enfermedad de Parkinson.</p>
     </div>
 
-    <h3 style="color:var(--blue);margin-top:2.5rem;margin-bottom:1.5rem;font-size:2rem;">Objetivos Específicos</h3>
+    <h3 style="color:var(--blue);margin-top:2.5rem;margin-bottom:1.5rem;font-size:3rem;">Objetivos Específicos</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
         <div style="display:flex;gap:1.2rem;align-items:flex-start;background:var(--bg-soft);border-radius:1rem;padding:1.8rem 2rem;">
-            <div class="step-num" style="min-width:3rem;height:3rem;font-size:1.5rem;">1</div>
-            <div><div style="font-size:1.4rem;font-weight:700;color:var(--blue);line-height:1.5;">Definir protocolo estandarizado de captura</div></div>
+            <div class="step-num" style="min-width:3.5rem;height:3.5rem;font-size:2rem;display:flex;align-items:center;justify-content:center;">1</div>
+            <div><div style="font-size:2rem;font-weight:700;color:var(--blue);line-height:1.5;">Definir protocolo estandarizado de captura</div></div>
         </div>
         <div style="display:flex;gap:1.2rem;align-items:flex-start;background:var(--bg-soft);border-radius:1rem;padding:1.8rem 2rem;">
-            <div class="step-num teal" style="min-width:3rem;height:3rem;font-size:1.5rem;">2</div>
-            <div><div style="font-size:1.4rem;font-weight:700;color:var(--teal);line-height:1.5;">Establecer correspondencia entre métricas y MDS-UPDRS</div></div>
+            <div class="step-num teal" style="min-width:3.5rem;height:3.5rem;font-size:2rem;display:flex;align-items:center;justify-content:center;">2</div>
+            <div><div style="font-size:2rem;font-weight:700;color:var(--teal);line-height:1.5;">Establecer correspondencia entre métricas y MDS-UPDRS</div></div>
         </div>
         <div style="display:flex;gap:1.2rem;align-items:flex-start;background:var(--bg-soft);border-radius:1rem;padding:1.8rem 2rem;">
-            <div class="step-num" style="min-width:3rem;height:3rem;font-size:1.5rem;background:var(--green);">3</div>
-            <div><div style="font-size:1.4rem;font-weight:700;color:var(--green);line-height:1.5;">Desarrollar módulo en Vimov e IMUs para captura y visualización</div></div>
+            <div class="step-num" style="min-width:3.5rem;height:3.5rem;font-size:2rem;background:var(--green);display:flex;align-items:center;justify-content:center;">3</div>
+            <div><div style="font-size:2rem;font-weight:700;color:var(--green);line-height:1.5;">Desarrollar módulo en Vimov e IMUs para captura y visualización</div></div>
         </div>
         <div style="display:flex;gap:1.2rem;align-items:flex-start;background:var(--bg-soft);border-radius:1rem;padding:1.8rem 2rem;">
-            <div class="step-num" style="min-width:3rem;height:3rem;font-size:1.5rem;background:var(--orange);">4</div>
-            <div><div style="font-size:1.4rem;font-weight:700;color:var(--orange);line-height:1.5;">Validar en laboratorio (TRL 3)</div></div>
+            <div class="step-num" style="min-width:3.5rem;height:3.5rem;font-size:2rem;background:var(--orange);display:flex;align-items:center;justify-content:center;">4</div>
+            <div><div style="font-size:2rem;font-weight:700;color:var(--orange);line-height:1.5;">Validar en laboratorio (TRL 3)</div></div>
         </div>
     </div>
     <div class="page-number">9</div>
@@ -307,19 +307,19 @@
         <p style="font-size:1.65rem;line-height:1.6;">Las características cinemáticas obtenidas mediante una <strong>unidad de medición inercial (IMU)</strong> ubicada en la muñeca permiten <strong>diferenciar de manera significativa</strong> los niveles de severidad motora establecidos por la escala MDS-UPDRS en las pruebas de golpeteo de dedos y pronación/supinación.</p>
     </div>
 
-    <h3 style="color:var(--blue);margin-top:2.5rem;margin-bottom:1.5rem;font-size:2rem;">Condiciones esperadas</h3>
+    <h3 style="color:var(--blue);margin-top:2.5rem;margin-bottom:1.5rem;font-size:2.5rem;">Condiciones esperadas</h3>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;">
         <div class="cd" style="padding:2rem 2.2rem;">
-            <div style="font-size:1.35rem;font-weight:700;color:var(--blue);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Diferencias significativas</div>
-            <p style="font-size:1.25rem;line-height:1.5;color:var(--text);">Las métricas extraídas presentan diferencias estadísticamente significativas entre los grupos evaluados.</p>
+            <div style="font-size:1.6rem;font-weight:700;color:var(--blue);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Diferencias significativas</div>
+            <p style="font-size:1.5rem;line-height:1.5;color:var(--text);">Las métricas extraídas presentan diferencias estadísticamente significativas entre los grupos evaluados.</p>
         </div>
         <div class="cd" style="border-left-color:var(--teal);padding:2rem 2.2rem;">
-            <div style="font-size:1.35rem;font-weight:700;color:var(--teal);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Discriminación de severidad</div>
-            <p style="font-size:1.25rem;line-height:1.5;color:var(--text);">Las métricas permiten discriminar los distintos niveles de severidad mediante técnicas de clasificación.</p>
+            <div style="font-size:1.6rem;font-weight:700;color:var(--teal);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Discriminación de severidad</div>
+            <p style="font-size:1.5rem;line-height:1.5;color:var(--text);">Las métricas permiten discriminar los distintos niveles de severidad mediante técnicas de clasificación.</p>
         </div>
         <div class="cd" style="border-left-color:var(--green);padding:2rem 2.2rem;">
-            <div style="font-size:1.35rem;font-weight:700;color:var(--green);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Viabilidad TRL 3</div>
-            <p style="font-size:1.25rem;line-height:1.5;color:var(--text);">Los resultados proveen evidencia de viabilidad tecnológica del sistema en entorno controlado de laboratorio.</p>
+            <div style="font-size:1.6rem;font-weight:700;color:var(--green);margin-bottom:0.8rem;text-transform:uppercase;line-height:1.3;">Viabilidad TRL 3</div>
+            <p style="font-size:1.5rem;line-height:1.5;color:var(--text);">Los resultados proveen evidencia de viabilidad tecnológica del sistema en entorno controlado de laboratorio.</p>
         </div>
     </div>
     <div class="page-number">10</div>
@@ -495,44 +495,38 @@
 </div>
 
 <!-- ===== 18. PIPELINE ===== -->
-<div class="slide slide-content">
-    <div class="section-header">Métricas</div>
+<div class="slide slide-content" style="padding: 1rem 3rem; display: flex; flex-direction: column; overflow: hidden; height: 100%;">
+    <div class="section-header" style="position: static; margin-bottom: 0.5rem;">Métricas</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>PIPELINE DE PROCESAMIENTO</h2>
-    <p class="sub">Etapas de limpieza, segmentación y extracción de métricas cinemáticas</p>
+    <h2 style="flex-shrink: 0; font-size: 3.5rem; margin: 0 0 0.5rem 0;">PIPELINE DE PROCESAMIENTO</h2>
+    <p class="sub" style="flex-shrink: 0; font-size: 2rem; margin-bottom: 1rem;">Etapas de limpieza, segmentación y extracción de métricas cinemáticas</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp32);margin-top:var(--sp24);">
-        <div>
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--blue);margin-bottom:var(--sp16);">Etapa 1 — Limpieza y acondicionamiento</h3>
-            <div style="display:flex;flex-direction:column;gap:var(--sp14);">
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <strong style="color:var(--blue);flex-shrink:0;font-size:var(--fs24);">①</strong> 
-                    <span>Eliminación de duplicados temporales antes del remuestreo para evitar inconsistencias en el vector de tiempo.</span>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem; flex: 1; overflow: hidden; min-height: 0;">
+        <div style="display: flex; flex-direction: column; overflow: hidden;">
+            <h3 style="font-size:2.2rem;font-weight:700;color:var(--blue);margin-bottom:0.8rem; flex-shrink: 0;">Etapa 1 — Limpieza y acondicionamiento</h3>
+            <div style="display:flex;flex-direction:column;gap:0.6rem; overflow-y: auto; flex: 1;">
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--blue);">
+                    <strong style="color:var(--blue);">①</strong> Eliminación de duplicados temporales antes del remuestreo para evitar inconsistencias en el vector de tiempo.
                 </div>
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <strong style="color:var(--blue);flex-shrink:0;font-size:var(--fs24);">②</strong> 
-                    <span>Filtrado de ruido y componentes no asociados al movimiento voluntario del paciente.</span>
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--blue);">
+                    <strong style="color:var(--blue);">②</strong> Filtrado de ruido y componentes no asociados al movimiento voluntario del paciente.
                 </div>
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <strong style="color:var(--blue);flex-shrink:0;font-size:var(--fs24);">③</strong> 
-                    <span>Identificación automática del eje de movimiento predominante a partir de acelerómetro y giroscopio.</span>
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--blue);">
+                    <strong style="color:var(--blue);">③</strong> Identificación automática del eje de movimiento predominante a partir de acelerómetro y giroscopio.
                 </div>
             </div>
         </div>
-        <div>
-            <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">Etapa 2 — Segmentación y extracción</h3>
-            <div style="display:flex;flex-direction:column;gap:var(--sp14);">
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <strong style="color:var(--teal);flex-shrink:0;font-size:var(--fs24);">④</strong> 
-                    <span>Detección automática de movimientos sobre la señal filtrada del giroscopio.</span>
+        <div style="display: flex; flex-direction: column; overflow: hidden;">
+            <h3 style="font-size:2.2rem;font-weight:700;color:var(--teal);margin-bottom:0.8rem; flex-shrink: 0;">Etapa 2 — Segmentación y extracción</h3>
+            <div style="display:flex;flex-direction:column;gap:0.6rem; overflow-y: auto; flex: 1;">
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--teal);">
+                    <strong style="color:var(--teal);">④</strong> Detección automática de movimientos sobre la señal filtrada del giroscopio.
                 </div>
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <strong style="color:var(--teal);flex-shrink:0;font-size:var(--fs24);">⑤</strong> 
-                    <span>Validación y selección de ciclos completos; eliminación de ciclos incompletos o inestables.</span>
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--teal);">
+                    <strong style="color:var(--teal);">⑤</strong> Validación y selección de ciclos completos; eliminación de ciclos incompletos o inestables.
                 </div>
-                <div style="display:flex;gap:var(--sp14);font-size:var(--fs28);line-height:1.7;color:var(--text);padding:var(--sp16) var(--sp20);background:var(--bg-soft);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <strong style="color:var(--teal);flex-shrink:0;font-size:var(--fs24);">⑥</strong> 
-                    <span>Cálculo de <strong>16 métricas</strong> (Pronación) y <strong>20 métricas</strong> (Golpeteo de dedos).</span>
+                <div style="font-size:1.6rem;line-height:1.4;color:var(--text);padding:0.8rem 1rem;background:var(--bg-soft);border-radius:0.5rem;border-left:4px solid var(--teal);">
+                    <strong style="color:var(--teal);">⑥</strong> Cálculo de 16 métricas (Pronación) y 20 métricas (Golpeteo de dedos).
                 </div>
             </div>
         </div>
@@ -655,29 +649,7 @@
         </div>
     </div>
 
-    <!-- Dimensiones evaluadas -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp14);margin-top:var(--sp20);">
-        <div style="background:var(--bg-soft);padding:var(--sp14) var(--sp18);border-radius:var(--sp8);border-top:4px solid var(--blue);text-align:center;">
-            <div style="font-size:var(--fs28);margin-bottom:var(--sp4);">⚡</div>
-            <div style="font-size:var(--fs20);font-weight:700;color:var(--blue);">Velocidad</div>
-            <p style="font-size:var(--fs18);color:var(--text-light);margin:4px 0 0;">Lentitud progresiva</p>
-        </div>
-        <div style="background:var(--bg-soft);padding:var(--sp14) var(--sp18);border-radius:var(--sp8);border-top:4px solid var(--orange);text-align:center;">
-            <div style="font-size:var(--fs28);margin-bottom:var(--sp4);"></div>
-            <div style="font-size:var(--fs20);font-weight:700;color:var(--orange);">Amplitud</div>
-            <p style="font-size:var(--fs18);color:var(--text-light);margin:4px 0 0;">Decremento de rango</p>
-        </div>
-        <div style="background:var(--bg-soft);padding:var(--sp14) var(--sp18);border-radius:var(--sp8);border-top:4px solid var(--teal);text-align:center;">
-            <div style="font-size:var(--fs28);margin-bottom:var(--sp4);">⏸</div>
-            <div style="font-size:var(--fs20);font-weight:700;color:var(--teal);">Hesitaciones</div>
-            <p style="font-size:var(--fs18);color:var(--text-light);margin:4px 0 0;">Pausas e interrupciones</p>
-        </div>
-        <div style="background:var(--bg-soft);padding:var(--sp14) var(--sp18);border-radius:var(--sp8);border-top:4px solid var(--purple,#7c3aed);text-align:center;">
-            <div style="font-size:var(--fs28);margin-bottom:var(--sp4);"></div>
-            <div style="font-size:var(--fs20);font-weight:700;color:#7c3aed;">Ritmo</div>
-            <p style="font-size:var(--fs18);color:var(--text-light);margin:4px 0 0;">Regularidad del movimiento</p>
-        </div>
-    </div>
+ 
 
     <div class="page-number">19</div>
 </div>
@@ -1111,43 +1083,43 @@
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
     <h2>ANÁLISIS DE LA ARQUITECTURA BASE</h2>
-    <p class="sub">Diagramas realizados para Vimov y la aplicación móvil IMUs</p>
+    <p class="sub" style="font-size: 1.8rem;">Diagramas realizados para Vimov y la aplicación móvil IMUs</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp40);margin-top:var(--sp32);">
         <div>
-            <h3 style="font-size:1.8rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp14);">Arquitectura Vimov</h3>
-            <p style="font-size:1.3rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas C4 y modelo de datos</p>
+            <h3 style="font-size:2.2rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp14);">Arquitectura Vimov</h3>
+            <p style="font-size:1.6rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas C4 y modelo de datos</p>
             <div style="display:flex;flex-direction:column;gap:var(--sp12);margin-bottom:var(--sp20);">
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 1 (Contexto)</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 1 (Contexto)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 2 (Contenedores)</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 2 (Contenedores)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--blue);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Modelo Entidad–Relación (MER)</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Modelo Entidad–Relación (MER)</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--orange);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 3 (Componentes)</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama C4 – Nivel 3 (Componentes)</p>
                 </div>
             </div>
-            <p style="font-size:1.3rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación completa de la arquitectura web</p>
+            <p style="font-size:1.6rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación completa de la arquitectura web</p>
         </div>
         <div>
-            <h3 style="font-size:1.8rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp14);">Aplicación Móvil IMUs</h3>
-            <p style="font-size:1.3rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas de diseño y flujo</p>
+            <h3 style="font-size:2.2rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp14);">Aplicación Móvil IMUs</h3>
+            <p style="font-size:1.6rem;color:var(--text-light);margin-bottom:var(--sp16);font-weight:500;">Diagramas de diseño y flujo</p>
             <div style="display:flex;flex-direction:column;gap:var(--sp12);margin-bottom:var(--sp20);">
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de clases</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama de clases</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--teal);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de secuencia</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama de secuencia</p>
                 </div>
                 <div style="background:var(--bg-soft);padding:var(--sp16) var(--sp20);border-radius:var(--sp8);border-left:4px solid var(--orange);">
-                    <p style="font-size:1.4rem;font-weight:600;color:var(--text);">Diagrama de flujo de datos</p>
+                    <p style="font-size:1.6rem;font-weight:600;color:var(--text);">Diagrama de flujo de datos</p>
                 </div>
             </div>
-            <p style="font-size:1.3rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación de la app móvil de captura</p>
+            <p style="font-size:1.6rem;color:var(--text-light);font-style:italic;margin-top:var(--sp12);">Documentación de la app móvil de captura</p>
         </div>
     </div>
     <div class="page-number">27</div>
@@ -1157,7 +1129,7 @@
 <div class="slide slide-content">
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2 style="margin-top:var(--sp28);font-size:var(--fs42);">MODELO C4 NIVEL 2 ARQUITECTURA VIMOV Diagramas de contexto, contenedores, componentes y relaciones</h2>
+    <h2 style="margin-top:var(--sp28);font-size:var(--fs42);">MODELO C4 NIVEL 2 ARQUITECTURA VIMOV</h2>
 
     <div class="img-slide" style="padding-top:8px;text-align:center;display:flex;justify-content:center;align-items:center;flex:1;">
         <img src="./assets/c4-nivel2-vimov.png" alt="Arquitectura Vimov — Diagramas C4" style="max-width:100%; max-height:76vh; width:100%; object-fit:contain; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
@@ -1242,49 +1214,49 @@
 </div>
 
 <!-- ===== 31. PRUEBAS DE SOFTWARE ===== -->
-<div class="slide slide-content">
+<div class="slide slide-content" style="padding: 3rem 4rem 2.5rem; display: flex; flex-direction: column; overflow: hidden;">
     <div class="section-header">Módulo</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>PRUEBAS DE SOFTWARE</h2>
-    <p class="sub">Cobertura y tipos de prueba en App IMUs y en Vimov</p>
+    <h2 style="margin-top:0.5rem; flex-shrink: 0;">PRUEBAS DE SOFTWARE</h2>
+    <p class="sub" style="flex-shrink: 0;">Cobertura y tipos de prueba en App IMUs y en Vimov</p>
 
-    <div class="cols" style="gap:var(--sp28);margin-top:var(--sp20);">
-        <div>
+    <div class="cols" style="gap:var(--sp28); margin-top:var(--sp20); flex: 1; overflow: hidden; min-height: 0;">
+        <div style="display: flex; flex-direction: column; overflow: hidden;">
             <h3 style="font-size:2rem;font-weight:700;color:var(--blue);margin-bottom:var(--sp16);">App IMUs</h3>
-            <table class="st" style="font-size:1.8rem;">
+            <table class="st" style="font-size:2rem; flex-shrink: 0;">
                 <thead><tr><th style="font-size:1.6rem;padding:var(--sp16) var(--sp20);">Tipo de prueba</th><th style="text-align:right;font-size:1.6rem;padding:var(--sp16) var(--sp20);">Cantidad</th></tr></thead>
                 <tbody>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">122</td></tr>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">48</td></tr>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">64</td></tr>
-                    <tr style="background:var(--blue);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>234</strong></td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">122</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">48</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">64</td></tr>
+                    <tr style="background:var(--blue);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:2rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:2rem;"><strong>234</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32);"><div class="mv" style="font-size:3.5rem;font-weight:800;">83%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32); flex-shrink: 0;"><div class="mv" style="font-size:3.5rem;font-weight:800;">83%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
         </div>
-        <div>
+        <div style="display: flex; flex-direction: column; overflow: hidden;">
             <h3 style="font-size:2rem;font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">Vimov</h3>
-            <table class="st" style="font-size:1.8rem;">
+            <table class="st" style="font-size:2rem; flex-shrink: 0;">
                 <thead><tr><th style="font-size:1.6rem;padding:var(--sp16) var(--sp20);">Tipo de prueba</th><th style="text-align:right;font-size:1.6rem;padding:var(--sp16) var(--sp20);">Cantidad</th></tr></thead>
                 <tbody>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">53</td></tr>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">161</td></tr>
-                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:1.8rem;">72</td></tr>
-                    <tr style="background:var(--teal);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:1.8rem;"><strong>286</strong></td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Regresión</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">53</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Unitarias</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">161</td></tr>
+                    <tr><td style="padding:var(--sp14) var(--sp20);font-size:2rem;">Integración</td><td style="text-align:right;font-weight:600;padding:var(--sp14) var(--sp20);font-size:2rem;">72</td></tr>
+                    <tr style="background:var(--teal);color:#fff;"><td style="padding:var(--sp14) var(--sp20);font-size:2rem;"><strong>Total</strong></td><td style="text-align:right;padding:var(--sp14) var(--sp20);font-size:2rem;"><strong>286</strong></td></tr>
                 </tbody>
             </table>
-            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32);"><div class="mv" style="font-size:3.5rem;font-weight:800;">96%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
+            <div class="mb gr" style="margin-top:var(--sp16);padding:var(--sp32); flex-shrink: 0;"><div class="mv" style="font-size:3.5rem;font-weight:800;">96%</div><div class="ml" style="font-size:1.6rem;margin-top:var(--sp8);">Coverage Features</div></div>
         </div>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp24);background:var(--blue);border-left-color:var(--teal);padding:var(--sp28) var(--sp32);">
-        <h4 style="color:var(--teal);font-size:1.8rem;margin-bottom:var(--sp12);">Total combinado</h4>
-        <p style="color:rgba(255,255,255,0.95);font-size:1.5rem;">520 pruebas en total entre ambos sistemas, con cobertura de features del 83% en App IMUs y <strong>96%</strong> en Vimov.</p>
+    <div class="hb" style="margin-top:auto; flex-shrink: 0; background:var(--blue);border-left-color:var(--teal);padding:var(--sp20) var(--sp32);">
+        <h4 style="color:var(--teal);font-size:2rem;margin-bottom:var(--sp8);">Total combinado</h4>
+        <p style="color:rgba(255,255,255,0.95);font-size:1.5rem; margin: 0;">520 pruebas en total entre ambos sistemas, con cobertura de features del 83% en App IMUs y <strong>96%</strong> en Vimov.</p>
     </div>
 
-    <div class="hb" style="margin-top:var(--sp16);padding:var(--sp28) var(--sp32);">
-        <h4 style="font-size:1.8rem;margin-bottom:var(--sp12);">✓ Validación con stakeholder</h4>
-        <p style="font-size:1.5rem;">El sistema fue validado con el stakeholder <strong>Nicolás Salazar</strong> (investigador i2t) mediante una <strong>prueba de uso libre</strong>, en la que evaluó de forma general la app IMUs y la plataforma Vimov simulando el rol de personal clínico, cubriendo el flujo de captura, la experiencia de usuario y la interpretación de los resultados.</p>
+    <div class="hb" style="margin-top:1rem; flex-shrink: 0; padding:var(--sp20) var(--sp32);">
+        <h4 style="font-size:2rem;margin-bottom:var(--sp8);">✓ Validación con stakeholder</h4>
+        <p style="font-size:1.5rem; margin: 0;">El sistema fue validado con el stakeholder <strong>Nicolás Salazar</strong> (investigador i2t) mediante una <strong>prueba de uso libre</strong>, en la que evaluó de forma general la app IMUs y la plataforma Vimov simulando el rol de personal clínico, cubriendo el flujo de captura, la experiencia de usuario y la interpretación de los resultados.</p>
     </div>
     <div class="page-number">33</div>
 </div>
@@ -1385,14 +1357,14 @@
 </div>
 
 <!-- ===== 36. ANÁLISIS INFERENCIAL — PRONACIÓN/SUPINACIÓN ===== -->
-<div class="slide slide-content" style="padding:var(--sp40) var(--sp60) var(--sp48);">
+<div class="slide slide-content" style="padding:var(--sp40) var(--sp60) var(--sp48); display: flex; flex-direction: column; overflow: hidden;">
     <div class="section-header">TRL 3</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>ANÁLISIS INFERENCIAL</h2>
-    <p class="sub">Pronación / Supinación — Prueba 3.6</p>
+    <h2 style="flex-shrink: 0;">ANÁLISIS INFERENCIAL</h2>
+    <p class="sub" style="flex-shrink: 0;">Pronación / Supinación — Prueba 3.6</p>
 
     <!-- Información en grid superior -->
-    <div style="margin-top:var(--sp20);margin-bottom:var(--sp20);">
+    <div style="margin-top:var(--sp20);margin-bottom:var(--sp20); flex-shrink: 0;">
         <div style="background:var(--bg-soft);padding:var(--sp24) var(--sp30);border-radius:var(--sp12);border-left:8px solid var(--blue);">
             <h3 style="font-size:var(--fs32);color:var(--blue);margin-bottom:var(--sp12);font-weight:700;">Kruskal–Wallis</h3>
             <p style="font-size:var(--fs28);line-height:1.6;margin:0;">Todas las features principales muestran diferencias significativas entre grupos. <strong>p &lt; 0.001</strong>. Las métricas de cadencia, frecuencia y dinámica presentan los mayores tamaños de efecto (η² &gt; 0.45).</p>
@@ -1400,7 +1372,7 @@
     </div>
 
     <!-- Top 5 Biomarcadores -->
-    <div style="margin-bottom:var(--sp20);">
+    <div style="margin-bottom:var(--sp20); flex-shrink: 0;">
         <h3 style="font-size:var(--fs32);font-weight:700;color:var(--blue);margin-bottom:var(--sp16);">Top 5 Biomarcadores</h3>
         <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp12);">
             <div class="bio-card">
@@ -1437,21 +1409,21 @@
     </div>
 
     <!-- Imagen -->
-    <div style="display:flex;justify-content:center;margin-top:var(--sp20);">
-        <img src="./assets/analisis-pronacion.png" alt="Análisis estadístico — Pronación" style="max-width:100%; max-height:55vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <div style="display:flex;justify-content:center; flex: 1; overflow: hidden; min-height: 0;">
+        <img src="./assets/analisis-pronacion.png" alt="Análisis estadístico — Pronación" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">37</div>
 </div>
 
 <!-- ===== 37. ANÁLISIS INFERENCIAL — GOLPETEO DE DEDOS ===== -->
-<div class="slide slide-content" style="padding:var(--sp40) var(--sp60) var(--sp48);">
+<div class="slide slide-content" style="padding:var(--sp40) var(--sp60) var(--sp48); display: flex; flex-direction: column; overflow: hidden;">
     <div class="section-header">TRL 3</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>ANÁLISIS INFERENCIAL</h2>
-    <p class="sub">Golpeteo de Dedos — Prueba 3.4</p>
+    <h2 style="flex-shrink: 0;">ANÁLISIS INFERENCIAL</h2>
+    <p class="sub" style="flex-shrink: 0;">Golpeteo de Dedos — Prueba 3.4</p>
 
     <!-- Información en grid superior -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp24);margin-top:var(--sp20);margin-bottom:var(--sp24);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp24);margin-top:var(--sp20);margin-bottom:var(--sp24); flex-shrink: 0;">
         <div style="background:var(--bg-soft);padding:var(--sp24) var(--sp30);border-radius:var(--sp12);border-left:8px solid var(--blue);">
             <h3 style="font-size:var(--fs32);color:var(--blue);margin-bottom:var(--sp12);font-weight:700;">Kruskal–Wallis</h3>
             <p style="font-size:var(--fs28);line-height:1.6;margin:0;">La mayoría de features muestran diferencias entre grupos. <strong>p &lt; 0.001</strong>. Métricas de temporización (ITI) presentan los mayores efectos (η² &gt; 0.50).</p>
@@ -1463,7 +1435,7 @@
     </div>
 
     <!-- Top 5 Biomarcadores -->
-    <div style="margin-bottom:var(--sp20);">
+    <div style="margin-bottom:var(--sp20); flex-shrink: 0;">
         <h3 style="font-size:var(--fs32);font-weight:700;color:var(--teal);margin-bottom:var(--sp16);">Top 5 Biomarcadores</h3>
         <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp12);">
             <div class="bio-card teal">
@@ -1500,8 +1472,8 @@
     </div>
 
     <!-- Imagen -->
-    <div style="display:flex;justify-content:center;margin-top:var(--sp20);">
-        <img src="./assets/analisis-golpeteo.png" alt="Análisis estadístico — Golpeteo" style="max-width:100%; max-height:55vh; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
+    <div style="display:flex;justify-content:center; flex: 1; overflow: hidden; min-height: 0;">
+        <img src="./assets/analisis-golpeteo.png" alt="Análisis estadístico — Golpeteo" style="max-width:100%; max-height:100%; object-fit:contain; border-radius:var(--sp8); box-shadow:0 4px 20px rgba(0,0,0,0.08); border:1px solid var(--border);">
     </div>
     <div class="page-number">38</div>
 </div>
@@ -1550,71 +1522,71 @@
     <div class="page-number" style="color:rgba(255,255,255,0.2)">40</div>
 </div>
 
-<!-- ===== 39. CONCLUSIONES ===== -->
-<div class="slide slide-content">
+<!-- ===== 41. CONCLUSIONES ===== -->
+<div class="slide slide-content" style="padding:var(--sp40) var(--sp60) var(--sp48); display: flex; flex-direction: column; overflow: hidden;">
     <div class="section-header">Conclusiones</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>CONCLUSIONES</h2>
-    <p class="sub">Cumplimiento de objetivos y hallazgos principales</p>
+    <h2 style="flex-shrink: 0;">CONCLUSIONES</h2>
+    <p class="sub" style="flex-shrink: 0;">Cumplimiento de objetivos y hallazgos principales</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp20);margin-top:var(--sp12);">
-        <div class="cd" style="padding:var(--sp24) var(--sp30);">
-            <h3 style="font-size:var(--fs36);margin-bottom:var(--sp8);">Integración técnica ✓</h3>
-            <p style="font-size:var(--fs28);">Vimov e IMUs completamente integrados. El módulo opera de extremo a extremo: captura, procesamiento y visualización.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp20);margin-top:var(--sp12); flex-shrink: 0;">
+        <div class="cd" style="padding:var(--sp20);">
+            <h3 style="font-size:var(--fs32);margin-bottom:var(--sp8);">Integración técnica ✓</h3>
+            <p style="font-size:var(--fs24);line-height:1.5;margin:0;">Vimov e IMUs completamente integrados. El módulo opera de extremo a extremo.</p>
         </div>
-        <div class="cd or" style="padding:var(--sp24) var(--sp30);">
-            <h3 style="font-size:var(--fs36);margin-bottom:var(--sp8);">IMU válido ✓</h3>
-            <p style="font-size:var(--fs28);">En pronación se obtuvo <strong>η² hasta 0.556</strong> y <strong>AUC macro 0.883</strong>, confirmando la detección de enlentecimiento.</p>
+        <div class="cd or" style="padding:var(--sp20);">
+            <h3 style="font-size:var(--fs32);margin-bottom:var(--sp8);">IMU válido ✓</h3>
+            <p style="font-size:var(--fs24);line-height:1.5;margin:0;">En pronación se obtuvo <strong>η² hasta 0.556</strong> y <strong>AUC macro 0.883</strong>.</p>
         </div>
-        <div class="cd" style="border-left-color:var(--teal);padding:var(--sp24) var(--sp30);">
-            <h3 style="color:var(--teal);font-size:var(--fs36);margin-bottom:var(--sp8);">Limitación</h3>
-            <p style="font-size:var(--fs28);">La <strong>amplitud en Golpeteo</strong> no logró significancia, evidenciando límites del IMU de muñeca para movimientos distales.</p>
+        <div class="cd" style="border-left-color:var(--teal);padding:var(--sp20);">
+            <h3 style="color:var(--teal);font-size:var(--fs32);margin-bottom:var(--sp8);">Limitación</h3>
+            <p style="font-size:var(--fs24);line-height:1.5;margin:0;">La <strong>amplitud en Golpeteo</strong> no logró significancia.</p>
         </div>
-        <div class="cd pu" style="padding:var(--sp24) var(--sp30);">
-            <h3 style="font-size:var(--fs36);margin-bottom:var(--sp8);">Muestra</h3>
-            <p style="font-size:var(--fs28);">La <strong>falta de pacientes</strong> reales limitó el estudio a TRL 3, sin posibilidad de generalización clínica formal.</p>
+        <div class="cd pu" style="padding:var(--sp20);">
+            <h3 style="font-size:var(--fs32);margin-bottom:var(--sp8);">Muestra</h3>
+            <p style="font-size:var(--fs24);line-height:1.5;margin:0;">La <strong>falta de pacientes</strong> limitó el estudio a TRL 3.</p>
         </div>
     </div>
 
-    <div style="background:#FFF7ED;border-left:8px solid var(--orange);border-radius:var(--sp12);padding:var(--sp24) var(--sp30);margin-top:var(--sp20);">
-        <h4 style="font-size:var(--fs28);font-weight:700;color:var(--orange);margin-bottom:var(--sp8);">⚠ Alcance real del OE2</h4>
-        <p style="font-size:var(--fs28);line-height:1.6;color:var(--text);">La correspondencia con la escala MDS-UPDRS se estableció contra <strong>scores simulados por los integrantes</strong> siguiendo criterios conductuales, no contra puntuaciones asignadas por neurólogos. La validación clínica real queda pendiente para TRL 4.</p>
+    <div style="background:#FFF7ED;border-left:8px solid var(--orange);border-radius:var(--sp12);padding:var(--sp16) var(--sp20);margin-top:var(--sp16); flex-shrink: 0;">
+        <h4 style="font-size:var(--fs24);font-weight:700;color:var(--orange);margin-bottom:var(--sp4);">⚠ Alcance real del OE2</h4>
+        <p style="font-size:var(--fs20);line-height:1.5;margin:0;color:var(--text);">La correspondencia con la escala MDS-UPDRS se estableció contra <strong>scores simulados</strong>, no contra puntuaciones de neurólogos. Validación clínica real pendiente para TRL 4.</p>
     </div>
 
-    <div class="hb" style="background:var(--blue);border-left-color:var(--teal);margin-top:var(--sp20);">
-        <h4 style="color:var(--teal);font-size:var(--fs32);">Conclusión principal</h4>
-        <p style="color:rgba(255,255,255,0.95);font-size:var(--fs32);">Este trabajo demuestra la <strong style="color:#fff;">viabilidad de integrar evaluación motora cuantitativa</strong> dentro del ecosistema Vimov–IMUs, contribuyendo hacia evaluaciones objetivas y basadas en evidencia.</p>
+    <div class="hb" style="margin-top:var(--sp16); flex-shrink: 0; background:var(--blue);border-left-color:var(--teal);padding:var(--sp16) var(--sp20);">
+        <h4 style="color:var(--teal);font-size:var(--fs28); margin: 0;">Conclusión principal</h4>
+        <p style="color:rgba(255,255,255,0.95);font-size:var(--fs24); margin: 0;">Este trabajo demuestra la <strong style="color:#fff;">viabilidad de integrar evaluación motora cuantitativa</strong> dentro del ecosistema Vimov–IMUs.</p>
     </div>
     <div class="page-number">41</div>
 </div>
 
 <!-- ===== 40. TRABAJO FUTURO ===== -->
-<div class="slide slide-content">
+<div class="slide slide-content" style="padding: 3rem 4rem; display: flex; flex-direction: column; overflow: hidden;">
     <div class="section-header">Conclusiones</div>
     <img src="./assets/logo-icesi.png" alt="Icesi" class="slide-logo">
-    <h2>TRABAJO FUTURO</h2>
-    <p class="sub">Extensiones identificadas para evolucionar el módulo Vimov–IMUs</p>
+    <h2 style="flex-shrink: 0; font-size: 3.5rem;">TRABAJO FUTURO</h2>
+    <p class="sub" style="flex-shrink: 0; font-size: 2rem;">Extensiones identificadas para evolucionar el módulo Vimov–IMUs</p>
 
-    <ol class="bl" style="margin-top:var(--sp32);display:flex;flex-direction:column;gap:var(--sp20);list-style:none;counter-reset:item;padding:0;">
-        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--blue);counter-increment:item;position:relative;padding-left:var(--sp60);">
-            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--blue);">1</span>
-            <strong style="font-size:1.6rem;color:var(--blue);display:block;margin-bottom:var(--sp8);">Integración multimodal:</strong> Incorporar visión por computador para la prueba de golpeteo de dedos, complementando la captura IMU con análisis de vídeo para superar las limitaciones de movimientos distales.
+    <ol class="bl" style="margin-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem; list-style:none; counter-reset:item; padding:0; flex: 1; overflow-y: auto;">
+        <li style="font-size:1.6rem; line-height:1.4; padding:var(--sp16) var(--sp24); background:var(--bg-soft); border-radius:var(--sp8); border-left:5px solid var(--blue); counter-increment:item; position:relative; padding-left:3rem;">
+            <span style="position:absolute; left:1rem; top:var(--sp16); font-size:1.4rem; font-weight:800; color:var(--blue);">1</span>
+            <strong style="color:var(--blue);">Integración multimodal:</strong> Incorporar visión por computador para la prueba de golpeteo de dedos, complementando la captura IMU con análisis de vídeo para superar las limitaciones de movimientos distales.
         </li>
-        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--teal);counter-increment:item;position:relative;padding-left:var(--sp60);">
-            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--teal);">2</span>
-            <strong style="font-size:1.6rem;color:var(--teal);display:block;margin-bottom:var(--sp8);">Validación clínica real:</strong> Extender la evaluación a pacientes diagnosticados con enfermedad de Parkinson en la Fundación Valle del Lili, avanzando hacia TRL 4–5.
+        <li style="font-size:1.6rem; line-height:1.4; padding:var(--sp16) var(--sp24); background:var(--bg-soft); border-radius:var(--sp8); border-left:5px solid var(--teal); counter-increment:item; position:relative; padding-left:3rem;">
+            <span style="position:absolute; left:1rem; top:var(--sp16); font-size:1.4rem; font-weight:800; color:var(--teal);">2</span>
+            <strong style="color:var(--teal);">Validación clínica real:</strong> Extender la evaluación a pacientes diagnosticados con enfermedad de Parkinson en la Fundación Valle del Lili, avanzando hacia TRL 4–5.
         </li>
-        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--orange);counter-increment:item;position:relative;padding-left:var(--sp60);">
-            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--orange);">3</span>
-            <strong style="font-size:1.6rem;color:var(--orange);display:block;margin-bottom:var(--sp8);">Evolución del modelo predictivo:</strong> Mejorar la sensibilidad, especificidad y generalización del clasificador LDA, explorando modelos con mayor capacidad para muestras pequeñas.
+        <li style="font-size:1.6rem; line-height:1.4; padding:var(--sp16) var(--sp24); background:var(--bg-soft); border-radius:var(--sp8); border-left:5px solid var(--orange); counter-increment:item; position:relative; padding-left:3rem;">
+            <span style="position:absolute; left:1rem; top:var(--sp16); font-size:1.4rem; font-weight:800; color:var(--orange);">3</span>
+            <strong style="color:var(--orange);">Evolución del modelo predictivo:</strong> Mejorar la sensibilidad, especificidad y generalización del clasificador LDA, explorando modelos con mayor capacidad para muestras pequeñas.
         </li>
-        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--purple);counter-increment:item;position:relative;padding-left:var(--sp60);">
-            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--purple);">4</span>
-            <strong style="font-size:1.6rem;color:var(--purple);display:block;margin-bottom:var(--sp8);">Reposicionamiento del IMU:</strong> Explorar ubicaciones alternativas del sensor para la prueba de golpeteo de dedos, como un guante instrumentado o sensores en la falange distal para capturar directamente la amplitud del movimiento, limitación principal del modelo actual.
+        <li style="font-size:1.6rem; line-height:1.4; padding:var(--sp16) var(--sp24); background:var(--bg-soft); border-radius:var(--sp8); border-left:5px solid var(--purple); counter-increment:item; position:relative; padding-left:3rem;">
+            <span style="position:absolute; left:1rem; top:var(--sp16); font-size:1.4rem; font-weight:800; color:var(--purple);">4</span>
+            <strong style="color:var(--purple);">Reposicionamiento del IMU:</strong> Explorar ubicaciones alternativas del sensor para la prueba de golpeteo de dedos, como un guante instrumentado o sensores en la falange distal para capturar directamente la amplitud del movimiento, limitación principal del modelo actual.
         </li>
-        <li style="font-size:1.5rem;line-height:1.7;padding:var(--sp24) var(--sp32);background:var(--bg-soft);border-radius:var(--sp12);border-left:5px solid var(--green);counter-increment:item;position:relative;padding-left:var(--sp60);">
-            <span style="position:absolute;left:var(--sp24);top:var(--sp24);font-size:1.8rem;font-weight:800;color:var(--green);">5</span>
-            <strong style="font-size:1.6rem;color:var(--green);display:block;margin-bottom:var(--sp8);">Expansión a más pruebas MDS-UPDRS:</strong> Incluir otras pruebas motoras de la Parte III (rigidez, temblor en reposo) para construir un perfil motor completo del paciente.
+        <li style="font-size:1.6rem; line-height:1.4; padding:var(--sp16) var(--sp24); background:var(--bg-soft); border-radius:var(--sp8); border-left:5px solid var(--green); counter-increment:item; position:relative; padding-left:3rem;">
+            <span style="position:absolute; left:1rem; top:var(--sp16); font-size:1.4rem; font-weight:800; color:var(--green);">5</span>
+            <strong style="color:var(--green);">Expansión a más pruebas MDS-UPDRS:</strong> Incluir otras pruebas motoras de la Parte III (rigidez, temblor en reposo) para construir un perfil motor completo del paciente.
         </li>
     </ol>
     <div class="page-number">42</div>

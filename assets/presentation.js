@@ -8,6 +8,21 @@ const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 let hideControlsTimeout;
 
+function scaleSlides() {
+    const baseWidth = 1920;
+    const baseHeight = 1080;
+
+    const scaleX = window.innerWidth / baseWidth;
+    const scaleY = window.innerHeight / baseHeight;
+
+    const scale = Math.min(scaleX, scaleY);
+
+    document.querySelectorAll('.slide').forEach(slide => {
+        slide.style.transform =
+            `translate(-50%, -50%) scale(${scale})`;
+    });
+}
+
 // Crear controles de navegación dinámicamente
 function createNavigationControls() {
     const navControls = document.createElement('div');
@@ -124,6 +139,7 @@ function handleSwipe() {
 
 // Inicializar presentación
 window.addEventListener('DOMContentLoaded', () => {
+    scaleSlides();
     createNavigationControls();
     showSlide(0);
     console.log(`✅ Presentación inicializada: ${totalSlides} slides`);
@@ -190,3 +206,4 @@ document.addEventListener('dblclick', () => {
 
 // Los controles ya están ocultos por defecto en fullscreen
 // Solo se mostrarán al mover el mouse gracias a showControls()
+window.addEventListener('resize', scaleSlides);
